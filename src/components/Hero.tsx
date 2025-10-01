@@ -163,7 +163,7 @@ const Hero = () => {
             <div>
               <h4 className="text-lg font-bold mb-2">Hackthons and Competative Exams</h4>
               <ul className="list-disc list-inside text-sm">
-                <li>Smart India Hackthon 2025 - Finalist (5-Teams MITS)</li>
+                <li>Smart India Hackthon 2025 - Finalist (4-Teams MITS)</li>
                 <li>Smart India Hackthon 2024 - Finalist (1-Team MITS)</li>
                 <li>GATE-DA 2025 Qualifed - AIR 7217</li>
               </ul>
