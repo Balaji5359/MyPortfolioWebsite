@@ -7,6 +7,10 @@ import SIHTeam02Image from '/src/assets/SIH2025/Team02/SIHTeam02.png'
 import SIHTeam03Image from '/src/assets/SIH2025/Team03/SIHTeam03.png'
 import SIHTeam04Image from '/src/assets/SIH2025/Team04/SIHTeam04.png'
 import SIHTeam05Image from '/src/assets/SIH2025/Team05/SIHTeam05.png'
+import AI_Skill_Dev_Image from '/src/assets/ai-skill-dev-image.png'
+import AI_Skill_Dev_Logo from '/src/assets/ai-skill-dev-logo.png'
+import Get_n_Grow_logo from '/src/assets/getngrow_logo.png'
+import Get_n_Grow_image from '/src/assets/getngrow_image.png'
 
 const Projects = () => {
   const [activeTab, setActiveTab] = React.useState('Projects');
@@ -92,24 +96,46 @@ const Projects = () => {
 
   const startupIdeas = [
     {
-      title: 'EduAI Platform',
-      idea: 'AI-driven personalized learning platform.',
-      plan: 'Business plan for scalable EdTech.',
-      demo: '',
-      github: '',
-      linkedin: '',
-      image: '',
-      video: '',
+      title: 'AI Skill Dev',
+      subtitle: 'AI, VR & Game-based Learning Platform',
+      logo: AI_Skill_Dev_Logo,
+      idea: [
+        'An AI, VR, and game-based learning platform for CS students.',
+        'Tracks student progress for institutes and placement trainers.',
+        'Enables personalized, interactive, and engaging learning experiences.',
+      ],
+      plan: [
+        'Sell products to institutions and university students.',
+        'Incorporate AI-based adaptive learning modules.',
+        'Enable easy tracking and analytics for institutions.',
+        'Offer placement readiness and skill assessments.',
+      ],
+      demo: 'http://genaiapp.netlify.app/',
+      github: 'https://github.com/Balaji5359/AI-Skill-Dev',
+      linkedin: 'https://www.linkedin.com/posts/rrbalaji',
+      image: AI_Skill_Dev_Image,
+      video: 'https://youtu.be/f3UU1HiVXCE',
     },
     {
-      title: 'Smart Retail Analytics',
-      idea: 'Retail analytics using computer vision.',
-      plan: 'Startup plan for retail stores.',
-      demo: '',
-      github: '',
+      title: 'Get and Grow',
+      subtitle: 'Bridging Dreams of Students with Generous Donors',
+      logo: Get_n_Grow_logo,
+      idea: [
+        'A student support platform connecting financially struggling students with donors.',
+        'Covers tuition, living costs, exam fees, and more.',
+        'Verified profiles, direct transfers, and real-time impact tracking.',
+        'Ensures fast, transparent, and meaningful educational aid across India.',
+      ],
+      plan: [
+        'Verify & Match: Students submit needs and documents, team verifies and matches with donors.',
+        'Direct Support: Donors choose what to fund and send money directly to student accounts.',
+        'Track Impact: Donors receive updates, receipts, and photos to see their impact.',
+      ],
+      demo: 'http://get-and-grow-startup-webapp-bucket.s3-website.ap-south-1.amazonaws.com/',
+      github: 'https://github.com/Balaji5359',
       linkedin: 'https://www.linkedin.com/posts/rrbalaji_sih-smartindiahackathon-teamleadership-activity-7377231820070961152-Nyiu?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE',
-      image: '',
-      video: '',
+      image: Get_n_Grow_image,
+      video: 'https://youtu.be/f3UU1HiVXCE',
     },
   ];
   const projects = [
@@ -291,7 +317,7 @@ const Projects = () => {
             {/* First 2 Hackathons */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
               {hackathonIdeas.slice(0, 2).map((idea, idx) => (
-                <div key={idea.title} className="tech-card group relative overflow-hidden animate-floating bg-white shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div key={idea.title} className="tech-card group relative overflow-hidden animate-floating bg-white shadow-xl">
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-4 text-pink-700">{idea.title}</h3>
                     <div className="mb-4">
@@ -352,14 +378,14 @@ const Projects = () => {
               </h2>
               <div className="space-y-8">
                 {hackathonIdeas.slice(2).map((idea, idx) => (
-                  <div key={idea.title} className="tech-card group relative overflow-hidden animate-floating bg-white shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <div key={idea.title} className="tech-card group relative overflow-hidden animate-floating bg-white shadow-xl">
                     <div className="flex flex-col lg:flex-row">
                       {/* Full Background Image */}
                       <div className="lg:w-1/2 h-50 lg:h-auto relative overflow-hidden">
-                        <img 
-                          src={idea.image} 
+                        <img
+                          src={idea.image}
                           alt={idea.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
                       </div>
@@ -409,7 +435,7 @@ const Projects = () => {
                               </Button>
                             </a>
                           )}
-                          {idea.linkedin && (
+                          {typeof idea.linkedin === 'string' && idea.linkedin && (
                             <a href={idea.linkedin} target="_blank" rel="noopener noreferrer">
                               <Button size="sm" variant="ghost" className="text-blue-600">
                                 LinkedIn
@@ -428,18 +454,107 @@ const Projects = () => {
 
         {/* Startup Ideas Tab */}
         {activeTab === 'Startup' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {startupIdeas.map((idea, idx) => (
-              <div key={idea.title} className="tech-card group p-8 animate-floating bg-white">
-                <h3 className="text-xl font-bold mb-2 text-orange-700">{idea.title}</h3>
-                <div className="mb-2"><span className="font-semibold">Idea:</span> {idea.idea}</div>
-                <div className="mb-2"><span className="font-semibold">Plan:</span> {idea.plan}</div>
-                <div className="flex gap-2 mt-4">
-                  {idea.demo && <a href={idea.demo} target="_blank" rel="noopener noreferrer"><Button size="sm" className="hero-btn">Demo</Button></a>}
-                  {idea.github && <a href={idea.github} target="_blank" rel="noopener noreferrer"><Button size="sm" variant="outline" className="glass-card border-white/20">GitHub</Button></a>}
-                  {idea.linkedin && <a href={idea.linkedin} target="_blank" rel="noopener noreferrer"><Button size="sm" variant="ghost">LinkedIn</Button></a>}
+          <div className="space-y-12">
+            {startupIdeas.map((idea, idx) => (
+              <div key={idea.title} className="tech-card group relative overflow-hidden animate-floating bg-white shadow-xl">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
+                <div className="flex flex-col lg:flex-row gap-8 p-8">
+                  {/* Left side: logo, title+subtitle aligned horizontally, idea, plan, links */}
+                  <div className="lg:w-1/2">
+                    <div className="flex items-center gap-6 mb-4">
+                      {idea.logo && (
+                        <img
+                          src={idea.logo}
+                          alt={`${idea.title} logo`}
+                          className="w-20 h-20 rounded-full shadow-lg border-4 border-orange-200"
+                        />
+                      )}
+                      <div>
+                        <h3 className="text-3xl font-bold text-orange-700 leading-tight">{idea.title}</h3>
+                        {idea.subtitle && (
+                          <p className="text-xl text-gray-600 italic mt-1">{idea.subtitle}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="mb-8">
+                      <h4 className="font-semibold text-purple-600 mb-4 text-lg">💡 Idea</h4>
+                      <ul className="list-disc list-inside text-gray-700 text-base leading-relaxed space-y-2 pl-4">
+                        {idea.idea.map((point, i) => (
+                          <li key={i} className="pl-2">{point}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="mb-8">
+                      <h4 className="font-semibold text-blue-600 mb-4 text-lg">📋 Plan</h4>
+                      <ul className="list-disc list-inside text-gray-700 text-base leading-relaxed space-y-2 pl-4">
+                        {idea.plan.map((point, i) => (
+                          <li key={i} className="pl-2">{point}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="flex flex-wrap gap-4">
+                      {idea.demo && (
+                        <a href={idea.demo} target="_blank" rel="noopener noreferrer">
+                          <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 transition-all duration-300 px-6 py-3 text-lg font-semibold">
+                            <ExternalLink className="mr-2 h-5 w-" />Visit Our Website
+                          </Button>
+                        </a>
+                      )}
+                      {idea.github && (
+                        <a href={idea.github} target="_blank" rel="noopener noreferrer">
+                          <Button size="lg" variant="outline" className="border-orange-300 text-orange-700 hover:bg-orange-50 transition-all duration-300 px-6 py-3 text-lg font-semibold">
+                            <Github className="mr-2 h-5 w-5" />GitHub
+                          </Button>
+                        </a>
+                      )}
+                      {idea.linkedin && (
+                        <a href={idea.linkedin} target="_blank" rel="noopener noreferrer">
+                          <Button size="lg" variant="ghost" className="text-blue-600 hover:bg-blue-50 transition-all duration-300 px-6 py-3 text-lg font-semibold">
+                            LinkedIn
+                          </Button>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  {/* Right side: video heading and image or video */}
+
+                  
+                  <div className="lg:w-1/2 flex flex-col items-center justify-center gap-6">
+                    {idea.image && (
+                      <>
+                        <h5 className="mt-6 mb-2 text-lg font-semibold text-gray-700">Here is Image of Our Startup-Website</h5>
+                        <img
+                          src={idea.image}
+                          alt={idea.title}
+                          className="w-4/5 h-auto rounded-lg shadow-lg object-cover max-h-72"
+                        />
+                      </>
+                    )}
+
+                    <h4 className="mt-6 mb-2 text-lg font-semibold text-gray-700">Here is small demo video of Startup plan</h4>
+                    {idea.video && (
+                      <div className="relative aspect-video w-4/5 rounded-lg overflow-hidden shadow-lg">
+                        <iframe
+                          src={idea.video.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/')}
+                          title={`${idea.title} Video`}
+                          className="w-full h-full"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    )}
+                    
+                    {!idea.image && !idea.video && (
+                      <div className="w-full h-64 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-lg flex items-center justify-center text-gray-500 shadow-inner">
+                        <div className="text-center">
+                          <Database className="mx-auto h-12 w-12 mb-2 opacity-50" />
+                          <p className="text-sm">Media Coming Soon</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                {/* Images/videos can be added here */}
               </div>
             ))}
           </div>
