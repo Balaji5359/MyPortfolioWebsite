@@ -1,7 +1,7 @@
 // --- Third Year Images ---
 const gateImages = [
   {
-    src: '/src/assets/thirdyear/gate-image-MITS.jpg',
+    src: gateImage,
     caption: 'GATE DA Appreciation',
     alt: 'GATE DA Qualified Certificate',
   },
@@ -9,22 +9,22 @@ const gateImages = [
 
 const sih2024Images = [
   {
-    src: '/src/assets/thirdyear/sih2024-01.jpg',
+    src: sih2024_01,
     caption: 'SIH 2024 Team',
     alt: 'SIH 2024 Team',
   },
   {
-    src: '/src/assets/thirdyear/sih2024-02.jpg',
+    src: sih2024_02,
     caption: 'SIH 2024 Project',
     alt: 'SIH 2024 Project',
   },
   {
-    src: '/src/assets/thirdyear/sih2024-03.jpg',
+    src: sih2024_03,
     caption: 'SIH 2024 Demo',
     alt: 'SIH 2024 Demo',
   },
   {
-    src: '/src/assets/thirdyear/sih2024-04.jpg',
+    src: sih2024_04,
     caption: 'SIH 2024 Presentation',
     alt: 'SIH 2024 Presentation',
   },
@@ -32,36 +32,36 @@ const sih2024Images = [
 
 // --- Fourth Year Images ---
 const startupChallengeImages = [
-  { src: '/src/assets/fourthyear/startup-challenge-certificate-money.jpg', caption: 'Certificate & Prize', alt: 'Startup Challenge Certificate and Prize' },
-  { src: '/src/assets/fourthyear/startup-challenge1.jpg', caption: 'Startup Challenge 1', alt: 'Startup Challenge 1' },
-  { src: '/src/assets/fourthyear/startup-challenge2.jpg', caption: 'Startup Challenge 2', alt: 'Startup Challenge 2' },
-  { src: '/src/assets/fourthyear/startup-challenge-poster.jpg', caption: 'Poster', alt: 'Startup Challenge Poster' },
-  { src: '/src/assets/fourthyear/startup-idea-slide1.png', caption: 'Idea Slide 1', alt: 'Startup Idea Slide 1' },
-  { src: '/src/assets/fourthyear/startup-idea-slide2.png', caption: 'Idea Slide 2', alt: 'Startup Idea Slide 2' },
-  { src: '/src/assets/fourthyear/startup-challenge-environment1.jpg', caption: 'Environment 1', alt: 'Startup Challenge Environment 1' },
-  { src: '/src/assets/fourthyear/startup-challenge-environment2.jpg', caption: 'Environment 2', alt: 'Startup Challenge Environment 2' },
-  { src: '/src/assets/fourthyear/startup-challenge-environment3.jpg', caption: 'Environment 3', alt: 'Startup Challenge Environment 3' },
-  { src: '/src/assets/fourthyear/startup-challenge-environment4.jpg', caption: 'Environment 4', alt: 'Startup Challenge Environment 4' },
-  { src: '/src/assets/fourthyear/startup-challenge-environment5.jpg', caption: 'Environment 5', alt: 'Startup Challenge Environment 5' },
-  { src: '/src/assets/fourthyear/startup-challenge-environment6.jpg', caption: 'Environment 6', alt: 'Startup Challenge Environment 6' },
-  { src: '/src/assets/fourthyear/startup-challenge-environment7.jpg', caption: 'Environment 7', alt: 'Startup Challenge Environment 7' },
+  { src: startupCertMoney, caption: 'Certificate & Prize', alt: 'Startup Challenge Certificate and Prize' },
+  { src: startup1, caption: 'Startup Challenge 1', alt: 'Startup Challenge 1' },
+  { src: startup2, caption: 'Startup Challenge 2', alt: 'Startup Challenge 2' },
+  { src: startupPoster, caption: 'Poster', alt: 'Startup Challenge Poster' },
+  { src: startupSlide1, caption: 'Idea Slide 1', alt: 'Startup Idea Slide 1' },
+  { src: startupSlide2, caption: 'Idea Slide 2', alt: 'Startup Idea Slide 2' },
+  { src: startupEnv1, caption: 'Environment 1', alt: 'Startup Challenge Environment 1' },
+  { src: startupEnv2, caption: 'Environment 2', alt: 'Startup Challenge Environment 2' },
+  { src: startupEnv3, caption: 'Environment 3', alt: 'Startup Challenge Environment 3' },
+  { src: startupEnv4, caption: 'Environment 4', alt: 'Startup Challenge Environment 4' },
+  { src: startupEnv5, caption: 'Environment 5', alt: 'Startup Challenge Environment 5' },
+  { src: startupEnv6, caption: 'Environment 6', alt: 'Startup Challenge Environment 6' },
+  { src: startupEnv7, caption: 'Environment 7', alt: 'Startup Challenge Environment 7' },
 ];
 
 const sih5TeamsImages = [
-  { src: '/src/assets/fourthyear/sih poster.jpg', caption: 'SIH Poster', alt: 'SIH Poster' },
-  { src: '/src/assets/fourthyear/sih-department-level.jpg', caption: 'Department Level', alt: 'SIH Department Level' },
-  { src: '/src/assets/fourthyear/sihmeeting.jpg', caption: 'SIH Meeting', alt: 'SIH Meeting' },
-  { src: '/src/assets/fourthyear/Team01-group-image1.jpg', caption: 'Team 01', alt: 'Team 01 Group' },
-  { src: '/src/assets/fourthyear/Team02-group-image1.jpg', caption: 'Team 02', alt: 'Team 02 Group 1' },
-  { src: '/src/assets/fourthyear/Team02-group-image2.jpg', caption: 'Team 02', alt: 'Team 02 Group 2' },
-  { src: '/src/assets/fourthyear/Team03-ar.jpg', caption: 'Team 03 AR', alt: 'Team 03 AR' },
-  { src: '/src/assets/fourthyear/Team03-group-image1.jpg', caption: 'Team 03', alt: 'Team 03 Group 1' },
-  { src: '/src/assets/fourthyear/Team03-group-image2.jpg', caption: 'Team 03', alt: 'Team 03 Group 2' },
-  { src: '/src/assets/fourthyear/Team04-group-image1.jpg', caption: 'Team 04', alt: 'Team 04 Group 1' },
-  { src: '/src/assets/fourthyear/Team04-group-image2.jpg', caption: 'Team 04', alt: 'Team 04 Group 2' },
-  { src: '/src/assets/fourthyear/Team05-aibot.png', caption: 'Team 05 AI Bot', alt: 'Team 05 AI Bot' },
-  { src: '/src/assets/fourthyear/Team05-group-image1.jpg', caption: 'Team 05', alt: 'Team 05 Group 1' },
-  { src: '/src/assets/fourthyear/Team05-group-image2.jpg', caption: 'Team 05', alt: 'Team 05 Group 2' },
+  { src: sihPoster, caption: 'SIH Poster', alt: 'SIH Poster' },
+  { src: sihDeptLevel, caption: 'Department Level', alt: 'SIH Department Level' },
+  { src: sihMeeting, caption: 'SIH Meeting', alt: 'SIH Meeting' },
+  { src: team01Img1, caption: 'Team 01', alt: 'Team 01 Group' },
+  { src: team02Img1, caption: 'Team 02', alt: 'Team 02 Group 1' },
+  { src: team02Img2, caption: 'Team 02', alt: 'Team 02 Group 2' },
+  { src: team03Ar, caption: 'Team 03 AR', alt: 'Team 03 AR' },
+  { src: team03Img1, caption: 'Team 03', alt: 'Team 03 Group 1' },
+  { src: team03Img2, caption: 'Team 03', alt: 'Team 03 Group 2' },
+  { src: team04Img1, caption: 'Team 04', alt: 'Team 04 Group 1' },
+  { src: team04Img2, caption: 'Team 04', alt: 'Team 04 Group 2' },
+  { src: team05Aibot, caption: 'Team 05 AI Bot', alt: 'Team 05 AI Bot' },
+  { src: team05Img1, caption: 'Team 05', alt: 'Team 05 Group 1' },
+  { src: team05Img2, caption: 'Team 05', alt: 'Team 05 Group 2' },
 ];
 
 // --- Generic Carousel ---
@@ -484,24 +484,74 @@ import {
   CarouselNext,
 } from '@/components/ui/carousel';
 
+// Import all images
+import chessComp2 from '../assets/firstyear/chess_compettion2.jpg';
+import chessComp3 from '../assets/firstyear/chess_competation3.jpg';
+import chessComp from '../assets/firstyear/chess_compettion.jpg';
+import chessPrizes from '../assets/firstyear/chess-spokenEng_prizes.jpg';
+import spokenEngComp from '../assets/firstyear/spoken_Eng_compettion.jpg';
+import spokenEngComp2 from '../assets/firstyear/spoken_Eng_compettion2.jpg';
+import cyberCertShield from '../assets/secondyear/cyber-pre-certificate-shield.jpg';
+import cyberCert from '../assets/secondyear/cyber-pre-certificate.png';
+import cyberNews1 from '../assets/secondyear/cyber-pre-image-newpaper1.jpg';
+import cyberNews2 from '../assets/secondyear/cyber-pre-image-newpaper2.jpg';
+import cyberNews3 from '../assets/secondyear/cyber-pre-image-newpaper3.jpg';
+import cyberNews4 from '../assets/secondyear/cyber-pre-image-newpaper4.jpg';
+import cyberNews5 from '../assets/secondyear/cyber-pre-image-newpaper5.jpg';
+import scienceCert from '../assets/secondyear/scienceday-essay-certificate.png';
+import scienceImage from '../assets/secondyear/scienceday-image.jpg';
+import sciencePhoto from '../assets/secondyear/scienceday-essay-photo.jpg';
+import gateImage from '../assets/thirdyear/gate-image-MITS.jpg';
+import sih2024_01 from '../assets/thirdyear/sih2024-01.jpg';
+import sih2024_02 from '../assets/thirdyear/sih2024-02.jpg';
+import sih2024_03 from '../assets/thirdyear/sih2024-03.jpg';
+import sih2024_04 from '../assets/thirdyear/sih2024-04.jpg';
+import startupCertMoney from '../assets/fourthyear/startup-challenge-certificate-money.jpg';
+import startup1 from '../assets/fourthyear/startup-challenge1.jpg';
+import startup2 from '../assets/fourthyear/startup-challenge2.jpg';
+import startupPoster from '../assets/fourthyear/startup-challenge-poster.jpg';
+import startupSlide1 from '../assets/fourthyear/startup-idea-slide1.png';
+import startupSlide2 from '../assets/fourthyear/startup-idea-slide2.png';
+import startupEnv1 from '../assets/fourthyear/startup-challenge-environment1.jpg';
+import startupEnv2 from '../assets/fourthyear/startup-challenge-environment2.jpg';
+import startupEnv3 from '../assets/fourthyear/startup-challenge-environment3.jpg';
+import startupEnv4 from '../assets/fourthyear/startup-challenge-environment4.jpg';
+import startupEnv5 from '../assets/fourthyear/startup-challenge-environment5.jpg';
+import startupEnv6 from '../assets/fourthyear/startup-challenge-environment6.jpg';
+import startupEnv7 from '../assets/fourthyear/startup-challenge-environment7.jpg';
+import sihPoster from '../assets/fourthyear/sih poster.jpg';
+import sihDeptLevel from '../assets/fourthyear/sih-department-level.jpg';
+import sihMeeting from '../assets/fourthyear/sihmeeting.jpg';
+import team01Img1 from '../assets/fourthyear/Team01-group-image1.jpg';
+import team02Img1 from '../assets/fourthyear/Team02-group-image1.jpg';
+import team02Img2 from '../assets/fourthyear/Team02-group-image2.jpg';
+import team03Ar from '../assets/fourthyear/Team03-ar.jpg';
+import team03Img1 from '../assets/fourthyear/Team03-group-image1.jpg';
+import team03Img2 from '../assets/fourthyear/Team03-group-image2.jpg';
+import team04Img1 from '../assets/fourthyear/Team04-group-image1.jpg';
+import team04Img2 from '../assets/fourthyear/Team04-group-image2.jpg';
+import team05Aibot from '../assets/fourthyear/Team05-aibot.png';
+import team05Img1 from '../assets/fourthyear/Team05-group-image1.jpg';
+import team05Img2 from '../assets/fourthyear/Team05-group-image2.jpg';
+
 const chessImages = [
   {
-    src: '/src/assets/firstyear/chess_compettion2.jpg',
+    src: chessComp2,
     caption: 'Champion Move',
     alt: 'Chess competition champion move',
   },
   {
-    src: '/src/assets/firstyear/chess_competation3.jpg',
+    src: chessComp3,
     caption: 'Champion Move',
     alt: 'Chess competition champion move',
   },
   {
-    src: '/src/assets/firstyear/chess_compettion.jpg',
+    src: chessComp,
     caption: 'Final Round',
     alt: 'Chess competition final round',
   },
   {
-    src: '/src/assets/firstyear/chess-spokenEng_prizes.jpg',
+    src: chessPrizes,
     caption: 'Victory Moment',
     alt: 'Chess competition victory moment',
   },
@@ -509,17 +559,17 @@ const chessImages = [
 
 const engcompitationImages = [
   {
-    src: '/src/assets/firstyear/spoken_Eng_compettion.jpg ',
+    src: spokenEngComp,
     caption: 'Champion Move',
     alt: 'Chess competition champion move',
   },
   {
-    src: '/src/assets/firstyear/spoken_Eng_compettion2.jpg',
+    src: spokenEngComp2,
     caption: 'Final Round',
     alt: 'Chess competition final round',
   },
   {
-    src: '/src/assets/firstyear/chess-spokenEng_prizes.jpg',
+    src: chessPrizes,
     caption: 'Victory Moment',
     alt: 'Chess competition victory moment',
   },
@@ -535,8 +585,8 @@ const firstYearAchievements = [
     title: 'Speaking Competition',
     description: 'Secured 2nd position in the college Speaking competitions',
     images: [
-      '/src/assets/firstyear/spoken_Eng_compettion.jpg',
-      '/src/assets/firstyear/spoken_Eng_compettion2.jpg',
+      spokenEngComp,
+      spokenEngComp2,
     ],
   },
 ];
