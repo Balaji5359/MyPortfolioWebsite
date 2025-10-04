@@ -172,37 +172,37 @@ const FourthYearAchievements = () => (
 // --- Second Year Images ---
 const cyberSecurityImages = [
   {
-    src: '/src/assets/secondyear/cyber-pre-certificate-shield.jpg',
+    src: cyberCertShield,
     caption: 'Certificate Shield',
     alt: 'Cyber Security Certificate Shield',
   },
   {
-    src: '/src/assets/secondyear/cyber-pre-certificate.png',
+    src: cyberCert,
     caption: 'Certificate',
     alt: 'Cyber Security Certificate',
   },
   {
-    src: '/src/assets/secondyear/cyber-pre-image-newpaper1.jpg',
+    src: cyberNews1,
     caption: 'Newspaper Feature 1',
     alt: 'Cyber Security Newspaper 1',
   },
   {
-    src: '/src/assets/secondyear/cyber-pre-image-newpaper2.jpg',
+    src: cyberNews2,
     caption: 'Newspaper Feature 2',
     alt: 'Cyber Security Newspaper 2',
   },
   {
-    src: '/src/assets/secondyear/cyber-pre-image-newpaper3.jpg',
+    src: cyberNews3,
     caption: 'Newspaper Feature 3',
     alt: 'Cyber Security Newspaper 3',
   },
   {
-    src: '/src/assets/secondyear/cyber-pre-image-newpaper4.jpg',
+    src: cyberNews4,
     caption: 'Newspaper Feature 4',
     alt: 'Cyber Security Newspaper 4',
   },
   {
-    src: '/src/assets/secondyear/cyber-pre-image-newpaper5.jpg',
+    src: cyberNews5,
     caption: 'Newspaper Feature 5',
     alt: 'Cyber Security Newspaper 5',
   },
@@ -210,17 +210,17 @@ const cyberSecurityImages = [
 
 const scienceDayImages = [
   {
-    src: '/src/assets/secondyear/scienceday-essay-certificate.png',
+    src: scienceCert,
     caption: 'Essay Certificate',
     alt: 'Science Day Essay Certificate',
   },
   {
-    src: '/src/assets/secondyear/scienceday-image.jpg',
+    src: scienceImage,
     caption: 'HOD\'s and Vice-Principal',
     alt: 'Science Day Essay Prize Photo',
   },
   {
-    src: '/src/assets/secondyear/scienceday-essay-photo.jpg',
+    src: sciencePhoto,
     caption: 'Prize Photo',
     alt: 'Science Day Essay Prize Photo',
   },
