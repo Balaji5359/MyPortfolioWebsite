@@ -694,14 +694,17 @@ const Achievements = () => {
       <h2 className="text-4xl font-bold text-center mb-10 text-purple-700">My Achievements</h2>
       <div className="flex justify-center gap-4 mb-10">
         {['First Year', 'Second Year', 'Third Year', 'Fourth Year'].map((year) => (
-          <Button
+          <button
             key={year}
-            variant={activeYear === year ? 'default' : 'outline'}
             onClick={() => setActiveYear(year)}
-            className="capitalize"
+            className={`capitalize px-6 py-2 rounded-full font-semibold border-2 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 ${
+              activeYear === year
+                ? 'bg-blue-600 text-white border-blue-700 shadow-lg scale-105'
+                : 'bg-white text-blue-700 border-blue-300 hover:bg-blue-100'
+            }`}
           >
             {year}
-          </Button>
+          </button>
         ))}
       </div>
       <div>
