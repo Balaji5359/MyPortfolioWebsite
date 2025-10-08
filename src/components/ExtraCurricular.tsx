@@ -2,6 +2,41 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
+// Import all images
+import HackerRank1 from '/src/assets/extra_curr_images/2ndyear_HackerRank1.jpg';
+import HackerRank2 from '/src/assets/extra_curr_images/2ndyear_HackerRank2.png';
+import HackerRank3 from '/src/assets/extra_curr_images/2ndyear_HackerRank3.jpg';
+import HackerRank4 from '/src/assets/extra_curr_images/2ndyear_HackerRank4.jpg';
+import HackerRank5 from '/src/assets/extra_curr_images/2ndyear_HackerRank5.jpg';
+import EC2Seminar1 from '/src/assets/extra_curr_images/3rdyear_EC2_seminar1.jpg';
+import EC2Seminar2 from '/src/assets/extra_curr_images/3rdyear_EC2_seminar2.jpg';
+import EC2Seminar3 from '/src/assets/extra_curr_images/3rdyear_EC2_seminar3.jpg';
+import EC2Seminar4 from '/src/assets/extra_curr_images/3rdyear_EC2_seminar4.jpg';
+import EC2Seminar5 from '/src/assets/extra_curr_images/3rdyear_EC2_seminar5.jpg';
+import GFG1 from '/src/assets/extra_curr_images/3rdyear_GFG1.jpg';
+import GFG2 from '/src/assets/extra_curr_images/3rdyear_GFG2.jpg';
+import GFG3 from '/src/assets/extra_curr_images/3rdyear_GFG3.jpg';
+import GFG5 from '/src/assets/extra_curr_images/3rdyear_GFG5.jpg';
+import GFG14 from '/src/assets/extra_curr_images/3rdyear_GFG14.jpg';
+import SchoolEvent1 from '/src/assets/extra_curr_images/3rdyear_schoolEvent1.jpg';
+import SchoolEvent2 from '/src/assets/extra_curr_images/3rdyear_schoolEvent2.jpg';
+import SchoolEvent3 from '/src/assets/extra_curr_images/3rdyear_schoolEvent3.jpg';
+import SchoolEvent31 from '/src/assets/extra_curr_images/3rdyear_schoolEvent3.1.jpg';
+import SchoolEvent4 from '/src/assets/extra_curr_images/3rdyear_schoolEvent4.jpg';
+import SchoolEvent5 from '/src/assets/extra_curr_images/3rdyear_schoolEvent5.jpg';
+import SchoolEvent6 from '/src/assets/extra_curr_images/3rdyear_schoolEvent6.jpg';
+import SoftSkills1 from '/src/assets/extra_curr_images/3rdyear_softskills1.jpg';
+import SoftSkills2 from '/src/assets/extra_curr_images/3rdyear_softskills2.jpg';
+import SoftSkills3 from '/src/assets/extra_curr_images/3rdyear_softskills3.jpg';
+import SoftSkills4 from '/src/assets/extra_curr_images/3rdyear_softskills4.jpg';
+import SoftSkills5 from '/src/assets/extra_curr_images/3rdyear_softskills5.jpg';
+import SoftSkills6 from '/src/assets/extra_curr_images/3rdyear_softskills6.jpg';
+import MySivi1 from '/src/assets/extra_curr_images/4thyear_my_sivi1.jpg';
+import MySivi2 from '/src/assets/extra_curr_images/4thyear_my_sivi2.jpg';
+import MySivi3 from '/src/assets/extra_curr_images/4thyear_my_sivi3.jpg';
+import MySivi4 from '/src/assets/extra_curr_images/4thyear_my_sivi4.jpg';
+import MySivi5 from '/src/assets/extra_curr_images/4thyear_my_sivi5.jpg';
+
 
 const extracurrData = [
   {
@@ -11,11 +46,11 @@ const extracurrData = [
         title: 'Activities in HackerRank',
         description: 'Apart from Academics, I actively participated in coding challenges on HackerRank, earning multiple certificates in Python, Problem Solving, and SQL to enhance my programming skills.',
         images: [
-          '/src/assets/extra_curr_images/2ndyear_HackerRank1.jpg',
-          '/src/assets/extra_curr_images/2ndyear_HackerRank2.png',
-          '/src/assets/extra_curr_images/2ndyear_HackerRank3.jpg',
-          '/src/assets/extra_curr_images/2ndyear_HackerRank4.jpg',
-          '/src/assets/extra_curr_images/2ndyear_HackerRank5.jpg',
+          HackerRank1,
+          HackerRank2,
+          HackerRank3,
+          HackerRank4,
+          HackerRank5,
         ],
       },
     ],
@@ -27,47 +62,47 @@ const extracurrData = [
         title: 'Seminar on AWS Cloud and EC2 Service',
         description: 'Presented a seminar on AWS Cloud, basics of Cloud Computing, detailed insights into EC2 services and practically demonstrating their usage, enhancing my understanding of cloud technologies.',
         images: [
-          '/src/assets/extra_curr_images/3rdyear_EC2_seminar1.jpg',
-          '/src/assets/extra_curr_images/3rdyear_EC2_seminar2.jpg',
-          '/src/assets/extra_curr_images/3rdyear_EC2_seminar3.jpg',
-          '/src/assets/extra_curr_images/3rdyear_EC2_seminar4.jpg',
-          '/src/assets/extra_curr_images/3rdyear_EC2_seminar5.jpg',
+          EC2Seminar1,
+          EC2Seminar2,
+          EC2Seminar3,
+          EC2Seminar4,
+          EC2Seminar5,
         ],
       },
       {
         title: 'Activities in GFG',
         description: 'To gain more knowledge on coding and problem solving, apart from labs programs solved some hundreds of problems on GeeksforGeeks and participated in various coding competitions hosted by GFG.',
         images: [
-          '/src/assets/extra_curr_images/3rdyear_GFG1.jpg',
-          '/src/assets/extra_curr_images/3rdyear_GFG2.jpg',
-          '/src/assets/extra_curr_images/3rdyear_GFG3.jpg',
-          '/src/assets/extra_curr_images/3rdyear_GFG5.jpg',
-          '/src/assets/extra_curr_images/3rdyear_GFG14.jpg',
+          GFG1,
+          GFG2,
+          GFG3,
+          GFG5,
+          GFG14,
         ],
       },
       {
         title: 'School Events Volunteering',
         description: 'Volunteered and organized various school-level events and activities.Guided students about carrer, college applications, and extracurricular involvement to help them make informed decisions about their futures.',
         images: [
-          '/src/assets/extra_curr_images/3rdyear_schoolEvent1.jpg',
-          '/src/assets/extra_curr_images/3rdyear_schoolEvent2.jpg',
-          '/src/assets/extra_curr_images/3rdyear_schoolEvent3.jpg',
-          '/src/assets/extra_curr_images/3rdyear_schoolEvent3.1.jpg',
-          '/src/assets/extra_curr_images/3rdyear_schoolEvent4.jpg',
-          '/src/assets/extra_curr_images/3rdyear_schoolEvent5.jpg',
-          '/src/assets/extra_curr_images/3rdyear_schoolEvent6.jpg',
+          SchoolEvent1,
+          SchoolEvent2,
+          SchoolEvent3,
+          SchoolEvent31,
+          SchoolEvent4,
+          SchoolEvent5,
+          SchoolEvent6,
         ],
       },
       {
         title: 'Attended Soft Skills Workshop',
         description: 'Attended soft skills workshops to enhance communication, teamwork, and leadership abilities.Involved actively with Dr.M.Prathima Mam and learned many new things which helped me to improve my personality and communication skills, and build connection with them.',
         images: [
-          '/src/assets/extra_curr_images/3rdyear_softskills1.jpg',
-          '/src/assets/extra_curr_images/3rdyear_softskills2.jpg',
-          '/src/assets/extra_curr_images/3rdyear_softskills3.jpg',
-          '/src/assets/extra_curr_images/3rdyear_softskills4.jpg',
-          '/src/assets/extra_curr_images/3rdyear_softskills5.jpg',
-          '/src/assets/extra_curr_images/3rdyear_softskills6.jpg',
+          SoftSkills1,
+          SoftSkills2,
+          SoftSkills3,
+          SoftSkills4,
+          SoftSkills5,
+          SoftSkills6,
         ],
       },
     ],
@@ -79,11 +114,11 @@ const extracurrData = [
         title: 'MySivi English Communication Streak – Platinum Badge',
         description: 'Beyond college training and soft skills classes, I took the initiative to improve my spoken English through daily practice on MySivi. With a 225-day streak, 350+ conversations, and consistent grammar lessons, I earned the Platinum badge - strengthening my communication for tech presentations, teamwork, and leadership.',
         images: [
-          '/src/assets/extra_curr_images/4thyear_my_sivi1.jpg',
-          '/src/assets/extra_curr_images/4thyear_my_sivi2.jpg',
-          '/src/assets/extra_curr_images/4thyear_my_sivi3.jpg',
-          '/src/assets/extra_curr_images/4thyear_my_sivi4.jpg',
-          '/src/assets/extra_curr_images/4thyear_my_sivi5.jpg',
+          MySivi1,
+          MySivi2,
+          MySivi3,
+          MySivi4,
+          MySivi5,
         ],
       },
     ],
