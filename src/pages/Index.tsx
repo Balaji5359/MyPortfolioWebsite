@@ -6,6 +6,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Achievements from '@/components/Achievements';
 import ExtraCurricular from '@/components/ExtraCurricular';
+import Conferences_Summits from '@/components/Conferences_Summits';
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
         <Hero />
         <Skills />
         <Projects />
+        <Conferences_Summits />
         <Achievements />
         <ExtraCurricular />
         <Contact />
