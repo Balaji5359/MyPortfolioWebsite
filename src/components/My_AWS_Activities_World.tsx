@@ -21,12 +21,14 @@ interface ActivityEntry {
 }
 
 const activities: ActivityEntry[] = [
+  
+  
   {
     year: 2025,
-    date: "September 2025",
+    date: "October 2025",
     title: "AI SkillDev - Startup Launch 🚀",
     type: "Startup",
-    description: "Founded AI SkillDev, an AI-powered skill development platform built entirely on AWS services. Transformed a pre-final year project into a production-ready startup after applying 2 years experience and learning of AWS.",
+    description: "Founded AI SkillDev, an AI-powered skill development platform built entirely on AWS services. Transformed a pre-final year project into a production-ready startup after applying 1.5 years experience and learning of AWS.",
     highlights: [
       "First product launch planned for October 2025",
       "Built using Amazon Bedrock, Lambda, S3, EC2, DynamoDB and many other AWS services",
@@ -37,7 +39,21 @@ const activities: ActivityEntry[] = [
   },
   {
     year: 2025,
-    date: "September 2025",
+    date: "August 2025",
+    title: "AWS Academy Graduate - Cloud Foundations",
+    type: "Certification",
+    description: "Completed a learning of all basics of AWS Cloud including core services, security, architecture, pricing, and support.Started journey in ETC for Global Certification voucher.",
+    highlights: [
+      "Revision of core AWS services",
+      "Hands-on labs and quizzes for practical understanding",
+      "Became AWS Academy Graduate",
+      "Suggested to 40+ juniors to join ETC, and 38 joined",
+    ],
+    tags: ["Services Revision", "AWS Services", "Global Certification Voucher"],
+  },
+  {
+    year: 2025,
+    date: "July 31, 2025",
     title: "AWS Builders Online Conference",
     type: "Conference",
     description: "Attended AWS Builders Online Series focused on agent building, scaling, and application development. Applied learnings directly to startup foundation.",
@@ -52,9 +68,10 @@ const activities: ActivityEntry[] = [
       post: "https://www.linkedin.com/feed/update/urn:li:activity:builders2025",
     },
   },
+  
   {
     year: 2025,
-    date: "August 2025",
+    date: "July 16, 2025",
     title: "AWS Summit New York",
     type: "Conference",
     description: "Explored cutting-edge AWS services at New York Summit, focusing on AI Agent development, new AWS services for agents, and Agentic core sub-services.",
@@ -102,7 +119,7 @@ const activities: ActivityEntry[] = [
   },
   {
     year: 2025,
-    date: "July 2025",
+    date: "June 13, 2025",
     title: "AWS Educate Emerging Talent Community Member",
     type: "Membership",
     description: "Joined AWS Educate Emerging Talent Community after completing 7-8 courses and exploring AWS blogs and company case studies.",
@@ -135,7 +152,7 @@ const activities: ActivityEntry[] = [
   },
   {
     year: 2024,
-    date: "October 22, 2024",
+    date: "October 2024",
     title: "AWS Cloud Practitioner Essentials",
     type: "Certification",
     description: "Completed comprehensive 15-day training covering 50+ AWS services as preparation for AWS Cloud Practitioner certification.",
@@ -150,7 +167,7 @@ const activities: ActivityEntry[] = [
   },
   {
     year: 2024,
-    date: "August 24, 2024",
+    date: "August 2024",
     title: "AWS Lex - Chatbot Development Training",
     type: "Training",
     description: "Successfully completed Amazon Lex training and built a museum ticket booking chatbot using Amazon Lex and Lambda.",
@@ -164,8 +181,8 @@ const activities: ActivityEntry[] = [
     project: "Museum Ticket Booking Bot",
   },
   {
-    year: 2023,
-    date: "July 11, 2023",
+    year: 2024,
+    date: "July 11, 2024",
     title: "AWSome Day Conference - Cloud Journey Begins",
     type: "Conference",
     description: "My first AWS conference that sparked the cloud computing journey. Learned AWS basics and received $25 credits to explore services.",
@@ -227,7 +244,7 @@ export default function MyAWSActivitiesWorld() {
             My AWS Activities World
           </h1>
           <p className="text-xl md:text-2xl text-black-800 max-w-3xl mx-auto mb-10 animate-fade-in-up [animation-delay:0.2s]">
-            <h1 className="text-2xl md:text-3xl font-extrabold text-blue-800 mb-6 animate-fade-in-up font-serif tracking-wide">From curious beginner to startup founder</h1> A journey of 2 years through AWS conferences, Summits,Training 
+            <h1 className="text-2xl md:text-3xl font-extrabold text-blue-800 mb-6 animate-fade-in-up font-serif tracking-wide">From curious beginner to startup founder</h1> A journey of 1.5 years through AWS conferences, Summits,Training 
             certifications, and hands-on learning, culminating in AI SkillDev.
           </p>
           <div className="flex flex-wrap justify-center gap-6 animate-fade-in-up [animation-delay:0.4s]">
