@@ -1,0 +1,171 @@
+First Cloud Journey in 2023 (in B-tech 2nd year)
+Hello... Everyone!...........
+Today I would like to share my research work which I started on Cloud Computing which is an wonder ful and very useful technology came into our world ,which was first started by amozan .
+Cloud Computing it is an service provided to users for storages,database,networking,servers , which we are using in our daily life services of AWS like EC2,lambda , Google App Engine ,Gmail,Google photos, Whatsapp backup data Etc........
+Like this I am here to show my small Reseach work ppt on Cloud Computing its Types of Services , Cloud providers , Clous Users and about its popularity etc............
+
+Learned Cloud and here is small ppt of my reseach and learning
+
+
+Today I am Very happy to attend the hashtag#AWSomeConference conducted by AWS Cloud where I have learned new things about Cloud Computing 
+>>How Cloud differ from a Data Center and Different types of services in Cloud
+>>How to use AWS EC2 , AWS Lambda , AWS DynamoDB , AWS S3 Virtual Machines and other Computing , Storage Services on cloud 
+>>How these Services help developers to develop Applications , Webapps an serverless and without physical Storage. 
+>>How to build and Deploy ML Models and Generative AI On cloud
+All these Basic things learned from AWS experts 
+Thanks for AWS for such a Wonderful Conference
+(Training Session)#https://lnkd.in/g_WKa7ri
+https://lnkd.in/gSxdGZUc
+
+
+Attended AWS Awsome Day Coference (in Btech 2nd year)
+Today I am Very happy to attend the hashtag#AWSomeConference conducted by AWS Cloud where I have learned new things about Cloud Computing 
+>>How Cloud differ from a Data Center and Different types of services in Cloud
+>>How to use AWS EC2 , AWS Lambda , AWS DynamoDB , AWS S3 Virtual Machines and other Computing , Storage Services on cloud 
+>>How these Services help developers to develop Applications , Webapps an serverless and without physical Storage. 
+>>How to build and Deploy ML Models and Generative AI On cloud
+All these Basic things learned from AWS experts 
+Thanks for AWS for such a Wonderful Conference
+(Training Session)#https://lnkd.in/g_WKa7ri
+https://lnkd.in/gSxdGZUc
+
+
+Got Certificate and $25 credits (11 July 2024)
+Today I am Very Happy to share that recently attended AWSome Day Online Conference conducted by AWS ,enjoyed the event and learned about
+>>>Cloud Computing 
+>>>Different Services of AWS
+>>>How to do innovative projects using AWS in the Domains like IOT, AIML, GenAI , Website Building, Application Development etc...
+Thanks for AWSome for a wonderful Conference and for providing $25 credits to use AWS services.
+hashtag#aws
+#https://lnkd.in/gSxdGZUc
+
+
+Completed AWS Cloud Practitioner Essentials (22-10-2024)
+Today I exited to share that I have successfully completed AWS Cloud Practitioner Essentials from AWS Skill builder (15 days ), as it is a part training course for my AWS Global certification "AWS Cloud Practitioner Essentials" 
+where I learned all important services in AWS (around 50+) and
+Introduction to Amazon Web Services
+Compute in the Cloud
+Global Infrastructure and Reliability
+Networking
+Storage and Databases
+Security
+Monitoring and Analytics
+Pricing and Support
+Migration and Innovation
+AWS Certified Cloud Practitioner Basics
+Thankyou for AWS skill builder for a wonderful training session
+Amazon Web Services (AWS)
+hashtag#AWS Skill Builder
+
+
+COmpleted AWS Lex Getting Started Training
+Larned Lambda,building Bot services (24-8-2024)
+Successfully completing a comprehensive training program on Amazon Lex. Through this program, I gained expertise in building conversational interfaces, understanding their business applications, and implementing interactive chatbots for customer service in real-world projects.
+
+Successfully developed a museum ticket booking Online ChatBot system using Amazon Lex. This conversational interface t effectively handles user queries and provides a seamless booking experience.
+
+
+
+Learned,Got Hands on Experience on AWS Services from Basic to Advance from AWS Educate
+Earned 7 badges (2025-April to 2025 May)
+Today I very delighted to share my badges received from AWS Educate for completing training series, which includes Storage, Compute, Database, Serverless, Networking, Security services and cloud Operations.
+Where I had gained good knowledge on these services from training session and also practical experience through their simulations(Labs).
+In Storge services I learned about EBS,EFS and S3.In simulation create S3 bucket and hosted a static website.
+In compute services I learned about EC2, EKS, ECS and EBS for EC2.In simulation launched EC2 instance and connected.
+In Database services I learned about SQL and NoSQL databases and RDS, DynamoDB, Document DynamoDB. In simulation created an RDS MySQL engine instance.
+In Serverless services I learned about AWS Lambda, container supported service AWS Fargate as well as monitoring, modifying and provisioning.
+In simulation I created lambda functions and triggered to AWS S3 buckets.
+In Networking services I learned VPC and its components such as Subnets, Security Groups, Gateway, Route tables and ACL network. In simulation established a VPC and fixed it to EC2 instance
+In Security services I learned IAM users, groups and roles for providing access and In simulation created some IAM Users and added in groups as well as IAM roles.
+Thank to so much! AWS Educate for such a wonderful and knowledgeful training course which boosted my AWS cloud learning.
+AWS Educate Student Community India 
+Amazon Web Services (AWS)
+AWS Training & Certification 
+AWS Educate Student Community India
+AWS Training & Certification
+hashtag#AWS Educate Platform
+hashtag#AWS Skill builder.
+
+
+Became AWS Educate Member(July 2025)
+Proud to be a new member of the AWS Educate Emerging Talent Community! My experience with AWS Educate has been incredibly enriching. Beyond completing 7-8 courses (Computer, Storage, Networking etc.)and gaining hands-on knowledge of AWS services, I've also delved into real-world applications by reading in-depth AWS blogs and analyzing compelling company case studies.
+
+This holistic approach to learning is truly accelerating my understanding of cloud computing. Looking forward to connecting with the community, sharing insights, and exploring future opportunities.
+Excited to learn more about AWS cloud and work in my highly interested field AI and GenAI by research on Amazon Bedrock and do projects on Building AI agents, understanding about Foundational Models and so on.
+Thank for AWS for such a wonderful platform.
+AWS Educate Student Community India 
+hashtag#AWSEducate hashtag#CloudJourney 
+hashtag#EmergingTalent hashtag#AWS hashtag#CaseStudies hashtag#TechBlogs"
+AWS Educate Student Community India
+AWS Training & Certification 
+https://lnkd.in/g-DEQmAD
+
+
+Completed Building Generative AI Apllications Using Amazon Bedrock (July 2025)
+What an incredible learning journey! I'm proud to announce my completion and certification in the Amazon Bedrock Getting Started Training Course through AWS Skill Builder. This program has truly opened my eyes to the transformative potential of generative AI.
+Throughout the course, I've solidified my understanding of crucial concepts essential for building intelligent applications:
+ * Generative AI: The art of creating unique content through AI.
+ * Foundation Models: The backbone of modern AI, ready for diverse applications. (Amazon Titan, Antropic- Claud3, Stability AI- Stable diffusion, and others)
+ * Retrieval Augmented Generation (RAG): A game-changer for building accurate and context-aware AI solutions by leveraging external knowledge bases.
+*Frameworks: Lang Chain for developing app powered by LLM's, which provides software building blocks to reduce the complexity of building from scratch of LLM.
+*Bed Rock Integrations: model, prompt templates, agents 
+ * Knowledge Bases: How to effectively manage and integrate vast amounts of information to power smarter AI. Fine-tuning to retrieve limited data to LLM for reducing latency
+Feeling inspired and ready to build the next generation of AI applications with Amazon Bedrock! Connect with me if you're also passionate about generative AI! hashtag#AmazonBedrock hashtag#GenerativeAI hashtag#AWS hashtag#ArtificialIntelligence hashtag#CloudComputing hashtag#AWSSkillBuilder hashtag#Innovation"
+Huge Thanks to AWS Training & Certification for such a wonderful Training course.
+
+
+
+
+Attended AWS Summit 2025-India (Mumbai and Bengluru on june 2025)
+Here is my learning
+Thrilled by Innovation: My Takeaways from AWS Summit 2025!
+I'm incredibly excited to share some key insights from my recent attendance at the AWS Summit 2025! It was a fantastic opportunity to delve into the latest advancements in cloud computing and witness firsthand how AWS is empowering organizations across India. The summit, held simultaneously in Bangalore and Mumbai, brought together visionary leaders and co-founders from various companies, demonstrating the transformative power of AWS.
+Real-World Impact & Applications
+One of the most inspiring aspects was seeing how deeply AWS is integrated into critical services. I was particularly impressed by the Poshan Tracker, an Indian government initiative for quality testing food in Anganwadis and schools – a project set to impact over 100 million lives! The robust and secure digital storage offered by AWS for Digilocker (526M+ users and 9.4B+ documents) and the massive customer data handling for IndiaMART (5.5M customers) truly highlighted the scale and reliability of AWS. Beyond this, it was fascinating to see how AWS supports diverse Generative AI applications like Zomato for image processing, trading apps for multilingual processing, and the backend for smart metering. 
+Powering the Future: AWS Graviton & Trainium
+The advancements in hardware were equally impressive. I learned about AWS Graviton 4, a new powerful chip offering 45% faster performance for large Java applications and 40% faster for database operations, supporting workloads on Parton and Dream 11. Similarly, AWS Trainium 2 stood out, offering 4x faster performance than the first generation and 3x more energy efficiency, making it ideal for Generative AI and Data AI. These innovations showcase AWS's commitment to delivering high-performance, cost-effective solutions.
+The Core of AI: Foundational & Multi-Agent Models
+My focus at the summit heavily leaned towards Generative AI. I gained a deeper understanding of Foundational Models, including Amazon Nova for understanding and content generation, and Q&A. The discussions around data customization, RAG (Retrieval Augmented Generation) models, prompt engineering, fine-tuning, and pre-training for customizing models were incredibly insightful. Learning about Knowledge Bases (structured, unstructured, multimodal, knowledge graphs) as crucial components for building robust RAG models was a key takeaway. The concept of Guardrails and Automated Reasoning to mitigate AI hallucination was also a vital lesson.
+A huge thank you to AWS for an incredibly informative and inspiring Summit! Looking forward to applying these insights and contributing to the world of cloud and AI.
+YouTube :(In future I will upload more) https://lnkd.in/geyBPdTa
+
+ hashtag#AWSSummit2025 hashtag#GenerativeAI hashtag#CloudComputing hashtag#AI hashtag#MachineLearning hashtag#Innovation hashtag#AWS hashtag#AmazonBedrock hashtag#MultiAgentSystems
+Amazon Web Services (AWS) 
+Amazon Web Services (AWS) Optimization 
+
+got certificate and $25 
+
+Excited to share that I've received my Certificate of Attendance for the AWS Summit India Online (June 26, 2025)! This conference was a fantastic deep dive into cloud innovation, especially in Generative AI and real-world AWS applications. Plus, a $25 bonus is headed my way!
+Looking forward to dive deeper in AWS Bedrock and to build an Agentic AI Project and to show case my skill in AWS with the help of this $25 credits.
+Grateful for the valuable insights and looking forward to applying what I've learned.
+My Certificate: https://lnkd.in/gYK83NjD
+Amazon Web Services (AWS) 
+AWS Training & Certification 
+AWS AI 
+hashtag#AWSSummit hashtag#AWS hashtag#Certificate hashtag#GenerativeAI hashtag#CloudComputing hashtag#Tech
+
+
+Attended AWS Summit New York (August 2025)
+
+here is my learning
+
+AWS Summit New York 2025
+Explored cutting-edge AWS services and met industry leaders at the New York Summit, discussing the future of AI Agent, AWS new service launched to help AI Agent Developers, Agentic core sub-service, it is a great opportunity to be part got great insights from AI Agent Leaders, President at New York.
+
+
+
+Attended Builders Conferece (September 2025)
+As a tech enthusiast, I'm always striving to learn and grow, and I make it a point to actively participate in AWS conferences to get insights into their useful products and services.
+​I recently attended the AWS Builders Online Series and gained valuable insights into agent building, scaling, and application development on AWS.
+​Thanks to this conference, I was able to apply what I learned to my pre-final year project—an AI agent-based application. What started as a small project has now become the foundation for my upcoming startup.
+​A huge thank you to the AWS Events team and AWS Training for providing such useful and innovative content. The $25 credit for building projects on AWS is a fantastic bonus!
+​hashtag#AWS hashtag#AI hashtag#Startup hashtag#Innovation hashtag#CloudComputing hashtag#ProjectSuccess hashtag#TechEnthusiast
+Amazon Web Services (AWS) 
+AWS Training & Certification 
+AWS Events
+
+
+Now in September did a great project using AWS is going to Startup AI-Skill-Dev (mostly using AWS Services )
+
+
+Started work in a Company rules way going launch first product in October 2025
