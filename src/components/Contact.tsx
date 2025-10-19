@@ -2,8 +2,59 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, MapPin, Phone, Send, Linkedin, Github, Youtube, ExternalLink } from 'lucide-react';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    try {
+      const response = await fetch('https://nrkg7cmta3.execute-api.ap-south-1.amazonaws.com/dev', {
+        method: 'PUT',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ firstName: '', lastName: '', email: '', message: '' });
+      } else {
+        console.error('API Error:', response.status, response.statusText);
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Network Error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const socialLinks = [
     {
       icon: Linkedin,
@@ -15,21 +66,21 @@ const Contact = () => {
     {
       icon: Github,
       label: 'GitHub',
-      url: 'https://github.com/rrbalaji',
+      url: 'https://github.com/balaji5359',
       description: 'Open source projects',
       gradient: 'from-gray-600 to-gray-400'
     },
     {
       icon: Youtube,
       label: 'YouTube',
-      url: 'https://youtube.com/@rrbalaji',
+      url: '#',
       description: 'Tech tutorials',
       gradient: 'from-red-600 to-red-400'
     },
     {
       icon: ExternalLink,
       label: 'Kaggle',
-      url: 'https://kaggle.com/rrbalaji',
+      url: 'https://www.kaggle.com/displaynames',
       description: 'Data science competitions',
       gradient: 'from-cyan-600 to-cyan-400'
     }
@@ -39,8 +90,7 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'contact@rbalaji.dev',
-      href: 'mailto:contact@rbalaji.dev'
+      value: 'rrbalaji2020@gmail.com'
     },
     {
       icon: MapPin,
@@ -51,8 +101,7 @@ const Contact = () => {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 XXXXX XXXXX',
-      href: 'tel:+91XXXXXXXXX'
+      value: '+91 9398350217'
     }
   ];
 
@@ -73,20 +122,28 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="glass-card p-8 animate-floating">
             <h3 className="text-2xl font-bold mb-6 gradient-text">Send a Message</h3>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">First Name</label>
                   <Input 
-                    placeholder="John" 
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    placeholder="A" 
                     className="glass-card border-white/20 focus:border-primary"
+                    required
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Last Name</label>
                   <Input 
-                    placeholder="Doe" 
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    placeholder="Rajesh" 
                     className="glass-card border-white/20 focus:border-primary"
+                    required
                   />
                 </div>
               </div>
@@ -95,31 +152,49 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2">Email</label>
                 <Input 
                   type="email" 
-                  placeholder="john@example.com" 
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="rajesh@example.com" 
                   className="glass-card border-white/20 focus:border-primary"
+                  required
                 />
               </div>
               
-              <div>
+              {/* <div>
                 <label className="block text-sm font-medium mb-2">Subject</label>
                 <Input 
                   placeholder="Project Collaboration" 
                   className="glass-card border-white/20 focus:border-primary"
                 />
-              </div>
+              </div> */}
               
               <div>
                 <label className="block text-sm font-medium mb-2">Message</label>
                 <Textarea 
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   placeholder="Tell me about your project..."
                   rows={5}
                   className="glass-card border-white/20 focus:border-primary resize-none"
+                  required
                 />
               </div>
               
-              <Button className="w-full hero-btn group">
+              {submitStatus === 'success' && (
+                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                  Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                  Failed to send message. Please try again.
+                </div>
+              )}
+              <Button type="submit" className="w-full hero-btn group" disabled={isSubmitting}>
                 <Send className="mr-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </div>
@@ -192,7 +267,7 @@ const Contact = () => {
             </div>
 
             {/* Availability Status */}
-            <div className="glass-card p-6 text-center animate-floating" style={{ animationDelay: '0.6s' }}>
+            {/* <div className="glass-card p-6 text-center animate-floating" style={{ animationDelay: '0.6s' }}>
               <div className="flex items-center justify-center mb-4">
                 <div className="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></div>
                 <span className="font-medium text-green-400">Available for Projects</span>
@@ -203,7 +278,7 @@ const Contact = () => {
               <Button variant="outline" className="glass-card border-white/20 hover:bg-white/10">
                 Schedule a Call
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

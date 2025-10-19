@@ -63,7 +63,7 @@ const Header = () => {
             </Button>
 
             <Button variant='ghost' size='icon' asChild>
-                <a href='#' target='_blank' rel='noopener noreferrer'>
+                <a href='https://www.kaggle.com/displaynames' target='_blank' rel='noopener noreferrer'>
                   K
                 </a>
             </Button>
