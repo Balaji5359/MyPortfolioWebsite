@@ -36,6 +36,7 @@ import MySivi2 from '/src/assets/extra_curr_images/4thyear_my_sivi2.jpg';
 import MySivi3 from '/src/assets/extra_curr_images/4thyear_my_sivi3.jpg';
 import MySivi4 from '/src/assets/extra_curr_images/4thyear_my_sivi4.jpg';
 import MySivi5 from '/src/assets/extra_curr_images/4thyear_my_sivi5.jpg';
+import AWSCertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg';
 
 
 const extracurrData = [
@@ -111,6 +112,15 @@ const extracurrData = [
     year: 'Fourth Year',
     activities: [
       {
+        title: 'AWS Certified Cloud Practitioner – Global Certification',
+        description: 'Successfully cleared AWS Global Certification - Cloud Practitioner in 4th year B.Tech. Achieved comprehensive understanding of AWS Cloud fundamentals, core services, security, architecture, pricing, and support models through extensive preparation and hands-on practice.',
+        images: [
+          AWSCertificate,
+        ],
+        link: 'https://www.linkedin.com/posts/rrbalaji_aws-certified-cloud-practitioner-activity-7396550578954362880-83p8?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE',
+        verifyLink: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/74f4d7e957af45c7b4032b8977311bb4',
+      },
+      {
         title: 'MySivi English Communication Streak – Platinum Badge',
         description: 'Beyond college training and soft skills classes, I took the initiative to improve my spoken English through daily practice on MySivi. With a 225-day streak, 350+ conversations, and consistent grammar lessons, I earned the Platinum badge - strengthening my communication for tech presentations, teamwork, and leadership.',
         images: [
@@ -172,7 +182,7 @@ const ExtraCurricular = () => {
                   key={imgSrc}
                   src={imgSrc}
                   alt={`${activity.title} ${i + 1}`}
-                  className="w-64 h-44 object-cover rounded-xl border-4 border-white shadow-xl hover:scale-105 transition-transform duration-300 bg-white"
+                  className={imgSrc === AWSCertificate ? "w-full h-auto object-contain rounded-xl border-4 border-white shadow-xl hover:scale-105 transition-transform duration-300 bg-white max-w-2xl" : "w-64 h-44 object-cover rounded-xl border-4 border-white shadow-xl hover:scale-105 transition-transform duration-300 bg-white"}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -181,6 +191,36 @@ const ExtraCurricular = () => {
                 />
               ))}
             </div>
+            {(activity.link || activity.verifyLink) && (
+              <div className="mt-6 text-center space-y-3">
+                {activity.link && (
+                  <a
+                    href={activity.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 mr-3"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    View LinkedIn Post
+                  </a>
+                )}
+                {activity.verifyLink && (
+                  <a
+                    href={activity.verifyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Verify Credential
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         ))}
       </div>

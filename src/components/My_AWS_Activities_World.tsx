@@ -1,4 +1,4 @@
-import { ArrowLeft, Award, BookOpen, Briefcase, Calendar, Cloud, Code, Cpu, Database, GraduationCap, Rocket, Sparkles, Trophy, Users } from "lucide-react";
+import { ArrowLeft, Award, BookOpen, Briefcase, Calendar, Cloud, Code, Cpu, Database, GraduationCap, Rocket, Sparkles, Trophy, Users, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -6,7 +6,7 @@ interface ActivityEntry {
   year: number;
   date: string;
   title: string;
-  type: "Conference" | "Training" | "Certification" | "Membership" | "Startup";
+  type: "Conference" | "Training" | "Certification" | "Membership" | "Startup" | "Global Certification";
   description: string;
   highlights?: string[];
   tags?: string[];
@@ -25,7 +25,7 @@ const activities: ActivityEntry[] = [
   
   {
     year: 2025,
-    date: "October 2025",
+    date: "December 2025",
     title: "AI SkillDev - Startup Launch 🚀",
     type: "Startup",
     description: "Founded AI SkillDev, an AI-powered skill development platform built entirely on AWS services. Transformed a pre-final year project into a production-ready startup after applying 1.5 years experience and learning of AWS.",
@@ -36,6 +36,28 @@ const activities: ActivityEntry[] = [
       "Operating as a registered company with structured processes",
     ],
     tags: ["Startup", "GenAI", "Amazon Bedrock", "Full-Stack", "Agentic AI", "..."],
+  },
+  
+  {
+    year: 2025,
+    date: "November 2025",
+    title: "AWS Certified Cloud Practitioner 🏆",
+    type: "Global Certification",
+    description: "Successfully cleared AWS Global Certification - Cloud Practitioner in 4th year B.Tech. Comprehensive understanding of AWS Cloud fundamentals, core services, security, architecture, pricing, and support models.",
+    highlights: [
+      "Cleared AWS Global Certification exam with strong performance",
+      "Mastered 100+ AWS services across all domains",
+      "Deep understanding of cloud economics and billing",
+      "Expertise in AWS security and compliance frameworks",
+      "Hands-on experience with AWS Well-Architected Framework",
+      "Completed extensive training through AWS Skill Builder"
+    ],
+    tags: ["Global Certification", "AWS Services", "Cloud Fundamentals", "4th Year Achievement"],
+    media: {
+      certificate: "/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg",
+      post: "https://www.linkedin.com/posts/rrbalaji_aws-certified-cloud-practitioner-activity-7396550578954362880-83p8?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE",
+      link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/74f4d7e957af45c7b4032b8977311bb4",
+    },
   },
   {
     year: 2025,
@@ -207,6 +229,7 @@ const typeIcons = {
   Certification: Award,
   Membership: GraduationCap,
   Startup: Rocket,
+  "Global Certification": Trophy,
 };
 
 const typeColors = {
@@ -215,6 +238,7 @@ const typeColors = {
   Certification: "bg-accent/10 text-accent border-accent/20",
   Membership: "bg-purple-500/10 text-purple-600 border-purple-500/20",
   Startup: "bg-gradient-to-r from-primary to-accent text-primary-foreground border-0",
+  "Global Certification": "bg-yellow-500/10 text-yellow-600 border-yellow-500/20",
 };
 
 export default function MyAWSActivitiesWorld() {
@@ -250,20 +274,24 @@ export default function MyAWSActivitiesWorld() {
           <div className="flex flex-wrap justify-center gap-6 animate-fade-in-up [animation-delay:0.4s]">
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
               <Trophy className="h-10 w-10 mb-3 text-yellow-600" />
-              <p className="text-4xl font-extrabold text-gray-800">10+</p>
-              <p className="text-sm font-medium text-gray-600">Milestones</p>
+              <p className="text-4xl font-extrabold text-gray-800">1</p>
+              <p className="text-sm font-medium text-gray-600">Global Certification</p>
             </div>
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
               <Award className="h-10 w-10 mb-3 text-blue-600" />
-              <p className="text-4xl font-extrabold text-gray-800">7+</p>
-              <p className="text-sm font-medium text-gray-600">Certifications</p>
+              <p className="text-4xl font-extrabold text-gray-800">30+</p>
+              <p className="text-sm font-medium text-gray-600">Training Certifications</p>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
+              <Sparkles className="h-10 w-10 mb-3 text-purple-600" />
+              <p className="text-4xl font-extrabold text-gray-800">100+</p>
+              <p className="text-sm font-medium text-gray-600">AWS Services known</p>
             </div>
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
               <Sparkles className="h-10 w-10 mb-3 text-purple-600" />
               <p className="text-4xl font-extrabold text-gray-800">30+</p>
-              <p className="text-sm font-medium text-gray-600">AWS Services</p>
+              <p className="text-sm font-medium text-gray-600">AWS Services Hands-On</p>
             </div>
-            
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
               <Rocket className="h-10 w-10 mb-3 text-green-600" />
               <p className="text-4xl font-extrabold text-gray-800">1</p>
@@ -439,40 +467,67 @@ export default function MyAWSActivitiesWorld() {
                         )}
 
                         {activity.media && Object.keys(activity.media).length > 0 && (
-                          <div className="mt-4 pt-4 border-t flex flex-wrap gap-2">
-                            {activity.media.certificate && (
-                              <a
-                                href={activity.media.certificate}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-xs text-primary hover:underline flex items-center gap-1"
-                              >
-                                <Award className="h-3 w-3" />
-                                Certificate
-                              </a>
+                          <div className="mt-4 pt-4 border-t space-y-3">
+                            {activity.media.certificate && activity.media.certificate.includes('.jpeg') && (
+                              <div className="bg-muted/30 rounded-lg p-4 border">
+                                <div className="flex items-center gap-2 mb-3">
+                                  <Trophy className="h-4 w-4 text-yellow-600" />
+                                  <span className="text-sm font-semibold">AWS Official Certificate</span>
+                                </div>
+                                <img 
+                                  src={activity.media.certificate} 
+                                  alt="AWS Certificate"
+                                  className="w-full max-w-md mx-auto rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+                                  onClick={() => window.open(activity.media.certificate, '_blank')}
+                                />
+                              </div>
                             )}
-                            {activity.media.post && (
-                              <a
-                                href={activity.media.post}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-xs text-primary hover:underline flex items-center gap-1"
-                              >
-                                <Briefcase className="h-3 w-3" />
-                                Post
-                              </a>
-                            )}
-                            {activity.media.video && (
-                              <a
-                                href={activity.media.video}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-xs text-primary hover:underline flex items-center gap-1"
-                              >
-                                <Calendar className="h-3 w-3" />
-                                Video
-                              </a>
-                            )}
+                            <div className="flex flex-wrap gap-2">
+                              {activity.media.certificate && !activity.media.certificate.includes('.jpeg') && (
+                                <a
+                                  href={activity.media.certificate}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-xs text-primary hover:underline flex items-center gap-1"
+                                >
+                                  <Award className="h-3 w-3" />
+                                  Certificate
+                                </a>
+                              )}
+                              {activity.media.link && (
+                                <a
+                                  href={activity.media.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-xs text-primary hover:underline flex items-center gap-1"
+                                >
+                                  <ExternalLink className="h-3 w-3" />
+                                  View Certificate
+                                </a>
+                              )}
+                              {activity.media.post && (
+                                <a
+                                  href={activity.media.post}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-xs text-primary hover:underline flex items-center gap-1"
+                                >
+                                  <Briefcase className="h-3 w-3" />
+                                  LinkedIn Post
+                                </a>
+                              )}
+                              {activity.media.video && (
+                                <a
+                                  href={activity.media.video}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-xs text-primary hover:underline flex items-center gap-1"
+                                >
+                                  <Calendar className="h-3 w-3" />
+                                  Video
+                                </a>
+                              )}
+                            </div>
                           </div>
                         )}
                       </CardContent>
@@ -490,7 +545,7 @@ export default function MyAWSActivitiesWorld() {
         <div className="max-w-4xl mx-auto text-center text-blue">
           <h3 className="text-3xl font-bold mb-4">Ready to Build the Future?</h3>
           <p className="text-lg mb-8 opacity-90">
-            Follow my journey as AI SkillDev launches in October 2025
+            Follow my journey as AI SkillDev launches in December 2025
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Badge className="bg-white text-primary px-6 py-2 text-base hover:scale-105 transition-transform">

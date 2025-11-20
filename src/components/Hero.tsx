@@ -60,13 +60,13 @@ const Hero = () => {
           <div className="md:w-2/3 bg-white dark:bg-card rounded-lg p-8 shadow">
             <h3 className="text-2xl font-bold mb-6">About Me</h3>
             <p className="text-gray-700 dark:text-gray-200 text-base leading-relaxed">
-              I'm a final-year B.Tech student and an aspiring entrepreneur, driven by a passion for creating impactful technology. 
-              My journey is rooted in a strong command of AI/ML, Data Science, AWS Cloud, and Full Stack Development, with a special focus on Generative AI and DevOps. 
-              I thrive on bridging the gap between innovative ideas and real-world applications.
+              I am a final-year B.Tech student with a strong passion for AIML, Generative AI, and Cloud. 
+              I cleared the AWS Global Certification – <b>AWS Cloud Practitioner</b>, and I am familiar with 100+ AWS services, with hands-on experience in 
+              30–40 services. I actively explore AWS AI/ML and GenAI capabilities to design, build, and deploy innovative solutions in the cloud.
               <br></br>
-              My expertise is built on hands-on experience, having developed over 15 projects that span across multiple domains, 
-              including AI Agents, Augmented Reality (AR), Full Stack Projects, and business intelligence with Power BI. 
-              I'm an ardent believer in the power of the cloud, and my proficiency in AWS allows me to design and deploy scalable solutions seamlessly.
+              Over the past few months, I have developed 10+ projects across diverse domains, including Data Science, AI, AI Agents, Generative AI, 
+              and Augmented Reality, all deployed using AWS services. I also have experience in DevOps practices, developing React applications, 
+              full-stack projects, and integrating cloud-native workflows.
               <br></br>
               Beyond technical skills, I possess strong communication, Team Lead and interpersonal abilities that enable me to collaborate effectively 
               and translate complex ideas into clear, actionable plans. Whether I’m architecting a new system or solving a critical problem, 
@@ -80,8 +80,12 @@ const Hero = () => {
                   <span className="block text-base text-gray-700 dark:text-gray-200">Years of Programming Experience</span>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
-                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">1+</span>
+                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">1.5+</span>
                   <span className="block text-base text-gray-700 dark:text-gray-200">Year of AWS Cloud Experience</span>
+                </div>
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
+                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">100+</span>
+                  <span className="block text-base text-gray-700 dark:text-gray-200">AWS Services known and explored</span>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
                   <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">30+</span>
@@ -103,13 +107,6 @@ const Hero = () => {
                   <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">300+</span>
                   <span className="block text-base text-gray-700 dark:text-gray-200">Problems solved on GFG and HackerRank</span>
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
-                  {/* down arrow */}
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mx-auto text-blue-700 dark:text-blue-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                  <span className="block text-base text-gray-700 dark:text-gray-200">much more.... below about me</span>
-                </div>
               </div>
             </div>
 
@@ -121,6 +118,14 @@ const Hero = () => {
               <p className="font-semibold">B.Tech in Computer Science and Technology</p>
               <p className="text-sm">MADANAPALLE INSTITUTE OF TECHNOLOGY & SCIENCE<br />2022-2026<br />GPA: 8.96/10</p>
             </div>
+
+            <div>
+              <h4 className="text-lg font-bold mb-2">Global Certifications</h4>
+              <ul className="list-disc list-inside text-sm">
+                <li>AWS Certified Cloud Practitioner</li>
+              </ul>
+            </div>
+
             <div>
               <h4 className="text-lg font-bold mb-2">Online Trainings Completed</h4>
               <ul className="list-disc list-inside text-sm">
@@ -130,7 +135,6 @@ const Hero = () => {
                 <li>Data Science Training</li>
                 <li>Web Development Training</li>
                 <li>Power BI Training</li>
-
               </ul>
             </div>
 
@@ -152,7 +156,7 @@ const Hero = () => {
             <div>
               <h4 className="text-lg font-bold mb-2">Cloud Online Trainings</h4>
               <ul className="list-disc list-inside text-sm">
-                <li>AWS SkillBuilder and Educate Training</li>
+                <li>AWS SkillBuilder 30+ Training on mutiple domains</li>
                 <li>AWS Educate 10+ Training on mutiple Services</li>
                 <li>AWS Cloud Practitioner Essentials</li>
                 <li>AWS Bedrock and Building GenAI Applications</li>

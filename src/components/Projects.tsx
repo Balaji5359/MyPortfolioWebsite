@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, PlayCircle, Database } from 'lucide-react';
+import { ExternalLink, Github, PlayCircle, Database, Trophy } from 'lucide-react';
 import { features } from 'node:process';
 import SIHTeam01Image from '/src/assets/SIH2025/Team01/SIHTeam01.png'
 import SIHTeam02Image from '/src/assets/SIH2025/Team02/SIHTeam02.png'
@@ -14,6 +14,14 @@ import Get_n_Grow_image from '/src/assets/getngrow_image.png'
 
 const Projects = () => {
   const [activeTab, setActiveTab] = React.useState('Projects');
+  
+  const globalCertification = {
+    title: 'AWS Certified Cloud Practitioner',
+    description: 'Successfully cleared AWS Global Certification (On 18th Nov 2025)- Cloud Practitioner in 4th year B.Tech. Achieved comprehensive understanding of AWS Cloud fundamentals, core services, security, architecture, pricing, and support models through extensive preparation and hands-on practice.',
+    image: '/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg',
+    linkedinPost: 'https://www.linkedin.com/posts/rrbalaji_aws-certified-cloud-practitioner-activity-7396550578954362880-83p8?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE',
+    verifyLink: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/74f4d7e957af45c7b4032b8977311bb4',
+  };
 
   // Example data for Hackathon and Startup Ideas
   const hackathonIdeas = [
@@ -225,6 +233,7 @@ const Projects = () => {
             <Button className={activeTab === 'Projects' ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white' : 'bg-red dark:bg-black-900'} onClick={() => setActiveTab('Projects')}>Projects</Button>
             <Button className={activeTab === 'Hackathon' ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white' : 'bg-white dark:bg-gray-900'} onClick={() => setActiveTab('Hackathon')}>Hackathon Ideas</Button>
             <Button className={activeTab === 'Startup' ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white' : 'bg-white dark:bg-gray-900'} onClick={() => setActiveTab('Startup')}>Startup Ideas</Button>
+            <Button className={activeTab === 'GlobalCert' ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white' : 'bg-white dark:bg-gray-900'} onClick={() => setActiveTab('GlobalCert')}><Trophy className="mr-2 h-4 w-4" />Global Certification</Button>
           </div>
         </div>
 
@@ -557,6 +566,62 @@ const Projects = () => {
                 </div>
               </div>
             ))}
+          </div>
+        )}
+
+        {/* Global Certification Tab */}
+        {activeTab === 'GlobalCert' && (
+          <div className="max-w-6.5xl mx-auto">
+            <div className="tech-card group relative overflow-hidden animate-floating bg-white shadow-xl">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-500 to-orange-500"></div>
+              <div className="p-12">
+                <div className="text-center mb-12">
+                  <h3 className="text-4xl font-bold text-yellow-700 mb-6">{globalCertification.title}</h3>
+                  <p className="text-gray-700 text-xl leading-relaxed max-w-5xl mx-auto">{globalCertification.description}</p>
+                </div>
+                
+                <div className="mb-12">
+                  <h4 className="text-2xl font-semibold text-center mb-8 text-gray-800">📜 AWS Official Certificate</h4>
+                  <div className="flex justify-center">
+                    <img 
+                      src={globalCertification.image} 
+                      alt="AWS Cloud Practitioner Certificate"
+                      className="w-full max-w-2xl h-auto object-contain rounded-xl border-4 border-yellow-200 shadow-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+                      onClick={() => window.open(globalCertification.image, '_blank')}
+                    />
+                  </div>
+                  <p className="text-center text-gray-600 mt-4 text-lg">Click on the certificate to view in full size</p>
+                </div>
+                
+                <div className="flex flex-wrap justify-center gap-6">
+                  <a
+                    href={globalCertification.linkedinPost}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 text-lg">
+                      <svg className="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      View LinkedIn Post
+                    </Button>
+                  </a>
+                  
+                  <a
+                    href={globalCertification.verifyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 text-lg">
+                      <svg className="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                      Verify Credential
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>
