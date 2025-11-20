@@ -11,6 +11,7 @@ import AI_Skill_Dev_Image from '/src/assets/ai-skill-dev-image.png'
 import AI_Skill_Dev_Logo from '/src/assets/ai-skill-dev-logo.png'
 import Get_n_Grow_logo from '/src/assets/getngrow_logo.png'
 import Get_n_Grow_image from '/src/assets/getngrow_image.png'
+import AWSCertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg'
 
 const Projects = () => {
   const [activeTab, setActiveTab] = React.useState('Projects');
@@ -18,7 +19,7 @@ const Projects = () => {
   const globalCertification = {
     title: 'AWS Certified Cloud Practitioner',
     description: 'Successfully cleared AWS Global Certification (On 18th Nov 2025)- Cloud Practitioner in 4th year B.Tech. Achieved comprehensive understanding of AWS Cloud fundamentals, core services, security, architecture, pricing, and support models through extensive preparation and hands-on practice.',
-    image: '/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg',
+    image: AWSCertificate,
     linkedinPost: 'https://www.linkedin.com/posts/rrbalaji_aws-certified-cloud-practitioner-activity-7396550578954362880-83p8?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE',
     verifyLink: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/74f4d7e957af45c7b4032b8977311bb4',
   };

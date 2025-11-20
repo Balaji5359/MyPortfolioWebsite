@@ -1,6 +1,7 @@
 import { ArrowLeft, Award, BookOpen, Briefcase, Calendar, Cloud, Code, Cpu, Database, GraduationCap, Rocket, Sparkles, Trophy, Users, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import AWSCertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg';
 
 interface ActivityEntry {
   year: number;
@@ -54,7 +55,7 @@ const activities: ActivityEntry[] = [
     ],
     tags: ["Global Certification", "AWS Services", "Cloud Fundamentals", "4th Year Achievement"],
     media: {
-      certificate: "/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg",
+      certificate: AWSCertificate,
       post: "https://www.linkedin.com/posts/rrbalaji_aws-certified-cloud-practitioner-activity-7396550578954362880-83p8?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE",
       link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/74f4d7e957af45c7b4032b8977311bb4",
     },
