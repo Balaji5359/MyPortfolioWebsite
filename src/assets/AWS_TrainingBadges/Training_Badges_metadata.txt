@@ -1,0 +1,155 @@
+AWS Educate Badges - Issued by Amazon Web Services Training and Certification 
+Expiration Date
+This credential does not expire
+1. AWS Educate Introduction to Cloud 101 - Training Badge Title
+    Earners of this badge have completed the Cloud Computing 101 training and achieved 
+    the required scores on the post-course assessment. They have demonstrated the ability
+    to create simple cloud applications in a virtual lab environment. They have shown a 
+    fundamental understanding of AWS cloud core services and understand the technical roles required for cloud success.
+    Skills
+    Amazon Web Services (AWS)
+    AWS Cloud
+    AWS Cloud Computing
+    Cloud Foundations
+    Issued Date - Oct 1 -2024
+    Credential ID - 862e8e53-3047-4fe3-ab60-043dc1664c44
+    Credential URL - https://www.credly.com/badges/862e8e53-3047-4fe3-ab60-043dc1664c44/public_url
+2. AWS Educate Getting Started with Storage - Training Badge Title
+    Earners of this badge have completed the Getting Started with Storage training and 
+    achieved the required scores on the post-course assessment. They have demonstrated the
+    ability to describe storage solutions and use Amazon S3 to store and retrieve objects.
+    Skills
+    Amazon Web Services (AWS)
+    AWS Cloud
+    AWS Storage Services
+    Issuing Date - Oct/30/2024
+    Credential ID - e7eada8f-88ae-46ba-a844-9e13fb38f299
+    Credential URL - https://www.credly.com/badges/e7eada8f-88ae-46ba-a844-9e13fb38f299/public_url
+3. AWS Educate Getting Started with Compute - Training Badge Title
+    Earners of this badge have completed the Getting Started with Compute training and achieved 
+    the required scores on the post-course assessment. They have demonstrated the ability to describe 
+    different types of compute and use Amazon EC2 to create a compute instance.
+    Skills
+    Amazon Web Services (AWS)
+    AWS Cloud
+    AWS Compute
+    Issuing Date - Nov/7/2024
+    Credential ID - 10d19535-c901-44e9-96bb-503636a6332f
+    Credential URL - https://www.credly.com/badges/10d19535-c901-44e9-96bb-503636a6332f/public_url
+4. AWS Educate Getting Started with Networking - Training Badge Title
+    Earners of this badge have completed the Getting Started with Networking training and achieved the required scores on the post-course assessment. They have demonstrated the ability to describe different ways to manage a network and how to use an Amazon VPC to do so.
+    Skills
+    Amazon Web Services (AWS)
+    AWS Cloud
+    AWS Networking
+    Issuing Date - Feb/27/2025
+    Credential ID - 73460360-df1b-4616-bc1c-3ab1fbc3def0
+    Credential URL - https://www.credly.com/badges/73460360-df1b-4616-bc1c-3ab1fbc3def0/public_url
+5. AWS Educate Getting Started with Databases - Training Badge Title
+    Earners of this badge have completed the Getting Started with Databases training and achieved the required scores on the post-course assessment. They have demonstrated the ability to set up an Amazon Relational Database instance and how to use SQL commands to read and write to the database.
+    Skills
+    Amazon Web Services (AWS)
+
+    AWS Cloud
+
+    AWS Databases
+    Issuing Date
+    March/6/2025
+    Credential ID
+    47024d3e-3cfe-4fa0-b705-c3767cd60cce
+    URL - https://www.credly.com/badges/47024d3e-3cfe-4fa0-b705-c3767cd60cce/public_url
+6. AWS Educate Getting Started with Serverless - Training Badge Title
+    Earners of this badge have completed the Getting Started with Serverless training and achieved the required scores on the post-course assessment. They have demonstrated the ability to describe how to configure an AWS Lambda function and identify services like Amazon Simple Queue Service, Amazon Simple Notification Service, and API Gateway to scale data.
+    Skills
+    Amazon Web Services (AWS)
+
+    AWS Cloud
+
+    Serverless
+
+    Serverless Computing
+    Issuing Date
+    March/7/2025
+    Credential ID
+    0961a6ac-5609-45e7-889e-05791bc35be3
+    URL - https://www.credly.com/badges/0961a6ac-5609-45e7-889e-05791bc35be3/public_url
+7. AWS Educate Getting Started with Cloud Ops - Training Badge Title
+    Earners of this badge have completed the Getting Started with Cloud Operations training and achieved the required scores on the post-course assessment. They have demonstrated the ability to define the Well-Architected Framework and identify how to use AWS services to manage their AWS Cloud environment.
+    Skills
+    Amazon Web Services (AWS)
+
+    AWS Cloud
+
+    AWS Cloud Ops
+
+    Cloud Operations
+    Issuing Date
+    March/10/2025
+    Credential ID
+    07013e2f-e054-4106-b5cc-5e3c7a429eaf
+    URL  - https://www.credly.com/badges/07013e2f-e054-4106-b5cc-5e3c7a429eaf/public_url
+8. AWS Educate Getting Started with Security - Training Badge
+    Earners of this badge have completed the Getting Started with Security training and achieved the required scores on the post-course assessment. They have demonstrated the ability to use AWS Identity and Access Management (AWS IAM) and identify additional AWS security services.
+    Skills
+    Amazon Web Services (AWS)
+
+    Cloud Security
+
+    AWS Cloud
+    Issuing Date
+    March/11/2025
+    Credential ID
+    1b849edf-48fa-477f-aa4d-fe2c67fbedca
+    URL - https://www.credly.com/badges/1b849edf-48fa-477f-aa4d-fe2c67fbedca/public_url
+9. AWS Educate Introduction to Generative AI - Training Badge Title
+    Earners of this badge have completed the Introduction to Generative Artificial Intelligence training and achieved the required scores on the post-course assessment. They have shown a fundamental understanding in generative artificial intelligence (AI) concepts, and demonstrated the ability to define foundation models, discuss generative AI use cases.
+    Skills
+    Amazon Web Services (AWS)
+
+    AI
+
+    AI and ML on AWS - Foundational
+
+    AWS Cloud
+    Issuing Date
+    Jul/21/2025
+    Credential ID
+    1ca11f15-c11b-41de-8950-5b61e1d23e19
+    URL - https://www.credly.com/badges/1ca11f15-c11b-41de-8950-5b61e1d23e19/public_url
+10. AWS Educate Machine Learning Foundations - Training Badge Title
+    Earners of this badge have completed the Machine Learning Foundations training and achieved the required scores on the post-course assessment. They have demonstrated the ability to discuss the fundamental concepts of machine learning and how to apply the machine learning pipeline to solve a business problem.
+    Skills
+    Amazon Web Services (AWS)
+
+    AWS Cloud
+
+    ML
+    Issuing Date
+    Jul/21/2025
+    Credential ID
+    5e9112bd-b0c8-4de7-92c7-503c4c3d1cc3
+    URL - https://www.credly.com/badges/5e9112bd-b0c8-4de7-92c7-503c4c3d1cc3/public_url
+
+
+
+AWS Academy Badge - AWS Training and Certification Issued
+
+
+AWS Academy Graduate - Cloud Foundations - Training Badge
+    Earners of this badge have taken the AWS Academy Cloud Foundations course.
+    Skills
+    AWS Architecture
+
+    AWS Cloud
+
+    AWS Core Services
+
+    AWS Pricing
+
+    AWS Support
+    Issuing Date
+    Aug/9/2025
+    Credential ID
+    edb4e86e-9549-4876-a898-e052d06b9954
+    URL - https://www.credly.com/badges/edb4e86e-9549-4876-a898-e052d06b9954/public_url
+
