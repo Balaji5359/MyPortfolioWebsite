@@ -50,6 +50,7 @@ const Header = () => {
               </a>
             </Button>
 
+
             <Button variant="ghost" size="icon" asChild>
               <a href="https://github.com/Balaji5359" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
@@ -62,10 +63,10 @@ const Header = () => {
               </a>
             </Button>
 
-            <Button variant='ghost' size='icon' asChild>
-                <a href='https://www.kaggle.com/displaynames' target='_blank' rel='noopener noreferrer'>
-                  K
-                </a>
+            <Button variant="ghost" size="icon" asChild>
+              <a href="https://www.credly.com/users/rbalaji" target="_blank" rel="noopener noreferrer">
+                Credly
+              </a>
             </Button>
 
 
@@ -103,6 +104,13 @@ const Header = () => {
               <Button variant="ghost" size="icon" asChild>
                 <a href="https://linkedin.com/in/rrbalaji" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="https://www.credly.com/users/rbalaji" target="_blank" rel="noopener noreferrer">
+                  <div className="h-5 w-5 rounded-full border-2 border-current flex items-center justify-center font-bold text-xs">
+                    C
+                  </div>
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>

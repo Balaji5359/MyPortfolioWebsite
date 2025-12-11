@@ -2,6 +2,10 @@ import { ArrowLeft, Award, BookOpen, Briefcase, Calendar, Cloud, Code, Cpu, Data
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import AWSCertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg';
+import AWSAICertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-AI-Practitioner.png';
+
+// Debug: Log the imported image
+console.log('AWSAICertificate:', AWSAICertificate);
 
 interface ActivityEntry {
   year: number;
@@ -41,12 +45,33 @@ const activities: ActivityEntry[] = [
   
   {
     year: 2025,
-    date: "November 2025",
+    date: "December 11, 2025",
+    title: "AWS Certified AI Practitioner 🏆",
+    type: "Global Certification",
+    description: "Successfully cleared AWS Certified AI Practitioner (AIF-C01) exam - second global certification in one month! Secured 100% exam voucher through AWS Skill Builder and AWS Educate programs.",
+    highlights: [
+      "Exam Score: 766/1000 - Strong Performance",
+      "Double AWS Global Certification in one month",
+      "20+ AWS AI services explored with hands-on experience",
+      "Deep understanding of AIML, LLM, FM, RAG, Fine-Tuning",
+      "AI Security and Compliance expertise",
+      "100% exam voucher secured through consistent effort"
+    ],
+    tags: ["Global Certification", "AI Practitioner", "GenAI", "AWS AI Services", "Double Achievement"],
+    media: {
+      certificate: AWSAICertificate,
+      post: "https://www.linkedin.com/posts/rrbalaji_aws-certified-ai-practitioner-activity-7404866772106903552-MF54?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE",
+      link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/0abd09a0a37a4858a309e168011e4a24",
+    },
+  },
+  {
+    year: 2025,
+    date: "November 18, 2025",
     title: "AWS Certified Cloud Practitioner 🏆",
     type: "Global Certification",
     description: "Successfully cleared AWS Global Certification - Cloud Practitioner in 4th year B.Tech. Comprehensive understanding of AWS Cloud fundamentals, core services, security, architecture, pricing, and support models.",
     highlights: [
-      "Cleared AWS Global Certification exam with strong performance",
+      "Exam Score: 761/1000 - Strong Performance",
       "Mastered 100+ AWS services across all domains",
       "Deep understanding of cloud economics and billing",
       "Expertise in AWS security and compliance frameworks",
@@ -234,12 +259,12 @@ const typeIcons = {
 };
 
 const typeColors = {
-  Conference: "bg-primary/10 text-primary border-primary/20",
-  Training: "bg-secondary/10 text-secondary border-secondary/20",
-  Certification: "bg-accent/10 text-accent border-accent/20",
-  Membership: "bg-purple-500/10 text-purple-600 border-purple-500/20",
+  Conference: "bg-blue-600 text-white border-blue-600",
+  Training: "bg-gray-800 text-white border-gray-800",
+  Certification: "bg-green-600 text-white border-green-600",
+  Membership: "bg-purple-600 text-white border-purple-600",
   Startup: "bg-gradient-to-r from-primary to-accent text-primary-foreground border-0",
-  "Global Certification": "bg-yellow-500/10 text-yellow-600 border-yellow-500/20",
+  "Global Certification": "bg-yellow-600 text-white border-yellow-600",
 };
 
 export default function MyAWSActivitiesWorld() {
@@ -275,8 +300,8 @@ export default function MyAWSActivitiesWorld() {
           <div className="flex flex-wrap justify-center gap-6 animate-fade-in-up [animation-delay:0.4s]">
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
               <Trophy className="h-10 w-10 mb-3 text-yellow-600" />
-              <p className="text-4xl font-extrabold text-gray-800">1</p>
-              <p className="text-sm font-medium text-gray-600">Global Certification</p>
+              <p className="text-4xl font-extrabold text-gray-800">2</p>
+              <p className="text-sm font-medium text-gray-600">Global Certifications</p>
             </div>
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
               <Award className="h-10 w-10 mb-3 text-blue-600" />
@@ -469,7 +494,7 @@ export default function MyAWSActivitiesWorld() {
 
                         {activity.media && Object.keys(activity.media).length > 0 && (
                           <div className="mt-4 pt-4 border-t space-y-3">
-                            {activity.media.certificate && activity.media.certificate.includes('.jpeg') && (
+                            {activity.media.certificate && (activity.media.certificate.includes('.jpeg') || activity.media.certificate.includes('.png')) && (
                               <div className="bg-muted/30 rounded-lg p-4 border">
                                 <div className="flex items-center gap-2 mb-3">
                                   <Trophy className="h-4 w-4 text-yellow-600" />
@@ -484,7 +509,7 @@ export default function MyAWSActivitiesWorld() {
                               </div>
                             )}
                             <div className="flex flex-wrap gap-2">
-                              {activity.media.certificate && !activity.media.certificate.includes('.jpeg') && (
+                              {activity.media.certificate && !activity.media.certificate.includes('.jpeg') && !activity.media.certificate.includes('.png') && (
                                 <a
                                   href={activity.media.certificate}
                                   target="_blank"

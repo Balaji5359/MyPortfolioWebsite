@@ -37,6 +37,7 @@ import MySivi3 from '/src/assets/extra_curr_images/4thyear_my_sivi3.jpg';
 import MySivi4 from '/src/assets/extra_curr_images/4thyear_my_sivi4.jpg';
 import MySivi5 from '/src/assets/extra_curr_images/4thyear_my_sivi5.jpg';
 import AWSCertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg';
+import AWSAICertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-AI-Practitioner.png';
 
 
 const extracurrData = [
@@ -112,6 +113,16 @@ const extracurrData = [
     year: 'Fourth Year',
     activities: [
       {
+        title: 'AWS Certified AI Practitioner – Global Certification',
+        description: 'Successfully cleared AWS Certified AI Practitioner (AIF-C01) exam - second global certification in one month! Secured 100% exam voucher through AWS Skill Builder and AWS Educate programs. Deep understanding of AIML, LLM, FM, RAG, Fine-Tuning, and AI Security.',
+        images: [
+          AWSAICertificate,
+        ],
+        link: 'https://www.linkedin.com/posts/rrbalaji_aws-certified-ai-practitioner-activity-7404866772106903552-MF54?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE',
+        verifyLink: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/0abd09a0a37a4858a309e168011e4a24',
+        credlyLink: 'https://www.credly.com/badges/d28a3b74-9951-4e4f-9665-07e36069a092/public_url',
+      },
+      {
         title: 'AWS Certified Cloud Practitioner – Global Certification',
         description: 'Successfully cleared AWS Global Certification - Cloud Practitioner in 4th year B.Tech. Achieved comprehensive understanding of AWS Cloud fundamentals, core services, security, architecture, pricing, and support models through extensive preparation and hands-on practice.',
         images: [
@@ -119,6 +130,7 @@ const extracurrData = [
         ],
         link: 'https://www.linkedin.com/posts/rrbalaji_aws-certified-cloud-practitioner-activity-7396550578954362880-83p8?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE',
         verifyLink: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/74f4d7e957af45c7b4032b8977311bb4',
+        credlyLink: 'https://www.credly.com/badges/c81e98f2-fb5c-45fa-b549-f5801cadef75/public_url',
       },
       {
         title: 'MySivi English Communication Streak – Platinum Badge',
@@ -182,7 +194,8 @@ const ExtraCurricular = () => {
                   key={imgSrc}
                   src={imgSrc}
                   alt={`${activity.title} ${i + 1}`}
-                  className={imgSrc === AWSCertificate ? "w-full h-auto object-contain rounded-xl border-4 border-white shadow-xl hover:scale-105 transition-transform duration-300 bg-white max-w-2xl" : "w-64 h-44 object-cover rounded-xl border-4 border-white shadow-xl hover:scale-105 transition-transform duration-300 bg-white"}
+                  className={(imgSrc === AWSCertificate || imgSrc === AWSAICertificate) ? "w-full h-auto object-contain rounded-xl border-4 border-white shadow-xl hover:scale-105 transition-transform duration-300 bg-white max-w-2xl cursor-pointer" : "w-64 h-44 object-cover rounded-xl border-4 border-white shadow-xl hover:scale-105 transition-transform duration-300 bg-white"}
+                  onClick={(imgSrc === AWSCertificate || imgSrc === AWSAICertificate) ? () => window.open(activity.credlyLink, '_blank') : undefined}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -191,7 +204,7 @@ const ExtraCurricular = () => {
                 />
               ))}
             </div>
-            {(activity.link || activity.verifyLink) && (
+            {(activity.link || activity.verifyLink || activity.credlyLink) && (
               <div className="mt-6 text-center space-y-3">
                 {activity.link && (
                   <a
@@ -211,12 +224,25 @@ const ExtraCurricular = () => {
                     href={activity.verifyLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 mr-3"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     Verify Credential
+                  </a>
+                )}
+                {activity.credlyLink && (
+                  <a
+                    href={activity.credlyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                    </svg>
+                    View Credly Badge
                   </a>
                 )}
               </div>

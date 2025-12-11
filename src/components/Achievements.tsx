@@ -153,8 +153,112 @@ const ThirdYearAchievements = () => (
   </div>
 );
 
+const awsAICertImages = [
+  {
+    src: AWSAICertificate,
+    caption: 'AWS Certified AI Practitioner Certificate',
+    alt: 'AWS AI Practitioner Certificate',
+  },
+];
+
+const awsCloudCertImages = [
+  {
+    src: AWSCertificate,
+    caption: 'AWS Certified Cloud Practitioner Certificate',
+    alt: 'AWS Cloud Practitioner Certificate',
+  },
+];
+
 const FourthYearAchievements = () => (
   <div>
+    <section className="bg-orange-50 rounded-2xl p-8 mb-10 shadow-2xl border border-gray-200">
+      <h3 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-orange-700 tracking-wide">
+        🏆 AWS Certified AI Practitioner – Global Certification
+      </h3>
+      <GenericCarousel images={awsAICertImages} />
+      <p className="mt-8 text-center text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
+        Successfully cleared <span className="font-semibold text-orange-700">AWS Certified AI Practitioner (AIF-C01)</span> exam - second global certification in one month! Secured 100% exam voucher through AWS Skill Builder and AWS Educate programs. Exam Score: 766/1000.
+      </p>
+      <div className="mt-6 text-center space-y-3">
+        <a
+          href="https://www.linkedin.com/posts/rrbalaji_aws-certified-ai-practitioner-activity-7404866772106903552-MF54?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 mr-3"
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          View LinkedIn Post
+        </a>
+        <a
+          href="https://cp.certmetrics.com/amazon/en/public/verify/credential/0abd09a0a37a4858a309e168011e4a24"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 mr-3"
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Verify Credential
+        </a>
+        <a
+          href="https://www.credly.com/badges/d28a3b74-9951-4e4f-9665-07e36069a092/public_url"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+          </svg>
+          View Credly Badge
+        </a>
+      </div>
+    </section>
+    <section className="bg-blue-50 rounded-2xl p-8 mb-10 shadow-2xl border border-gray-200">
+      <h3 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-blue-700 tracking-wide">
+        🏆 AWS Certified Cloud Practitioner – Global Certification
+      </h3>
+      <GenericCarousel images={awsCloudCertImages} />
+      <p className="mt-8 text-center text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
+        Successfully cleared <span className="font-semibold text-blue-700">AWS Global Certification - Cloud Practitioner</span> in 4th year B.Tech. Comprehensive understanding of AWS Cloud fundamentals, core services, security, architecture, pricing, and support models. Exam Score: 761/1000.
+      </p>
+      <div className="mt-6 text-center space-y-3">
+        <a
+          href="https://www.linkedin.com/posts/rrbalaji_aws-certified-cloud-practitioner-activity-7396550578954362880-83p8?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 mr-3"
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          View LinkedIn Post
+        </a>
+        <a
+          href="https://cp.certmetrics.com/amazon/en/public/verify/credential/74f4d7e957af45c7b4032b8977311bb4"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 mr-3"
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Verify Credential
+        </a>
+        <a
+          href="https://www.credly.com/badges/c81e98f2-fb5c-45fa-b549-f5801cadef75/public_url"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+          </svg>
+          View Credly Badge
+        </a>
+      </div>
+    </section>
     <section className="bg-pink-50 rounded-2xl p-8 mb-10 shadow-2xl border border-gray-200">
       <h3 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-pink-700 tracking-wide">
         🚀 Secured First Prize in Startup Challenge at MITS University
@@ -533,6 +637,8 @@ import team04Img2 from '../assets/fourthyear/Team04-group-image2.jpg';
 import team05Aibot from '../assets/fourthyear/Team05-aibot.png';
 import team05Img1 from '../assets/fourthyear/Team05-group-image1.jpg';
 import team05Img2 from '../assets/fourthyear/Team05-group-image2.jpg';
+import AWSCertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg';
+import AWSAICertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-AI-Practitioner.png';
 
 const chessImages = [
   {

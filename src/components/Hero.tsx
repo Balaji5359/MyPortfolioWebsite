@@ -18,10 +18,13 @@ const Hero = () => {
               Hi, I'm Balaji
             </h1>
             <h2 className="text-xl md:text-4xl text-muted-foreground mb-4">
-              Tech Enthusiastic
+              Tech and AI Enthusiastic
             </h2 >
+            <h2 className="text-xl md:text-2xl text-muted-foreground mb-4">
+              Dual AWS Certified: Expert in Cloud Foundations & Generative AI.
+            </h2>
             <h3 className="text-lg md:text-1xl text-muted-foreground mb-6">
-              I love building Innovative solutions to solve real-world problems,<br></br> with Tech as my passion.
+              I love building Innovative solutions to solve real-world problems,<br></br> with Tech and latest AI services as my passion.
             </h3>
 
             
@@ -61,8 +64,8 @@ const Hero = () => {
             <h3 className="text-2xl font-bold mb-6">About Me</h3>
             <p className="text-gray-700 dark:text-gray-200 text-base leading-relaxed">
               I am a final-year B.Tech student with a strong passion for AIML, Generative AI, and Cloud. 
-              I cleared the AWS Global Certification – <b>AWS Cloud Practitioner</b>, and I am familiar with 100+ AWS services, with hands-on experience in 
-              30–40 services. I actively explore AWS AI/ML and GenAI capabilities to design, build, and deploy innovative solutions in the cloud.
+              I cleared the AWS Global Certification – <b>AWS Cloud Practitioner</b> and <b>AWS AI Practitioner</b>, and I am familiar with 100+ AWS services, with hands-on experience in 
+              30–40 services. I actively explore AWS AI/ML, LLM, FM, RAG and GenAI capabilities to design, build, and deploy innovative AI solutions in the cloud.
               <br></br>
               Over the past few months, I have developed 10+ projects across diverse domains, including Data Science, AI, AI Agents, Generative AI, 
               and Augmented Reality, all deployed using AWS services. I also have experience in DevOps practices, developing React applications, 
@@ -123,8 +126,11 @@ const Hero = () => {
               <h4 className="text-lg font-bold mb-2">Global Certifications</h4>
               <ul className="list-disc list-inside text-sm">
                 <li>AWS Certified Cloud Practitioner</li>
+                <li>AWS Certified AI Practitioner</li>
               </ul>
             </div>
+
+            
 
             <div>
               <h4 className="text-lg font-bold mb-2">Online Trainings Completed</h4>
@@ -144,6 +150,8 @@ const Hero = () => {
                 <li>AWSome Day (AWS One Day online conference)</li>
                 <li>AWS Summit 2025 - India (GenAI-Applications)</li>
                 <li>AWS Summit 2025 – New York (Agentic AI Evolution)</li>
+                <li>AWS Builders 2025 - Bedrock and Vibe Coding</li>
+                <li>AWS re:Invent 2025 - 5 Days (Future of AgenticAI)</li>
               </ul>
             </div>
 
