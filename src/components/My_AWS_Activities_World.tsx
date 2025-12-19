@@ -4,6 +4,72 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import AWSCertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg';
 import AWSAICertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-AI-Practitioner.png';
 
+// Add custom CSS animations
+const customStyles = `
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(5px) rotate(-1deg); }
+  }
+  
+  @keyframes float-delayed {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(8px) rotate(-1deg); }
+    66% { transform: translateY(-12px) rotate(1deg); }
+  }
+  
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(0.5deg); }
+  }
+  
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+  }
+  
+  @keyframes pulse-slower {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.5; }
+  }
+  
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float-delayed 10s ease-in-out infinite;
+  }
+  
+  .animate-float-slow {
+    animation: float-slow 12s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slower {
+    animation: pulse-slower 6s ease-in-out infinite;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+    opacity: 0;
+  }
+`;
+
 // Debug: Log the imported image
 console.log('AWSAICertificate:', AWSAICertificate);
 
@@ -272,56 +338,77 @@ export default function MyAWSActivitiesWorld() {
   const otherActivities = activities.filter((a) => a.type !== "Startup");
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-muted/30 to-background">
+    <>
+      <style>{customStyles}</style>
+    <div className="min-h-screen relative overflow-hidden font-inter" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 20%, #f093fb 40%, #f5576c 60%, #4facfe 80%, #00f2fe 100%)'}}>
+      {/* Floating Glow Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute top-1/4 right-0 w-80 h-80 bg-white/15 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-white/8 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}} />
+        <div className="absolute bottom-1/4 left-1/4 w-88 h-88 bg-white/12 rounded-full blur-3xl animate-float-delayed" style={{animationDelay: '3s'}} />
+      </div>
+      
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-glow to-accent py-20 px-6">
-        <div className="absolute inset-0 bg-grid-white/10 bg-[size:30px_30px]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+      <section className="relative overflow-hidden py-20 px-6" style={{background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)'}}>
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-white/20 rounded-full blur-2xl animate-pulse-slow" />
+          <div className="absolute top-20 right-20 w-24 h-24 bg-white/25 rounded-full blur-2xl animate-pulse-slower" />
+          <div className="absolute bottom-10 left-1/2 w-28 h-28 bg-white/15 rounded-full blur-2xl animate-pulse-slow" style={{animationDelay: '1s'}} />
+        </div>
         
         <div className="relative max-w-6xl mx-auto text-center">
-          <Badge className="mb-4 px-6 py-3 text-lg bg-white/30 text-black border-white/40 backdrop-blur-sm shadow-lg">
+          <Badge className="mb-8 px-6 py-3 text-lg bg-white/20 backdrop-blur-md border-2 border-white/30 text-white shadow-lg">
             <Cloud className="mr-3 h-6 w-6" />
             AWS Cloud Journey 2023-2025
-          </Badge><br></br><br></br>
-          <a
+          </Badge>
+          {/* <a
             href="/"
-            className="inline-flex items-center gap-2 mb-6 bg-white/80 hover:bg-white text-blue-900 font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300 text-sm backdrop-blur-sm border border-blue-200/50 hover:shadow-lg"
+            className="inline-flex items-center gap-2 mb-8 bg-white/20 backdrop-blur-md hover:bg-white/30 hover:-translate-y-0.5 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ease-out text-base border-2 border-white/30"
           >
-            <ArrowLeft className="h-4 w-4" />
-            Back to Main Page
-          </a>
-          <h1 className="text-4xl md:text-7xl font-extrabold text-blue-900 mb-8 animate-fade-in-up font-serif tracking-wide">
+            <ArrowLeft className="h-5 w-5" />
+            Back to Portfolio
+          </a> */}
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-lg">
             My AWS Activities World
           </h1>
-          <p className="text-xl md:text-2xl text-black-800 max-w-3xl mx-auto mb-10 animate-fade-in-up [animation-delay:0.2s]">
-            <h1 className="text-2xl md:text-3xl font-extrabold text-blue-800 mb-6 animate-fade-in-up font-serif tracking-wide">From curious beginner to startup founder</h1> A journey of 1.5 years through AWS conferences, Summits,Training 
-            certifications, and hands-on learning, culminating in AI SkillDev.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6 animate-fade-in-up [animation-delay:0.4s]">
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
-              <Trophy className="h-10 w-10 mb-3 text-yellow-600" />
-              <p className="text-4xl font-extrabold text-gray-800">2</p>
-              <p className="text-sm font-medium text-gray-600">Global Certifications</p>
+          <div className="max-w-4xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3xl font-semibold text-white/90 mb-6 drop-shadow-md">
+              From Curious Beginner to Startup Founder
+            </h2>
+            <p className="text-lg text-white/80 leading-relaxed drop-shadow-sm">
+              An inspiring 1.5-year journey through AWS conferences, global summits, intensive training, 
+              professional certifications, and hands-on learning experiences, culminating in the creation of 
+              <span className="font-bold text-yellow-300 drop-shadow-sm">AI SkillDev</span> - 
+              a revolutionary AI-powered learning platform.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-orange-500 transition-all duration-500 ease-out group animate-fade-in-up">
+              <Trophy className="h-10 w-10 mb-3 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
+              <p className="text-3xl font-bold text-gray-900 mb-2">2</p>
+              <p className="text-sm font-medium text-gray-600 text-center">Global AWS Certifications</p>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
-              <Award className="h-10 w-10 mb-3 text-blue-600" />
-              <p className="text-4xl font-extrabold text-gray-800">30+</p>
-              <p className="text-sm font-medium text-gray-600">Training Certifications</p>
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-blue-500 transition-all duration-500 ease-out group animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+              <Award className="h-10 w-10 mb-3 text-blue-500 group-hover:scale-110 transition-transform duration-300" />
+              <p className="text-3xl font-bold text-gray-900 mb-2">30+</p>
+              <p className="text-sm font-medium text-gray-600 text-center">Training Badges</p>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
-              <Sparkles className="h-10 w-10 mb-3 text-purple-600" />
-              <p className="text-4xl font-extrabold text-gray-800">100+</p>
-              <p className="text-sm font-medium text-gray-600">AWS Services known</p>
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-emerald-500 transition-all duration-500 ease-out group animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              <Sparkles className="h-10 w-10 mb-3 text-emerald-500 group-hover:scale-110 transition-transform duration-300" />
+              <p className="text-3xl font-bold text-gray-900 mb-2">100+</p>
+              <p className="text-sm font-medium text-gray-600 text-center">AWS Services Known</p>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
-              <Sparkles className="h-10 w-10 mb-3 text-purple-600" />
-              <p className="text-4xl font-extrabold text-gray-800">30+</p>
-              <p className="text-sm font-medium text-gray-600">AWS Services Hands-On</p>
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-cyan-500 transition-all duration-500 ease-out group animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+              <Code className="h-10 w-10 mb-3 text-cyan-500 group-hover:scale-110 transition-transform duration-300" />
+              <p className="text-3xl font-bold text-gray-900 mb-2">30+</p>
+              <p className="text-sm font-medium text-gray-600 text-center">Hands-On Projects</p>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 flex flex-col items-center min-w-[140px]">
-              <Rocket className="h-10 w-10 mb-3 text-green-600" />
-              <p className="text-4xl font-extrabold text-gray-800">1</p>
-              <p className="text-sm font-medium text-gray-600">Startup</p>
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-red-500 transition-all duration-500 ease-out group animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+              <Rocket className="h-10 w-10 mb-3 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
+              <p className="text-3xl font-bold text-gray-900 mb-2">1</p>
+              <p className="text-sm font-medium text-gray-600 text-center">AI Startup Founded</p>
             </div>
           </div>
         </div>
@@ -330,49 +417,46 @@ export default function MyAWSActivitiesWorld() {
       {/* Startup Highlight */}
       {startupEntry && (
         <section className="max-w-6xl mx-auto px-6 -mt-16 relative z-10 mb-20">
-          <Card className="overflow-hidden border-2 border-primary shadow-[0_20px_70px_-20px_hsl(var(--primary)/0.5)] animate-scale-in hover:shadow-[0_30px_90px_-20px_hsl(var(--primary)/0.7)] transition-all duration-500">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent" />
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+          <Card className="overflow-hidden bg-white rounded-2xl shadow-xl border-2 border-gray-800 hover:shadow-2xl hover:-translate-y-2 hover:border-orange-500 transition-all duration-500 ease-out animate-fade-in-up">
             
-            <CardHeader className="relative">
-              <div className="flex items-start justify-between mb-4">
-                <Badge className={`${typeColors[startupEntry.type]} animate-glow-pulse`}>
-                  <Rocket className="mr-2 h-4 w-4" />
+            <CardHeader className="p-8">
+              <div className="flex items-start justify-between mb-6">
+                <Badge className="bg-orange-500 text-white px-4 py-2 text-base font-semibold">
+                  <Rocket className="mr-2 h-5 w-5" />
                   {startupEntry.type}
                 </Badge>
-                <span className="text-sm text-muted-foreground">{startupEntry.date}</span>
+                <span className="text-sm text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full">{startupEntry.date}</span>
               </div>
-              <CardTitle className="text-4xl mb-2 flex items-center gap-3">
+              <CardTitle className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 {startupEntry.title}
               </CardTitle>
-              <CardDescription className="text-lg">{startupEntry.description}</CardDescription>
+              <CardDescription className="text-lg text-gray-600 leading-relaxed">{startupEntry.description}</CardDescription>
             </CardHeader>
             
-            <CardContent className="relative">
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <h4 className="font-semibold mb-3 flex items-center gap-2">
-                    <Sparkles className="h-5 w-5 text-primary" />
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-300 hover:bg-gray-100/50 hover:border-orange-400 transition-all duration-300">
+                  <h4 className="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-900">
+                    <Sparkles className="h-5 w-5 text-orange-500" />
                     Key Achievements
                   </h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {startupEntry.highlights?.map((highlight, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm">
-                        <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2" />
-                        <span>{highlight}</span>
+                      <li key={i} className="flex items-start gap-3 text-sm">
+                        <div className="h-1.5 w-1.5 rounded-full bg-orange-500 mt-2" />
+                        <span className="text-gray-700 leading-relaxed">{highlight}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="bg-muted/50 rounded-lg p-6 border">
-                  <h4 className="font-semibold mb-3 flex items-center gap-2">
-                    <Code className="h-5 w-5 text-accent" />
+                <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-300 hover:bg-gray-100/50 hover:border-blue-400 transition-all duration-300">
+                  <h4 className="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-900">
+                    <Code className="h-5 w-5 text-blue-500" />
                     Tech Stack
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {["Amazon Bedrock", "Lambda", "S3", "EC2", "DynamoDB", "GenAI", "Agentic AI"].map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-xs">
+                      <Badge key={tech} className="text-xs px-3 py-1 bg-blue-100 text-blue-700 border border-blue-200 font-medium">
                         {tech}
                       </Badge>
                     ))}
@@ -381,9 +465,14 @@ export default function MyAWSActivitiesWorld() {
               </div>
               
               {startupEntry.tags && (
-                <div className="flex flex-wrap gap-2">
-                  {startupEntry.tags.map((tag) => (
-                    <Badge key={tag} variant="outline">
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {startupEntry.tags.map((tag, index) => (
+                    <Badge key={tag} className={`px-3 py-1 text-xs font-medium border transition-all duration-200 ${
+                      index % 4 === 0 ? 'bg-red-50 text-red-700 border-red-200' :
+                      index % 4 === 1 ? 'bg-blue-50 text-blue-700 border-blue-200' :
+                      index % 4 === 2 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
+                      'bg-purple-50 text-purple-700 border-purple-200'
+                    }`}>
                       {tag}
                     </Badge>
                   ))}
@@ -395,17 +484,22 @@ export default function MyAWSActivitiesWorld() {
       )}
 
       {/* Timeline Roadmap */}
-      <section className="max-w-6xl mx-auto px-6 pb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Learning Journey Roadmap</h2>
-          <p className="text-lg text-muted-foreground">
-            From B.Tech 2nd year to startup founder — Every milestone that shaped my AWS expertise
+      <section className="max-w-6xl mx-auto px-6 pb-20 relative">
+        <div className="text-center mb-16">
+          <Badge className="mb-6 px-6 py-3 text-base bg-white/20 backdrop-blur-md border-2 border-white/30 text-white shadow-md">
+            Journey Timeline
+          </Badge>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-lg">
+            Learning Journey Roadmap
+          </h2>
+          <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
+            From B.Tech 2nd year to startup founder — Every milestone, achievement, and breakthrough that shaped my AWS expertise and entrepreneurial journey
           </p>
         </div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary" />
+          {/* Clean Timeline line */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-300" />
 
           <div className="space-y-12">
             {otherActivities.map((activity, index) => {
@@ -422,14 +516,21 @@ export default function MyAWSActivitiesWorld() {
                     animationDelay: `${index * 0.1}s`,
                   }}
                 >
-                  {/* Timeline dot */}
+                  {/* Clean Timeline dot */}
                   <div className="absolute left-8 md:left-1/2 -ml-3 flex items-center justify-center">
-                    <div className="h-6 w-6 rounded-full bg-primary border-4 border-background shadow-lg animate-scale-in" />
+                    <div className={`h-6 w-6 rounded-full border-4 border-white shadow-lg ${
+                      activity.type === 'Global Certification' ? 'bg-orange-500' :
+                      activity.type === 'Conference' ? 'bg-blue-500' :
+                      activity.type === 'Training' ? 'bg-emerald-500' :
+                      activity.type === 'Certification' ? 'bg-cyan-500' :
+                      activity.type === 'Membership' ? 'bg-purple-500' :
+                      'bg-gray-500'
+                    }`} />
                   </div>
 
-                  {/* Year badge */}
+                  {/* Clean Year badge */}
                   <div className="hidden md:block absolute left-1/2 -ml-12 -mt-12">
-                    <Badge variant="outline" className="bg-background">
+                    <Badge className="bg-white text-gray-700 border border-gray-200 px-3 py-1 text-sm font-medium shadow-md">
                       {activity.year}
                     </Badge>
                   </div>
@@ -440,33 +541,54 @@ export default function MyAWSActivitiesWorld() {
                       isLeft ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
                     }`}
                   >
-                    <Card className="group hover:shadow-hover transition-all duration-300 hover:scale-[1.02] border-2 hover:border-primary/50">
-                      <CardHeader>
-                        <div className="flex items-start justify-between mb-2">
-                          <Badge className={typeColors[activity.type]}>
+                    <Card className="group bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-out border-2 border-gray-700 hover:border-blue-500 rounded-2xl animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
+                      <CardHeader className="p-6">
+                        <div className="flex items-start justify-between mb-4">
+                          <Badge className={`px-3 py-1 text-sm font-medium ${
+                            activity.type === 'Global Certification' ? 'bg-orange-100 text-orange-700 border border-orange-200' :
+                            activity.type === 'Conference' ? 'bg-blue-100 text-blue-700 border border-blue-200' :
+                            activity.type === 'Training' ? 'bg-emerald-100 text-emerald-700 border border-emerald-200' :
+                            activity.type === 'Certification' ? 'bg-cyan-100 text-cyan-700 border border-cyan-200' :
+                            activity.type === 'Membership' ? 'bg-purple-100 text-purple-700 border border-purple-200' :
+                            'bg-gray-100 text-gray-700 border border-gray-200'
+                          }`}>
                             <Icon className="mr-2 h-3 w-3" />
                             {activity.type}
                           </Badge>
-                          <span className="text-xs text-muted-foreground">{activity.date}</span>
+                          <span className="text-sm text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full">{activity.date}</span>
                         </div>
-                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                        <CardTitle className="text-xl font-semibold text-gray-900 mb-3">
                           {activity.title}
                         </CardTitle>
-                        <CardDescription>{activity.description}</CardDescription>
+                        <CardDescription className="text-sm text-gray-600 leading-relaxed">{activity.description}</CardDescription>
                       </CardHeader>
 
-                      <CardContent>
+                      <CardContent className="p-6">
                         {activity.highlights && (
-                          <div className="mb-4">
-                            <h4 className="text-sm font-semibold mb-2 flex items-center gap-2">
-                              <Cpu className="h-4 w-4 text-primary" />
-                              Key Learnings
+                          <div className="mb-6">
+                            <h4 className="text-base font-semibold mb-3 flex items-center gap-2 text-gray-900">
+                              <Cpu className={`h-4 w-4 ${
+                                activity.type === 'Global Certification' ? 'text-orange-500' :
+                                activity.type === 'Conference' ? 'text-blue-500' :
+                                activity.type === 'Training' ? 'text-emerald-500' :
+                                activity.type === 'Certification' ? 'text-cyan-500' :
+                                activity.type === 'Membership' ? 'text-purple-500' :
+                                'text-gray-500'
+                              }`} />
+                              Key Learnings & Achievements
                             </h4>
-                            <ul className="space-y-1.5">
+                            <ul className="space-y-2">
                               {activity.highlights.map((highlight, i) => (
                                 <li key={i} className="text-sm flex items-start gap-2">
-                                  <div className="h-1 w-1 rounded-full bg-primary mt-2" />
-                                  <span className="text-muted-foreground">{highlight}</span>
+                                  <div className={`h-1.5 w-1.5 rounded-full mt-2 ${
+                                    activity.type === 'Global Certification' ? 'bg-orange-500' :
+                                    activity.type === 'Conference' ? 'bg-blue-500' :
+                                    activity.type === 'Training' ? 'bg-emerald-500' :
+                                    activity.type === 'Certification' ? 'bg-cyan-500' :
+                                    activity.type === 'Membership' ? 'bg-purple-500' :
+                                    'bg-gray-500'
+                                  }`} />
+                                  <span className="text-gray-600 leading-relaxed">{highlight}</span>
                                 </li>
                               ))}
                             </ul>
@@ -474,18 +596,25 @@ export default function MyAWSActivitiesWorld() {
                         )}
 
                         {activity.project && (
-                          <div className="mb-4 p-3 bg-muted/50 rounded-lg border">
-                            <p className="text-sm flex items-center gap-2">
-                              <Database className="h-4 w-4 text-accent" />
-                              <strong>Project:</strong> {activity.project}
+                          <div className="mb-4 p-4 bg-gray-50 rounded-xl border-2 border-gray-300 hover:bg-gray-100/50 hover:border-cyan-400 transition-all duration-300">
+                            <p className="text-sm flex items-center gap-2 text-gray-700">
+                              <Database className="h-4 w-4 text-cyan-500" />
+                              <strong className="text-cyan-600">Featured Project:</strong> 
+                              <span className="font-medium">{activity.project}</span>
                             </p>
                           </div>
                         )}
 
                         {activity.tags && (
-                          <div className="flex flex-wrap gap-2">
-                            {activity.tags.map((tag) => (
-                              <Badge key={tag} variant="secondary" className="text-xs">
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            {activity.tags.map((tag, tagIndex) => (
+                              <Badge key={tag} className={`text-xs px-2 py-1 font-medium border ${
+                                tagIndex % 5 === 0 ? 'bg-red-50 text-red-700 border-red-200' :
+                                tagIndex % 5 === 1 ? 'bg-blue-50 text-blue-700 border-blue-200' :
+                                tagIndex % 5 === 2 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
+                                tagIndex % 5 === 3 ? 'bg-purple-50 text-purple-700 border-purple-200' :
+                                'bg-orange-50 text-orange-700 border-orange-200'
+                              }`}>
                                 {tag}
                               </Badge>
                             ))}
@@ -493,17 +622,17 @@ export default function MyAWSActivitiesWorld() {
                         )}
 
                         {activity.media && Object.keys(activity.media).length > 0 && (
-                          <div className="mt-4 pt-4 border-t space-y-3">
+                          <div className="mt-4 pt-4 border-t border-gray-200 space-y-4">
                             {activity.media.certificate && (activity.media.certificate.includes('.jpeg') || activity.media.certificate.includes('.png')) && (
-                              <div className="bg-muted/30 rounded-lg p-4 border">
+                              <div className="bg-orange-50 rounded-2xl p-4 border-2 border-orange-300 hover:bg-orange-100/50 hover:border-orange-500 transition-all duration-300">
                                 <div className="flex items-center gap-2 mb-3">
-                                  <Trophy className="h-4 w-4 text-yellow-600" />
-                                  <span className="text-sm font-semibold">AWS Official Certificate</span>
+                                  <Trophy className="h-5 w-5 text-orange-500" />
+                                  <span className="text-base font-semibold text-orange-700">AWS Official Certificate</span>
                                 </div>
                                 <img 
                                   src={activity.media.certificate} 
                                   alt="AWS Certificate"
-                                  className="w-full max-w-md mx-auto rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+                                  className="w-full max-w-md mx-auto rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-out cursor-pointer border-2 border-orange-400"
                                   onClick={() => window.open(activity.media.certificate, '_blank')}
                                 />
                               </div>
@@ -514,7 +643,7 @@ export default function MyAWSActivitiesWorld() {
                                   href={activity.media.certificate}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-xs text-primary hover:underline flex items-center gap-1"
+                                  className="bg-orange-500 hover:bg-orange-600 hover:-translate-y-0.5 text-white px-3 py-2 rounded-full text-xs font-medium transition-all duration-300 ease-out flex items-center gap-1 shadow-md hover:shadow-lg"
                                 >
                                   <Award className="h-3 w-3" />
                                   Certificate
@@ -525,7 +654,7 @@ export default function MyAWSActivitiesWorld() {
                                   href={activity.media.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-xs text-primary hover:underline flex items-center gap-1"
+                                  className="bg-blue-500 hover:bg-blue-600 hover:-translate-y-0.5 text-white px-3 py-2 rounded-full text-xs font-medium transition-all duration-300 ease-out flex items-center gap-1 shadow-md hover:shadow-lg"
                                 >
                                   <ExternalLink className="h-3 w-3" />
                                   View Certificate
@@ -536,7 +665,7 @@ export default function MyAWSActivitiesWorld() {
                                   href={activity.media.post}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-xs text-primary hover:underline flex items-center gap-1"
+                                  className="bg-purple-500 hover:bg-purple-600 hover:-translate-y-0.5 text-white px-3 py-2 rounded-full text-xs font-medium transition-all duration-300 ease-out flex items-center gap-1 shadow-md hover:shadow-lg"
                                 >
                                   <Briefcase className="h-3 w-3" />
                                   LinkedIn Post
@@ -547,7 +676,7 @@ export default function MyAWSActivitiesWorld() {
                                   href={activity.media.video}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-xs text-primary hover:underline flex items-center gap-1"
+                                  className="bg-emerald-500 hover:bg-emerald-600 hover:-translate-y-0.5 text-white px-3 py-2 rounded-full text-xs font-medium transition-all duration-300 ease-out flex items-center gap-1 shadow-md hover:shadow-lg"
                                 >
                                   <Calendar className="h-3 w-3" />
                                   Video
@@ -566,30 +695,43 @@ export default function MyAWSActivitiesWorld() {
         </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="bg-gradient-to-r from-primary via-primary-glow to-accent py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center text-blue">
-          <h3 className="text-3xl font-bold mb-4">Ready to Build the Future?</h3>
-          <p className="text-lg mb-8 opacity-90">
-            Follow my journey as AI SkillDev launches in December 2025
+      {/* Colorful Gradient Footer */}
+      <section className="relative py-20 px-6 overflow-hidden" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%)'}}>
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-float-delayed" />
+          <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-float-slow" />
+        </div>
+        <div className="relative max-w-4xl mx-auto text-center animate-fade-in-up">
+          <h3 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+            Ready to Build the Future? 🚀
+          </h3>
+          <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+            Follow my incredible journey as <span className="font-bold text-yellow-300 drop-shadow-sm">AI SkillDev</span> launches in December 2025 — 
+            The next chapter in revolutionizing AI-powered education! ✨
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Badge className="bg-white text-primary px-6 py-2 text-base hover:scale-105 transition-transform">
-              <Rocket className="mr-2 h-5 w-5" />
-              Coming Soon: AI SkillDev
+          <div className="flex flex-wrap justify-center gap-6">
+            <Badge className="bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 text-lg font-bold hover:bg-white/30 hover:-translate-y-1 hover:scale-105 transition-all duration-500 ease-out shadow-2xl hover:shadow-white/20">
+              <Rocket className="mr-3 h-6 w-6" />
+              Coming Soon: AI SkillDev Platform
+            </Badge>
+            <Badge className="bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 text-lg font-bold hover:bg-white/30 hover:-translate-y-1 hover:scale-105 transition-all duration-500 ease-out shadow-2xl hover:shadow-white/20">
+              <Sparkles className="mr-3 h-6 w-6" />
+              Powered by AWS & AI
             </Badge>
           </div>
         </div>
       </section>
 
-      {/* Sticky Back Button */}
+      {/* Clean Sticky Back Button */}
       <a
         href="/"
-        className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl"
-        aria-label="Back to Main Page"
+        className="fixed bottom-6 right-6 z-50 bg-blue-500 hover:bg-blue-600 hover:-translate-y-1 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-out"
+        aria-label="Back to Portfolio"
       >
         <ArrowLeft className="h-6 w-6" />
       </a>
     </div>
+    </>
   );
 }
