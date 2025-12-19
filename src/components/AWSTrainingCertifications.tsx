@@ -3,67 +3,76 @@ import { Award, ExternalLink, Calendar, Shield, X } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
+// Import badge images
+import sb1 from '/src/assets/AWS_TrainingBadges/AWS_SB_B1_CL01_87d9f1ba-9b5a-4bcb-b0f2-3910de7d68e7.png';
+import sb2 from '/src/assets/AWS_TrainingBadges/AWS_SB_B2_CL01_56d0d0f8-56c7-49b1-ae44-0bba2ac31deb.png';
+import sb3 from '/src/assets/AWS_TrainingBadges/AWS_SB_B3_CL01_70848990-7a8f-4b02-be84-b111e3aacd99.png';
+import sb4 from '/src/assets/AWS_TrainingBadges/AWS_SB_B4_CL01_1dbd7196-f485-43a4-870b-077ac68fb291.png';
+import sb5 from '/src/assets/AWS_TrainingBadges/AWS_SB_B5_CL01_83fe4335-4b2a-4637-b8ee-45853ef53ca4.png';
+import sb6 from '/src/assets/AWS_TrainingBadges/AWS_SB_B6_CL01_a0f8f908-d800-44ac-a3c0-4b11f0dba8b0.png';
+import sb7 from '/src/assets/AWS_TrainingBadges/AWS_SB_B7_CL01_8e1407c1-a6a7-4862-b3bc-9c1f74c4f420.png';
+import sb8 from '/src/assets/AWS_TrainingBadges/AWS_SB_B8_CL01_460504f2-d472-4574-b4bc-0f218ae80160.png';
+import sb9 from '/src/assets/AWS_TrainingBadges/AWS_SB_B9_CL01_c628e0e1-cba2-4b3b-b529-2e0838dfaa7c.png';
+import sb10 from '/src/assets/AWS_TrainingBadges/AWS_SB_B10_CL01_c6da4509-3522-43bd-a30f-46197f583794.png';
+import sb11 from '/src/assets/AWS_TrainingBadges/AWS_SB_B11_CL01_925d90eb-fdbf-40fe-ae5d-9198a7920339.png';
+import sb12 from '/src/assets/AWS_TrainingBadges/AWS_SB_B12_CL01_fb6e61e3-1c0c-44cc-98b1-3710c8844a95.png';
+import sb13 from '/src/assets/AWS_TrainingBadges/AWS_SB_B13_CL01_e16a9725-af16-48b7-91af-5ceb7e33a5b7.png';
+import sb14 from '/src/assets/AWS_TrainingBadges/AWS_SB_B14_CL01_TE_f51be61b-7336-4e0f-a32d-26d5da6946ca.png';
+import sb15 from '/src/assets/AWS_TrainingBadges/AWS_SB_B15_CL01_CE_22de1550-0f7a-4a5f-9696-87e09f7fc918.png';
+import sb16 from '/src/assets/AWS_TrainingBadges/AWS_SB_B16_Bedrock_54d2ed58-30cf-4f13-8384-5769ec378432.png';
+import sb17 from '/src/assets/AWS_TrainingBadges/AWS_SB_B17_Lex_bc2e0ded-4e31-430e-9bc5-c5f6a9b78ad5.png';
+import sb18 from '/src/assets/AWS_TrainingBadges/AWS_SB_B18_Transcribe_54d2ed58-30cf-4f13-8384-5769ec378432.png';
+import sb19 from '/src/assets/AWS_TrainingBadges/AWS_SB_B19_AI_assistBuilding_5b21bb76-23d8-43c7-88ce-9ee17ee3a5f9.png';
+import sb20 from '/src/assets/AWS_TrainingBadges/AWS_SB_B20_Bedrock2_02b55b7f-4309-475e-b28a-e52efb7a6115.png';
+import sb21 from '/src/assets/AWS_TrainingBadges/AWS_SB_B21_ML_Model_SM_6b4371ad-b906-442f-b35c-8af22722f79a.png';
+
+// AWS AI Practitioner Badge imports
+import aip22 from '/src/assets/AWS_TrainingBadges/AWS_SB_B22_AIP_Badge_.png';
+import aip23 from '/src/assets/AWS_TrainingBadges/AWS_SB_B23_AIP_Badge_55193053-8200-4373-892c-941524cc5b6e.png';
+import aip24 from '/src/assets/AWS_TrainingBadges/AWS_SB_B24_AIP_Badge_b18ee92c-b505-4a4d-b16e-0c36d0e1da23.png';
+import aip25 from '/src/assets/AWS_TrainingBadges/AWS_SB_B25_AIP_Badge_357027af-48bf-4d8b-af9c-2e70ac054c14.png';
+import aip26 from '/src/assets/AWS_TrainingBadges/AWS_SB_B26_AIP_Badge_4caacc7e-a608-4c01-82da-9e42c3b52199.png';
+import aip27 from '/src/assets/AWS_TrainingBadges/AWS_SB_B27_AIP_Badge_c2bca3b7-5a18-4394-8421-3e872e9fadb5.png';
+import aip28 from '/src/assets/AWS_TrainingBadges/AWS_SB_B28_AIP_Badge_659266fb-eae0-45ed-9c37-de52d5d85741.png';
+import aip29 from '/src/assets/AWS_TrainingBadges/AWS_SB_B29_AIP_Badge_.png';
+import aip30 from '/src/assets/AWS_TrainingBadges/AWS_SB_B30_AIP_Badge_10096bda-943e-4e42-9cd6-f3615ae390a0.png';
+import aip31 from '/src/assets/AWS_TrainingBadges/AWS_SB_B31_AIP_Badge_c5498b47-2e29-4016-bbdd-7266c2a6ff34.png';
+import aip32 from '/src/assets/AWS_TrainingBadges/AWS_SB_B32_AIP_Badge_c855a05d-b748-4189-ad74-d54a02e0fbb3.png';
+import aip33 from '/src/assets/AWS_TrainingBadges/AWS_SB_B33_AIP_Badge_367c962e-a136-4f1a-b091-b69b1bced677.png';
+import aip34 from '/src/assets/AWS_TrainingBadges/AWS_SB_B34_AIP_Badge_aef6e6db-b67a-401e-a70b-da965ec999a4.png';
+import aip35 from '/src/assets/AWS_TrainingBadges/AWS_SB_B35_AIP_Badge_e89ebf2d-e1ef-4105-b26b-800517a2ab33.png';
+import aip36 from '/src/assets/AWS_TrainingBadges/AWS_SB_B36_AIP_Badge_931647e6-19ce-4678-b433-e6976a639119.png';
+import aip37 from '/src/assets/AWS_TrainingBadges/AWS_SB_B37_AIP_Badge_f3b66a69-bef1-47d6-ad44-345048426ecb.png';
+import aip38 from '/src/assets/AWS_TrainingBadges/AWS_SB_B38_AIP_Badge_ada15459-9aae-4a78-904e-63e62074040c.png';
+import aip39 from '/src/assets/AWS_TrainingBadges/AWS_SB_B39_AIP_Badge_46660159-bfc4-4e1d-9cc8-521629399441.png';
+import aip40 from '/src/assets/AWS_TrainingBadges/AWS_SB_B40_AIP_Badge_d6fb0417-3a96-4eef-9d35-b51dfcea0c3c.png';
+
+// AWS Educate Badge imports
+import badge1 from '/src/assets/AWS_TrainingBadges/AWSEducateBagde1_CC101.png';
+import badge2 from '/src/assets/AWS_TrainingBadges/AWSEducateBagde2_Storage.png';
+import badge3 from '/src/assets/AWS_TrainingBadges/AWSEducateBagde3_Compute.png';
+import badge4 from '/src/assets/AWS_TrainingBadges/AWSEducateBagde4_Networking.png';
+import badge5 from '/src/assets/AWS_TrainingBadges/AWSEducateBagde5_Databases.png';
+import badge6 from '/src/assets/AWS_TrainingBadges/AWSEducateBagde6_Serverless.png';
+import badge7 from '/src/assets/AWS_TrainingBadges/AWSEducateBagde7_CloudOperations.png';
+import badge8 from '/src/assets/AWS_TrainingBadges/AWSEducateBagde8_Security.png';
+import badge9 from '/src/assets/AWS_TrainingBadges/AWSEducateBagde_GenAI.png';
+import badge10 from '/src/assets/AWS_TrainingBadges/AWSEducateBagdeML_foundations.png';
+import badge11 from '/src/assets/AWS_TrainingBadges/AWS Academy 2025(Aug).png';
+
 // AWS Skill Builder Badge images
 const awsSkillBuilderBadges = {
-  sb1: '/src/assets/AWS_TrainingBadges/AWS_SB_B1_CL01_87d9f1ba-9b5a-4bcb-b0f2-3910de7d68e7.png',
-  sb2: '/src/assets/AWS_TrainingBadges/AWS_SB_B2_CL01_56d0d0f8-56c7-49b1-ae44-0bba2ac31deb.png',
-  sb3: '/src/assets/AWS_TrainingBadges/AWS_SB_B3_CL01_70848990-7a8f-4b02-be84-b111e3aacd99.png',
-  sb4: '/src/assets/AWS_TrainingBadges/AWS_SB_B4_CL01_1dbd7196-f485-43a4-870b-077ac68fb291.png',
-  sb5: '/src/assets/AWS_TrainingBadges/AWS_SB_B5_CL01_83fe4335-4b2a-4637-b8ee-45853ef53ca4.png',
-  sb6: '/src/assets/AWS_TrainingBadges/AWS_SB_B6_CL01_a0f8f908-d800-44ac-a3c0-4b11f0dba8b0.png',
-  sb7: '/src/assets/AWS_TrainingBadges/AWS_SB_B7_CL01_8e1407c1-a6a7-4862-b3bc-9c1f74c4f420.png',
-  sb8: '/src/assets/AWS_TrainingBadges/AWS_SB_B8_CL01_460504f2-d472-4574-b4bc-0f218ae80160.png',
-  sb9: '/src/assets/AWS_TrainingBadges/AWS_SB_B9_CL01_c628e0e1-cba2-4b3b-b529-2e0838dfaa7c.png',
-  sb10: '/src/assets/AWS_TrainingBadges/AWS_SB_B10_CL01_c6da4509-3522-43bd-a30f-46197f583794.png',
-  sb11: '/src/assets/AWS_TrainingBadges/AWS_SB_B11_CL01_925d90eb-fdbf-40fe-ae5d-9198a7920339.png',
-  sb12: '/src/assets/AWS_TrainingBadges/AWS_SB_B12_CL01_fb6e61e3-1c0c-44cc-98b1-3710c8844a95.png',
-  sb13: '/src/assets/AWS_TrainingBadges/AWS_SB_B13_CL01_e16a9725-af16-48b7-91af-5ceb7e33a5b7.png',
-  sb14: '/src/assets/AWS_TrainingBadges/AWS_SB_B14_CL01_TE_f51be61b-7336-4e0f-a32d-26d5da6946ca.png',
-  sb15: '/src/assets/AWS_TrainingBadges/AWS_SB_B15_CL01_CE_22de1550-0f7a-4a5f-9696-87e09f7fc918.png',
-  sb16: '/src/assets/AWS_TrainingBadges/AWS_SB_B16_Bedrock_54d2ed58-30cf-4f13-8384-5769ec378432.png',
-  sb17: '/src/assets/AWS_TrainingBadges/AWS_SB_B17_Lex_bc2e0ded-4e31-430e-9bc5-c5f6a9b78ad5.png',
-  sb18: '/src/assets/AWS_TrainingBadges/AWS_SB_B18_Transcribe_54d2ed58-30cf-4f13-8384-5769ec378432.png',
-  sb19: '/src/assets/AWS_TrainingBadges/AWS_SB_B19_AI_assistBuilding_5b21bb76-23d8-43c7-88ce-9ee17ee3a5f9.png',
-  sb20: '/src/assets/AWS_TrainingBadges/AWS_SB_B20_Bedrock2_02b55b7f-4309-475e-b28a-e52efb7a6115.png',
-  sb21: '/src/assets/AWS_TrainingBadges/AWS_SB_B21_ML_Model_SM_6b4371ad-b906-442f-b35c-8af22722f79a.png'
+  sb1, sb2, sb3, sb4, sb5, sb6, sb7, sb8, sb9, sb10, sb11, sb12, sb13, sb14, sb15, sb16, sb17, sb18, sb19, sb20, sb21
 };
 
 // AWS AI Practitioner Badge images
 const awsAIPractitionerBadges = {
-  aip22: '/src/assets/AWS_TrainingBadges/AWS_SB_B22_AIP_Badge_.png',
-  aip23: '/src/assets/AWS_TrainingBadges/AWS_SB_B23_AIP_Badge_55193053-8200-4373-892c-941524cc5b6e.png',
-  aip24: '/src/assets/AWS_TrainingBadges/AWS_SB_B24_AIP_Badge_b18ee92c-b505-4a4d-b16e-0c36d0e1da23.png',
-  aip25: '/src/assets/AWS_TrainingBadges/AWS_SB_B25_AIP_Badge_357027af-48bf-4d8b-af9c-2e70ac054c14.png',
-  aip26: '/src/assets/AWS_TrainingBadges/AWS_SB_B26_AIP_Badge_4caacc7e-a608-4c01-82da-9e42c3b52199.png',
-  aip27: '/src/assets/AWS_TrainingBadges/AWS_SB_B27_AIP_Badge_c2bca3b7-5a18-4394-8421-3e872e9fadb5.png',
-  aip28: '/src/assets/AWS_TrainingBadges/AWS_SB_B28_AIP_Badge_659266fb-eae0-45ed-9c37-de52d5d85741.png',
-  aip29: '/src/assets/AWS_TrainingBadges/AWS_SB_B29_AIP_Badge_.png',
-  aip30: '/src/assets/AWS_TrainingBadges/AWS_SB_B30_AIP_Badge_10096bda-943e-4e42-9cd6-f3615ae390a0.png',
-  aip31: '/src/assets/AWS_TrainingBadges/AWS_SB_B31_AIP_Badge_c5498b47-2e29-4016-bbdd-7266c2a6ff34.png',
-  aip32: '/src/assets/AWS_TrainingBadges/AWS_SB_B32_AIP_Badge_c855a05d-b748-4189-ad74-d54a02e0fbb3.png',
-  aip33: '/src/assets/AWS_TrainingBadges/AWS_SB_B33_AIP_Badge_367c962e-a136-4f1a-b091-b69b1bced677.png',
-  aip34: '/src/assets/AWS_TrainingBadges/AWS_SB_B34_AIP_Badge_aef6e6db-b67a-401e-a70b-da965ec999a4.png',
-  aip35: '/src/assets/AWS_TrainingBadges/AWS_SB_B35_AIP_Badge_e89ebf2d-e1ef-4105-b26b-800517a2ab33.png',
-  aip36: '/src/assets/AWS_TrainingBadges/AWS_SB_B36_AIP_Badge_931647e6-19ce-4678-b433-e6976a639119.png',
-  aip37: '/src/assets/AWS_TrainingBadges/AWS_SB_B37_AIP_Badge_f3b66a69-bef1-47d6-ad44-345048426ecb.png',
-  aip38: '/src/assets/AWS_TrainingBadges/AWS_SB_B38_AIP_Badge_ada15459-9aae-4a78-904e-63e62074040c.png',
-  aip39: '/src/assets/AWS_TrainingBadges/AWS_SB_B39_AIP_Badge_46660159-bfc4-4e1d-9cc8-521629399441.png',
-  aip40: '/src/assets/AWS_TrainingBadges/AWS_SB_B39_AIP_Badge_d6fb0417-3a96-4eef-9d35-b51dfcea0c3c.png'
+  aip22, aip23, aip24, aip25, aip26, aip27, aip28, aip29, aip30, aip31, aip32, aip33, aip34, aip35, aip36, aip37, aip38, aip39, aip40
 };
 
 // AWS Educate Badge images
 const awsEducateBadges = {
-  badge1: '/src/assets/AWS_TrainingBadges/AWSEducateBagde1_CC101.png',
-  badge2: '/src/assets/AWS_TrainingBadges/AWSEducateBagde2_Storage.png',
-  badge3: '/src/assets/AWS_TrainingBadges/AWSEducateBagde3_Compute.png',
-  badge4: '/src/assets/AWS_TrainingBadges/AWSEducateBagde4_Networking.png',
-  badge5: '/src/assets/AWS_TrainingBadges/AWSEducateBagde5_Databases.png',
-  badge6: '/src/assets/AWS_TrainingBadges/AWSEducateBagde6_Serverless.png',
-  badge7: '/src/assets/AWS_TrainingBadges/AWSEducateBagde7_CloudOperations.png',
-  badge8: '/src/assets/AWS_TrainingBadges/AWSEducateBagde8_Security.png',
-  badge9: '/src/assets/AWS_TrainingBadges/AWSEducateBagde_GenAI.png',
-  badge10: '/src/assets/AWS_TrainingBadges/AWSEducateBagdeML_foundations.png',
-  badge11: '/src/assets/AWS_TrainingBadges/AWS Academy 2025(Aug).png'
+  badge1, badge2, badge3, badge4, badge5, badge6, badge7, badge8, badge9, badge10, badge11
 };
 
 interface Certification {
@@ -627,13 +636,12 @@ export default function AWSTrainingCertifications({ isOpen, onClose }: ModalProp
               <Award className="mr-4 h-10 w-15" />
               <h1>My AWS Training & Certifications</h1>
             </Badge>
-            {/* <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              My AWS Training Certifications
-            </h2><br></br> */}
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               AWS training badges earned through hands-on learning, Labs, Simulation,Tutorials, Challenges, Games on services and Assessments
             </p>
           </div>
+
+
 
           {/* AWS AI Practitioner Exam Preparatory Section */}
           <div className="mb-16">

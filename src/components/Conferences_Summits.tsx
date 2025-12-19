@@ -55,7 +55,60 @@ import suSummit16 from "../assets/conferences_summits_Images/SU_Summit2025_Offli
 import suSummit17 from "../assets/conferences_summits_Images/SU_Summit2025_Offline17.jpg";
 import suSummit18 from "../assets/conferences_summits_Images/SU_Summit2025_Offline18.jpg";
 
+// AWS re:Invent Images
+import reinvent0_1 from "../assets/conferences_summits_Images/image0 (1).png";
+import reinvent0_2 from "../assets/conferences_summits_Images/image0 (2).png";
+import reinvent0_3 from "../assets/conferences_summits_Images/image0 (3).png";
+import reinvent1 from "../assets/conferences_summits_Images/image1.png";
+import reinvent2 from "../assets/conferences_summits_Images/image2.png";
+import reinvent3 from "../assets/conferences_summits_Images/image3.png";
+import reinvent4 from "../assets/conferences_summits_Images/image4.png";
+import reinvent5 from "../assets/conferences_summits_Images/image5.png";
+import reinvent6 from "../assets/conferences_summits_Images/image6.png";
+import reinvent7 from "../assets/conferences_summits_Images/image7.png";
+import reinvent8 from "../assets/conferences_summits_Images/image8.png";
+import reinvent9 from "../assets/conferences_summits_Images/image9.png";
+import reinvent10 from "../assets/conferences_summits_Images/image10.png";
+import reinvent11 from "../assets/conferences_summits_Images/image11.png";
+import reinvent12 from "../assets/conferences_summits_Images/image12.png";
+import reinvent13 from "../assets/conferences_summits_Images/image13.png";
+import reinvent14 from "../assets/conferences_summits_Images/image14.png";
+import reinvent15 from "../assets/conferences_summits_Images/image15.png";
+import reinvent16 from "../assets/conferences_summits_Images/image16.jpg";
+import reinvent17 from "../assets/conferences_summits_Images/image17.jpg";
+import reinvent18 from "../assets/conferences_summits_Images/image18.jpg";
+import reinvent19 from "../assets/conferences_summits_Images/image19.jpg";
+import reinvent20 from "../assets/conferences_summits_Images/image20.png";
+
 const conferences = [
+  {
+    title: "AWS re:Invent 2025 – Las Vegas (Online Live)",
+    description: "My Learning Journey from AWS re:Invent (Dec 1–5) | 5 Days of Deep AI Agents & AWS Insights. After getting notification from AWS, I made a conscious decision to learn deeply, document everything, and reflect on every insight shared by industry leaders. The AWS re:Invent event was not just a conference for me — it was a mindset shift towards AWS and Agentic AI. Every session added clarity to how AI, Agents, and Cloud-native systems are shaping the future. Keynotes by AWS CEO and Dr Swami Shiva Subramanyam were the most impactful moments, emphasizing thinking beyond tools, building AI systems with responsibility, scalability, and trust, and why Agents are the future of enterprise automation.",
+    images: [
+      { src: reinvent0_1, caption: 'AWS re:Invent Opening', alt: 'AWS re:Invent Opening' },
+      { src: reinvent1, caption: 'AI Agents Core Components', alt: 'AI Agents Architecture' },
+      { src: reinvent2, caption: 'Amazon Bedrock & Nova', alt: 'Amazon Bedrock Services' },
+      { src: reinvent3, caption: 'AWS Lambda & S3 Insights', alt: 'AWS Core Services' },
+      { src: reinvent4, caption: 'Database & Security Hub', alt: 'AWS Database Services' },
+      { src: reinvent5, caption: 'DevOps Agent Excellence', alt: 'DevOps Best Practices' },
+      { src: reinvent6, caption: 'AI Factory Concept', alt: 'AI Factory Architecture' },
+      { src: reinvent7, caption: 'Nova Lite & Pro Models', alt: 'Amazon Nova Models' },
+      { src: reinvent8, caption: 'Bring Your Own Data', alt: 'Custom Model Training' },
+      { src: reinvent9, caption: 'Agent Memory & Learning', alt: 'Agent Memory Systems' },
+      { src: reinvent10, caption: 'Agent Evaluation Methods', alt: 'Agent Performance Metrics' },
+      { src: reinvent11, caption: 'Reinforcement Fine-tuning', alt: 'Model Improvement' },
+      { src: reinvent12, caption: 'AWS Security Framework', alt: 'Security Best Practices' },
+      { src: reinvent13, caption: 'Event-driven Architecture', alt: 'Serverless Architecture' },
+      { src: reinvent14, caption: 'Intelligent Tiering S3', alt: 'S3 Storage Optimization' },
+      { src: reinvent15, caption: 'Multi-modal Reasoning', alt: 'AI Reasoning Capabilities' },
+      { src: reinvent16, caption: 'Learning Documentation', alt: 'Knowledge Capture' },
+      { src: reinvent17, caption: 'Deep Learning Notes', alt: 'Technical Documentation' },
+      { src: reinvent18, caption: 'Architecture Insights', alt: 'System Architecture' },
+      { src: reinvent19, caption: 'AI Innovation Roadmap', alt: 'Future Technology Trends' },
+      { src: reinvent20, caption: 'Complete Learning Journey', alt: 'Comprehensive Learning' }
+    ],
+    linkedinUrl: "https://www.linkedin.com/posts/rrbalaji_my-learning-journey-from-aws-re-invent-activity-7406399733306527744-4v32?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE"
+  },
   {
     title: "Singularity Summit India 2025 – Bengaluru",
     description: "A dream turned reality! I had the incredible opportunity to attend the Singularity Summit India offline at the Sheraton Grand, Bengaluru. The summit was a powerhouse of innovation, featuring global leaders in AI, robotics, blockchain, AR/VR, and humanoid tech. Grateful to Dr. Dinesh K and MITS University for this transformative experience in tech, entrepreneurship, and leadership. Energized by deep discussions, global networking, and immersive learning—this summit marked a milestone in my journey toward future tech impact.",
@@ -142,7 +195,7 @@ function GenericCarousel({ images }: { images: { src: string; caption: string; a
   const prev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
   const next = () => setCurrent((prev) => (prev + 1) % images.length);
   return (
-    <div className="relative w-full max-w-3xl mx-auto">
+    <div className="relative w-full max-w-10xl mx-auto">
       <div className="overflow-hidden rounded-2xl bg-white shadow-lg">
         <motion.img
           key={images[current].src}
