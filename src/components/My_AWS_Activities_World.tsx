@@ -92,43 +92,43 @@ interface ActivityEntry {
 }
 
 // AWS re:Invent Learning Journey Entry
-const reinventJourney = {
-  year: 2024,
-  date: "December 1-5, 2024",
-  title: "AWS re:Invent 2024 - My Learning Journey from Las Vegas 🎯",
-  type: "Conference" as const,
-  description: "My Learning Journey from AWS re:Invent (Dec 1–5) | 5 Days of Deep AI Agents & AWS Insights on new services from Las Vegas (USA) online live. After getting notification mail from AWS about re:Invent, from Day One, I made a conscious decision to learn deeply, document everything, and reflect on every insight shared by industry leaders. The AWS re:Invent event was not just a conference for me — it was a mindset shift towards AWS and Agentic AI. Every session added clarity to how AI, Agents, and Cloud-native systems are shaping the future.",
-  highlights: [
-    "Keynotes by AWS CEO and Dr Swami Shiva Subramanyam - most impactful moments of the event",
-    "Thinking beyond tools and focusing on problem-solving with AI systems",
-    "Building AI systems with responsibility, scalability, and trust",
-    "The importance of human-in-the-loop AI and why Agents are the future",
-    "AI Agents Core Components: Model, Code, Tools (APIs, workflows)",
-    "Agent Memory: Enables learning from experience, history-aware agents",
-    "Agent Evaluation: Measuring agent behavior, continuous improvement using feedback loops",
-    "Amazon Nova: Nova Lite, Nova Pro, Nova Omni - Unified multimodal model for text, reasoning & image generation",
-    "Bring Your Own Data: Train custom models, Fine-tune or build from scratch",
-    "Amazon Nova Forge: Access to open-training models (Cohere, Stability, etc.)",
-    "AI Factory Concept: Domain-specific AI at scale with reliability + governance + evaluation",
-    "AWS Lambda: Durable functions, Event-driven architecture",
-    "Amazon S3: Max object size 5TB, Intelligent Tiering & replication",
-    "Databases: RDS (Postgres, Oracle), EMR, EC2, ECS",
-    "AWS Security Hub & FortiAgent for secure applications",
-    "DevOps Agent: Operational excellence, Faster alerts, reduced ops load",
-    "Reinforcement fine-tuning in Amazon Bedrock for improved accuracy and decision-making"
-  ],
-  tags: ["re:Invent 2024", "AI Agents", "Amazon Bedrock", "Nova Models", "Agentic AI", "AWS CEO Keynote", "Agent Memory", "AI Factory", "Las Vegas Online", "Deep Learning", "Documentation"],
-  media: {
-    post: "https://www.linkedin.com/posts/rrbalaji_aws-reinvent-aiagents-activity-7270123456789012345-abcd?utm_source=share&utm_medium=member_desktop",
-    link: "https://lnkd.in/gMxFAiUF"
-  }
-};
+// const reinventJourney = {
+//   year: 2024,
+//   date: "December 1-5, 2024",
+//   title: "AWS re:Invent 2024 - My Learning Journey from Las Vegas 🎯",
+//   type: "Conference" as const,
+//   description: "My Learning Journey from AWS re:Invent (Dec 1–5) | 5 Days of Deep AI Agents & AWS Insights on new services from Las Vegas (USA) online live. After getting notification mail from AWS about re:Invent, from Day One, I made a conscious decision to learn deeply, document everything, and reflect on every insight shared by industry leaders. The AWS re:Invent event was not just a conference for me — it was a mindset shift towards AWS and Agentic AI. Every session added clarity to how AI, Agents, and Cloud-native systems are shaping the future.",
+//   highlights: [
+//     "Keynotes by AWS CEO and Dr Swami Shiva Subramanyam - most impactful moments of the event",
+//     "Thinking beyond tools and focusing on problem-solving with AI systems",
+//     "Building AI systems with responsibility, scalability, and trust",
+//     "The importance of human-in-the-loop AI and why Agents are the future",
+//     "AI Agents Core Components: Model, Code, Tools (APIs, workflows)",
+//     "Agent Memory: Enables learning from experience, history-aware agents",
+//     "Agent Evaluation: Measuring agent behavior, continuous improvement using feedback loops",
+//     "Amazon Nova: Nova Lite, Nova Pro, Nova Omni - Unified multimodal model for text, reasoning & image generation",
+//     "Bring Your Own Data: Train custom models, Fine-tune or build from scratch",
+//     "Amazon Nova Forge: Access to open-training models (Cohere, Stability, etc.)",
+//     "AI Factory Concept: Domain-specific AI at scale with reliability + governance + evaluation",
+//     "AWS Lambda: Durable functions, Event-driven architecture",
+//     "Amazon S3: Max object size 5TB, Intelligent Tiering & replication",
+//     "Databases: RDS (Postgres, Oracle), EMR, EC2, ECS",
+//     "AWS Security Hub & FortiAgent for secure applications",
+//     "DevOps Agent: Operational excellence, Faster alerts, reduced ops load",
+//     "Reinforcement fine-tuning in Amazon Bedrock for improved accuracy and decision-making"
+//   ],
+//   tags: ["re:Invent 2024", "AI Agents", "Amazon Bedrock", "Nova Models", "Agentic AI", "AWS CEO Keynote", "Agent Memory", "AI Factory", "Las Vegas Online", "Deep Learning", "Documentation"],
+//   media: {
+//     post: "https://www.linkedin.com/posts/rrbalaji_aws-reinvent-aiagents-activity-7270123456789012345-abcd?utm_source=share&utm_medium=member_desktop",
+//     link: "https://lnkd.in/gMxFAiUF"
+//   }
+// };
 
 const activities: ActivityEntry[] = [
   {
-    year: 2024,
-    date: "December 1-5, 2024",
-    title: "AWS re:Invent 2024 - Deep AI Agents & AWS Insights 🎯",
+    year: 2025,
+    date: "December 1-5, 2025",
+    title: "AWS re:Invent 2025 (Las Vages, USA)",
     type: "Conference",
     description: "My Learning Journey from AWS re:Invent (Dec 1–5) | 5 Days of Deep AI Agents & AWS Insights on new services from Las Vegas (USA) online live. After getting notification mail from AWS about re:Invent, from Day One, I made a conscious decision to learn deeply, document everything, and reflect on every insight shared by industry leaders. The AWS re:Invent event was not just a conference for me — it was a mindset shift towards AWS and Agentic AI.",
     highlights: [
@@ -154,8 +154,8 @@ const activities: ActivityEntry[] = [
   },
   
   {
-    year: 2025,
-    date: "December 2025",
+    year: 2026,
+    date: "January 2026",
     title: "AI SkillDev - Startup Launch 🚀",
     type: "Startup",
     description: "Founded AI SkillDev, an AI-powered skill development platform built entirely on AWS services. Transformed a pre-final year project into a production-ready startup after applying 1.5 years experience and learning of AWS.",
@@ -165,7 +165,7 @@ const activities: ActivityEntry[] = [
       "Agentic AI application for personalized learning",
       "Operating as a registered company with structured processes",
     ],
-    tags: ["Startup", "GenAI", "Amazon Bedrock", "Full-Stack", "Agentic AI", "..."],
+    tags: ["Startup", "GenAI", "Amazon Bedrock", "Full-Stack", "AI Agents", "..."],
   },
   
   {
@@ -438,8 +438,8 @@ export default function MyAWSActivitiesWorld() {
             </h2>
             <p className="text-lg text-white/80 leading-relaxed drop-shadow-sm">
               An inspiring 1.5-year journey through AWS conferences, global summits, intensive training, 
-              professional certifications, and hands-on learning experiences, culminating in the creation of 
-              <span className="font-bold text-yellow-300 drop-shadow-sm">AI SkillDev</span> - 
+              professional certifications, and hands-on learning experiences, culminating in the creation of <br></br>
+              <span className="font-bold text-yellow-300 drop-shadow-sm"> AI SkillDev</span> - 
               a revolutionary AI-powered learning platform.
             </p>
           </div>
@@ -471,104 +471,6 @@ export default function MyAWSActivitiesWorld() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* AWS re:Invent Learning Journey Highlight */}
-      <section className="max-w-6xl mx-auto px-6 -mt-16 relative z-10 mb-20">
-        <Card className="overflow-hidden bg-white rounded-2xl shadow-xl border-2 border-gray-800 hover:shadow-2xl hover:-translate-y-2 hover:border-blue-500 transition-all duration-500 ease-out animate-fade-in-up">
-          <CardHeader className="p-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-            <div className="flex items-start justify-between mb-6">
-              <Badge className="bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-4 py-2 text-base font-semibold">
-                <Users className="mr-2 h-5 w-5" />
-                {reinventJourney.type}
-              </Badge>
-              <span className="text-sm text-blue-100 font-medium bg-white/20 px-3 py-1 rounded-full">{reinventJourney.date}</span>
-            </div>
-            <CardTitle className="text-3xl md:text-4xl font-bold text-white mb-4">
-              {reinventJourney.title}
-            </CardTitle>
-            <CardDescription className="text-lg text-blue-100 leading-relaxed">{reinventJourney.description}</CardDescription>
-          </CardHeader>
-          
-          <CardContent className="p-8">
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div className="bg-blue-50 rounded-2xl p-6 border-2 border-blue-300 hover:bg-blue-100/50 hover:border-blue-500 transition-all duration-300">
-                <h4 className="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-900">
-                  <Sparkles className="h-5 w-5 text-blue-500" />
-                  Key Learnings & Insights
-                </h4>
-                <ul className="space-y-3 max-h-80 overflow-y-auto">
-                  {reinventJourney.highlights?.slice(0, 8).map((highlight, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm">
-                      <div className="h-1.5 w-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
-                      <span className="text-gray-700 leading-relaxed">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-purple-50 rounded-2xl p-6 border-2 border-purple-300 hover:bg-purple-100/50 hover:border-purple-500 transition-all duration-300">
-                <h4 className="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-900">
-                  <Code className="h-5 w-5 text-purple-500" />
-                  AWS Services Explored
-                </h4>
-                <div className="space-y-3">
-                  <div className="flex flex-wrap gap-2">
-                    {["Amazon Bedrock", "Nova Models", "Lambda", "S3", "RDS", "EC2", "Security Hub"].map((tech) => (
-                      <Badge key={tech} className="text-xs px-3 py-1 bg-purple-100 text-purple-700 border border-purple-200 font-medium">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="mt-4">
-                    <p className="text-sm text-gray-600 mb-2"><strong>Documentation:</strong> Page-by-page learning notes</p>
-                    <p className="text-sm text-gray-600 mb-2"><strong>Focus Areas:</strong> AI Agents, Agentic AI, GenAI</p>
-                    <p className="text-sm text-gray-600"><strong>Impact:</strong> Mindset shift towards AWS & AI</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex flex-wrap gap-2 justify-center mb-6">
-              {reinventJourney.tags?.map((tag, index) => (
-                <Badge key={tag} className={`px-3 py-1 text-xs font-medium border transition-all duration-200 ${
-                  index % 4 === 0 ? 'bg-red-50 text-red-700 border-red-200' :
-                  index % 4 === 1 ? 'bg-blue-50 text-blue-700 border-blue-200' :
-                  index % 4 === 2 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
-                  'bg-purple-50 text-purple-700 border-purple-200'
-                }`}>
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-
-            {reinventJourney.media && (
-              <div className="flex flex-wrap gap-3 justify-center">
-                {reinventJourney.media.post && (
-                  <a
-                    href={reinventJourney.media.post}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-blue-500 hover:bg-blue-600 hover:-translate-y-0.5 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-out flex items-center gap-2 shadow-md hover:shadow-lg"
-                  >
-                    <Briefcase className="h-4 w-4" />
-                    LinkedIn Post
-                  </a>
-                )}
-                {reinventJourney.media.link && (
-                  <a
-                    href={reinventJourney.media.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-purple-500 hover:bg-purple-600 hover:-translate-y-0.5 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-out flex items-center gap-2 shadow-md hover:shadow-lg"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    Learning Documentation
-                  </a>
-                )}
-              </div>
-            )}
-          </CardContent>
-        </Card>
       </section>
 
       {/* Startup Highlight */}
