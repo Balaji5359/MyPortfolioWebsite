@@ -10,6 +10,7 @@ import Achievements from '@/components/Achievements';
 import ExtraCurricular from '@/components/ExtraCurricular';
 import Conferences_Summits from '@/components/Conferences_Summits';
 import AWSTrainingCertifications from '@/components/AWSTrainingCertifications';
+import AWSSessionsEvents from '@/components/AWSSessionsEvents';
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,6 +20,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <AWSSessionsEvents />
         <div className="flex flex-col items-center gap-4 mt-8 mb-2">
           <button
             onClick={() => setIsModalOpen(true)}
