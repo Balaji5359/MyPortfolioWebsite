@@ -3,6 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import AWSCertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-Cloud-Practitioner.jpeg';
 import AWSAICertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified-AI-Practitioner.png';
+import AWSStartupCreditsImage from '/src/assets/My_AWS_Activities_Images/AWS-StartUp-credits.png';
+import dept2ndEventImage from '@/assets/AWS_sessions/Dept_2nd_Session_Image0.jpeg';
+import dept3rdEventImage from '@/assets/AWS_sessions/Dept_3rd_Session_Image1.jpeg';
+import skillBeeEventImage from '@/assets/AWS_sessions/Skill_BeeClub_Session_Image0_29-12-25.jpg';
+import dsEventImage from '@/assets/AWS_sessions/DS_Session_Image1_23-12-25.jpg';
 
 // Add custom CSS animations
 const customStyles = `
@@ -77,7 +82,7 @@ interface ActivityEntry {
   year: number;
   date: string;
   title: string;
-  type: "Conference" | "Training" | "Certification" | "Membership" | "Startup" | "Global Certification";
+  type: "Conference" | "Training" | "Certification" | "Membership" | "Startup" | "Global Certification" | "Event";
   description: string;
   highlights?: string[];
   tags?: string[];
@@ -91,40 +96,92 @@ interface ActivityEntry {
   };
 }
 
-// AWS re:Invent Learning Journey Entry
-// const reinventJourney = {
-//   year: 2024,
-//   date: "December 1-5, 2024",
-//   title: "AWS re:Invent 2024 - My Learning Journey from Las Vegas 🎯",
-//   type: "Conference" as const,
-//   description: "My Learning Journey from AWS re:Invent (Dec 1–5) | 5 Days of Deep AI Agents & AWS Insights on new services from Las Vegas (USA) online live. After getting notification mail from AWS about re:Invent, from Day One, I made a conscious decision to learn deeply, document everything, and reflect on every insight shared by industry leaders. The AWS re:Invent event was not just a conference for me — it was a mindset shift towards AWS and Agentic AI. Every session added clarity to how AI, Agents, and Cloud-native systems are shaping the future.",
-//   highlights: [
-//     "Keynotes by AWS CEO and Dr Swami Shiva Subramanyam - most impactful moments of the event",
-//     "Thinking beyond tools and focusing on problem-solving with AI systems",
-//     "Building AI systems with responsibility, scalability, and trust",
-//     "The importance of human-in-the-loop AI and why Agents are the future",
-//     "AI Agents Core Components: Model, Code, Tools (APIs, workflows)",
-//     "Agent Memory: Enables learning from experience, history-aware agents",
-//     "Agent Evaluation: Measuring agent behavior, continuous improvement using feedback loops",
-//     "Amazon Nova: Nova Lite, Nova Pro, Nova Omni - Unified multimodal model for text, reasoning & image generation",
-//     "Bring Your Own Data: Train custom models, Fine-tune or build from scratch",
-//     "Amazon Nova Forge: Access to open-training models (Cohere, Stability, etc.)",
-//     "AI Factory Concept: Domain-specific AI at scale with reliability + governance + evaluation",
-//     "AWS Lambda: Durable functions, Event-driven architecture",
-//     "Amazon S3: Max object size 5TB, Intelligent Tiering & replication",
-//     "Databases: RDS (Postgres, Oracle), EMR, EC2, ECS",
-//     "AWS Security Hub & FortiAgent for secure applications",
-//     "DevOps Agent: Operational excellence, Faster alerts, reduced ops load",
-//     "Reinforcement fine-tuning in Amazon Bedrock for improved accuracy and decision-making"
-//   ],
-//   tags: ["re:Invent 2024", "AI Agents", "Amazon Bedrock", "Nova Models", "Agentic AI", "AWS CEO Keynote", "Agent Memory", "AI Factory", "Las Vegas Online", "Deep Learning", "Documentation"],
-//   media: {
-//     post: "https://www.linkedin.com/posts/rrbalaji_aws-reinvent-aiagents-activity-7270123456789012345-abcd?utm_source=share&utm_medium=member_desktop",
-//     link: "https://lnkd.in/gMxFAiUF"
-//   }
-// };
-
 const activities: ActivityEntry[] = [
+  {
+    year: 2026,
+    date: "February 05, 2026",
+    title: "2nd Year CST Department Event - AWS, AI & Global Certification road-map Session",
+    type: "Event",
+    description: "Delivered an in-depth AWS session for 2nd year CST students on cloud foundations, certifications, AI/DevOps workflows, and practical industry-ready learning pathways.",
+    highlights: [
+      "Guided students on a practical AWS roadmap from beginner to project-ready",
+      "Connected AI + DevOps concepts with real implementation examples",
+      "Shared project workflow and how to build consistency in learning",
+      "Strong engagement and student interest for advanced follow-up sessions"
+    ],
+    tags: ["CST Department", "AWS Session", "AI", "DevOps", "Student Mentoring"],
+    media: {
+      certificate: dept2ndEventImage,
+    },
+  },
+  {
+    year: 2026,
+    date: "February 04, 2026",
+    title: "AWS Activate Approved - Startup Funding Credits ($1000)",
+    type: "Startup",
+    description: "Recognized under AWS Startups and received AWS Activate credits worth $1000 as initial startup funding support after three rejections.",
+    highlights: [
+      "Approved on 04-02-2026 after 3 previous rejections",
+      "Received official confirmation email: Your AWS Activate Credits are approved - get started now",
+      "Credits added to billing for eligible AWS services",
+      "Funding supports development and launch acceleration for the startup"
+    ],
+    tags: ["AWS Startups", "AWS Activate", "$1000 Credits", "Startup Funding", "Persistence"],
+    media: {
+      certificate: AWSStartupCreditsImage,
+    },
+  },
+  {
+    year: 2026,
+    date: "January 03, 2026",
+    title: "CST Department Event - Guiding Juniors on AWS & Certifications",
+    type: "Event",
+    description: "Conducted two sessions (9 AM-11 AM and 3 PM-5 PM) on AWS, cloud journey, global certifications, and project demonstrations for 140+ students.",
+    highlights: [
+      "Explained AWS fundamentals and a clear learning roadmap",
+      "Showcased EC2, S3, Bedrock, Amplify, and Amazon Q demos",
+      "Presented AI and DevOps use cases with end-to-end project demo",
+      "Recognized by HOD Dr Dinesh K and department coordinator"
+    ],
+    tags: ["CST Department", "AWS", "Cloud Computing", "Knowledge Sharing", "Career Guidance"],
+    media: {
+      certificate: dept3rdEventImage,
+    },
+  },
+  {
+    year: 2025,
+    date: "December 29, 2025",
+    title: "Skill Bee Club - AWS Workshop",
+    type: "Event",
+    description: "Conducted a university-wide AWS workshop through Skill Bee Club covering cloud fundamentals, services, and practical project pathways.",
+    highlights: [
+      "Delivered AWS fundamentals for cross-department students",
+      "Covered practical service usage and project orientation",
+      "Guided participants on certification and learning direction",
+      "Helped students understand real-world cloud adoption"
+    ],
+    tags: ["Skill Bee Club", "AWS Workshop", "Cloud Fundamentals", "Student Community"],
+    media: {
+      certificate: skillBeeEventImage,
+    },
+  },
+  {
+    year: 2025,
+    date: "December 23, 2025",
+    title: "AWS Session for Data Science Students",
+    type: "Event",
+    description: "Delivered an AWS-focused session to 100+ Data Science students, sharing cloud learning journey, certifications, and hands-on service understanding.",
+    highlights: [
+      "Motivated students to pursue AWS and cloud skill building",
+      "Explained practical roadmap from beginner to certified learner",
+      "Shared project experiences and applied cloud insights",
+      "Interactive Q&A with strong student participation"
+    ],
+    tags: ["Data Science Department", "AWS Session", "Mentoring", "Cloud Journey"],
+    media: {
+      certificate: dsEventImage,
+    },
+  },
   {
     year: 2025,
     date: "December 1-5, 2025",
@@ -155,10 +212,10 @@ const activities: ActivityEntry[] = [
   
   {
     year: 2026,
-    date: "January 2026",
-    title: "AI SkillDev - Startup Launch 🚀",
+    date: "February 2026",
+    title: "SkillRoute-AI Startup Launch 🚀",
     type: "Startup",
-    description: "Founded AI SkillDev, an AI-powered skill development platform built entirely on AWS services. Transformed a pre-final year project into a production-ready startup after applying 1.5 years experience and learning of AWS.",
+    description: "Founded SkillRoute-AI, an AI-powered skill development platform built entirely on AWS services. Transformed a pre-final year project into a production-ready startup after applying 1.5 years experience and learning of AWS.",
     highlights: [
       "First product launch planned for October 2025",
       "Built using Amazon Bedrock, Lambda, S3, EC2, DynamoDB and many other AWS services",
@@ -381,6 +438,7 @@ const typeIcons = {
   Membership: GraduationCap,
   Startup: Rocket,
   "Global Certification": Trophy,
+  Event: Calendar,
 };
 
 const typeColors = {
@@ -390,11 +448,13 @@ const typeColors = {
   Membership: "bg-purple-600 text-white border-purple-600",
   Startup: "bg-gradient-to-r from-primary to-accent text-primary-foreground border-0",
   "Global Certification": "bg-yellow-600 text-white border-yellow-600",
+  Event: "bg-cyan-600 text-white border-cyan-600",
 };
 
 export default function MyAWSActivitiesWorld() {
-  const startupEntry = activities.find((a) => a.type === "Startup");
-  const otherActivities = activities.filter((a) => a.type !== "Startup");
+  const startupEntry = activities.find((a) => a.title.includes("Startup Launch"));
+  const otherActivities = activities.filter((a) => a !== startupEntry);
+  const isImageAsset = (value: string) => /\.(png|jpe?g|webp|gif)$/i.test(value);
 
   return (
     <>
@@ -420,15 +480,8 @@ export default function MyAWSActivitiesWorld() {
         <div className="relative max-w-6xl mx-auto text-center">
           <Badge className="mb-8 px-6 py-3 text-lg bg-white/20 backdrop-blur-md border-2 border-white/30 text-white shadow-lg">
             <Cloud className="mr-3 h-6 w-6" />
-            AWS Cloud Journey 2023-2025
+            AWS Cloud Journey 2024-2026
           </Badge>
-          {/* <a
-            href="/"
-            className="inline-flex items-center gap-2 mb-8 bg-white/20 backdrop-blur-md hover:bg-white/30 hover:-translate-y-0.5 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ease-out text-base border-2 border-white/30"
-          >
-            <ArrowLeft className="h-5 w-5" />
-            Back to Portfolio
-          </a> */}
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-lg">
             My AWS Activities World
           </h1>
@@ -437,13 +490,13 @@ export default function MyAWSActivitiesWorld() {
               From Curious Beginner to Startup Founder
             </h2>
             <p className="text-lg text-white/80 leading-relaxed drop-shadow-sm">
-              An inspiring 1.5-year journey through AWS conferences, global summits, intensive training, 
-              professional certifications, and hands-on learning experiences, culminating in the creation of <br></br>
-              <span className="font-bold text-yellow-300 drop-shadow-sm"> AI SkillDev</span> - 
+              An inspiring 2-year journey through AWS conferences, global summits, intensive training, 
+              professional certifications, AWS sessions and hands-on learning experiences, culminating in the creation of <br></br>
+              <span className="font-bold text-yellow-300 drop-shadow-sm">SkillRoute-AI</span> - 
               a revolutionary AI-powered learning platform.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
             <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-orange-500 transition-all duration-500 ease-out group animate-fade-in-up">
               <Trophy className="h-10 w-10 mb-3 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
               <p className="text-3xl font-bold text-gray-900 mb-2">2</p>
@@ -468,6 +521,11 @@ export default function MyAWSActivitiesWorld() {
               <Rocket className="h-10 w-10 mb-3 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
               <p className="text-3xl font-bold text-gray-900 mb-2">1</p>
               <p className="text-sm font-medium text-gray-600 text-center">AI Startup Founded</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-red-500 transition-all duration-500 ease-out group animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+              <Code className="h-10 w-10 mb-3 text-yellow-500 group-hover:scale-110 transition-transform duration-300" />
+              <p className="text-3xl font-bold text-gray-900 mb-2">4</p>
+              <p className="text-sm font-medium text-gray-600 text-center">AWS Sessions Taken</p>
             </div>
           </div>
         </div>
@@ -580,9 +638,11 @@ export default function MyAWSActivitiesWorld() {
                     <div className={`h-6 w-6 rounded-full border-4 border-white shadow-lg ${
                       activity.type === 'Global Certification' ? 'bg-orange-500' :
                       activity.type === 'Conference' ? 'bg-blue-500' :
+                      activity.type === 'Event' ? 'bg-cyan-500' :
                       activity.type === 'Training' ? 'bg-emerald-500' :
                       activity.type === 'Certification' ? 'bg-cyan-500' :
                       activity.type === 'Membership' ? 'bg-purple-500' :
+                      activity.type === 'Startup' ? 'bg-orange-500' :
                       'bg-gray-500'
                     }`} />
                   </div>
@@ -606,9 +666,11 @@ export default function MyAWSActivitiesWorld() {
                           <Badge className={`px-3 py-1 text-sm font-medium ${
                             activity.type === 'Global Certification' ? 'bg-orange-100 text-orange-700 border border-orange-200' :
                             activity.type === 'Conference' ? 'bg-blue-100 text-blue-700 border border-blue-200' :
+                            activity.type === 'Event' ? 'bg-cyan-100 text-cyan-700 border border-cyan-200' :
                             activity.type === 'Training' ? 'bg-emerald-100 text-emerald-700 border border-emerald-200' :
                             activity.type === 'Certification' ? 'bg-cyan-100 text-cyan-700 border border-cyan-200' :
                             activity.type === 'Membership' ? 'bg-purple-100 text-purple-700 border border-purple-200' :
+                            activity.type === 'Startup' ? 'bg-orange-100 text-orange-700 border border-orange-200' :
                             'bg-gray-100 text-gray-700 border border-gray-200'
                           }`}>
                             <Icon className="mr-2 h-3 w-3" />
@@ -629,9 +691,11 @@ export default function MyAWSActivitiesWorld() {
                               <Cpu className={`h-4 w-4 ${
                                 activity.type === 'Global Certification' ? 'text-orange-500' :
                                 activity.type === 'Conference' ? 'text-blue-500' :
+                                activity.type === 'Event' ? 'text-cyan-500' :
                                 activity.type === 'Training' ? 'text-emerald-500' :
                                 activity.type === 'Certification' ? 'text-cyan-500' :
                                 activity.type === 'Membership' ? 'text-purple-500' :
+                                activity.type === 'Startup' ? 'text-orange-500' :
                                 'text-gray-500'
                               }`} />
                               Key Learnings & Achievements
@@ -642,9 +706,11 @@ export default function MyAWSActivitiesWorld() {
                                   <div className={`h-1.5 w-1.5 rounded-full mt-2 ${
                                     activity.type === 'Global Certification' ? 'bg-orange-500' :
                                     activity.type === 'Conference' ? 'bg-blue-500' :
+                                    activity.type === 'Event' ? 'bg-cyan-500' :
                                     activity.type === 'Training' ? 'bg-emerald-500' :
                                     activity.type === 'Certification' ? 'bg-cyan-500' :
                                     activity.type === 'Membership' ? 'bg-purple-500' :
+                                    activity.type === 'Startup' ? 'bg-orange-500' :
                                     'bg-gray-500'
                                   }`} />
                                   <span className="text-gray-600 leading-relaxed">{highlight}</span>
@@ -682,22 +748,54 @@ export default function MyAWSActivitiesWorld() {
 
                         {activity.media && Object.keys(activity.media).length > 0 && (
                           <div className="mt-4 pt-4 border-t border-gray-200 space-y-4">
-                            {activity.media.certificate && (activity.media.certificate.includes('.jpeg') || activity.media.certificate.includes('.png')) && (
-                              <div className="bg-orange-50 rounded-2xl p-4 border-2 border-orange-300 hover:bg-orange-100/50 hover:border-orange-500 transition-all duration-300">
+                            {activity.media.certificate && isImageAsset(activity.media.certificate) && (
+                              <div className={`rounded-2xl p-4 border-2 transition-all duration-300 ${
+                                activity.type === 'Event'
+                                  ? 'bg-cyan-50 border-cyan-300 hover:bg-cyan-100/50 hover:border-cyan-500'
+                                  : activity.title.includes('AWS Activate Approved')
+                                    ? 'bg-blue-50 border-blue-300 hover:bg-blue-100/50 hover:border-blue-500'
+                                    : 'bg-orange-50 border-orange-300 hover:bg-orange-100/50 hover:border-orange-500'
+                              }`}>
                                 <div className="flex items-center gap-2 mb-3">
-                                  <Trophy className="h-5 w-5 text-orange-500" />
-                                  <span className="text-base font-semibold text-orange-700">AWS Official Certificate</span>
+                                  {activity.type === 'Event' ? (
+                                    <Calendar className="h-5 w-5 text-cyan-500" />
+                                  ) : activity.title.includes('AWS Activate Approved') ? (
+                                    <Rocket className="h-5 w-5 text-blue-500" />
+                                  ) : (
+                                    <Trophy className="h-5 w-5 text-orange-500" />
+                                  )}
+                                  <span className={`text-base font-semibold ${
+                                    activity.type === 'Event'
+                                      ? 'text-cyan-700'
+                                      : activity.title.includes('AWS Activate Approved')
+                                        ? 'text-blue-700'
+                                        : 'text-orange-700'
+                                  }`}>
+                                    {activity.type === 'Event'
+                                      ? 'Event Snapshot'
+                                      : activity.title.includes('AWS Activate Approved')
+                                        ? 'AWS Activate Approval'
+                                        : 'AWS Official Certificate'}
+                                  </span>
                                 </div>
-                                <img 
-                                  src={activity.media.certificate} 
-                                  alt="AWS Certificate"
-                                  className="w-full max-w-md mx-auto rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-out cursor-pointer border-2 border-orange-400"
-                                  onClick={() => window.open(activity.media.certificate, '_blank')}
-                                />
+                                <div className={`w-full max-w-xl mx-auto rounded-lg border-2 overflow-hidden bg-white ${
+                                  activity.type === 'Event'
+                                    ? 'border-cyan-400'
+                                    : activity.title.includes('AWS Activate Approved')
+                                      ? 'border-blue-400'
+                                      : 'border-orange-400'
+                                }`}>
+                                  <img
+                                    src={activity.media.certificate}
+                                    alt={activity.type === 'Event' ? `${activity.title} image` : 'AWS Certificate'}
+                                    className="w-full h-72 object-contain shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-out cursor-pointer"
+                                    onClick={() => window.open(activity.media.certificate, '_blank')}
+                                  />
+                                </div>
                               </div>
                             )}
                             <div className="flex flex-wrap gap-2">
-                              {activity.media.certificate && !activity.media.certificate.includes('.jpeg') && !activity.media.certificate.includes('.png') && (
+                              {activity.media.certificate && !isImageAsset(activity.media.certificate) && (
                                 <a
                                   href={activity.media.certificate}
                                   target="_blank"

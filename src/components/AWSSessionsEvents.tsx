@@ -13,9 +13,21 @@ import skillBeeImage2 from '@/assets/AWS_sessions/Skill_BeeClub_Session_Image2_2
 import skillBeeImage3 from '@/assets/AWS_sessions/Skill_BeeClub_Session_Image3_29-12-25.jpg';
 import skillBeeImage4 from '@/assets/AWS_sessions/Skill_BeeClub_Session_Image4_29-12-25.jpg';
 import skillBeeImage5 from '@/assets/AWS_sessions/Skill_BeeClub_Session_Image5_29-12-25.jpg';
+import dept2ndImage0 from '@/assets/AWS_sessions/Dept_2nd_Session_Image0.jpeg';
+import dept2ndImage1 from '@/assets/AWS_sessions/Dept_2nd_Session_Image1.jpeg';
+import dept2ndImage2 from '@/assets/AWS_sessions/Dept_2nd_Session_Image2.jpeg';
+import dept2ndImage3 from '@/assets/AWS_sessions/Dept_2nd_Session_Image3.jpeg';
+import dept3rdImage1 from '@/assets/AWS_sessions/Dept_3rd_Session_Image1.jpeg';
+import dept3rdImage2 from '@/assets/AWS_sessions/Dept_3rd_Session_Image2.jpeg';
+import dept3rdImage3 from '@/assets/AWS_sessions/Dept_3rd_Session_Image3.jpeg';
+import dept3rdImage4 from '@/assets/AWS_sessions/Dept_3rd_Session_Image4.jpeg';
+import dept3rdImage5 from '@/assets/AWS_sessions/Dept_3rd_Session_Image5.jpeg';
+import dept3rdImage6 from '@/assets/AWS_sessions/Dept_3rd_Session_Image6.jpeg';
+import dept3rdImage7 from '@/assets/AWS_sessions/Dept_3rd_Session_Image7.jpeg';
+import dept3rdImage8 from '@/assets/AWS_sessions/Dept_3rd_Session_Image8.jpeg';
 
 // Event data with metadata extracted from filenames
-const eventsData = [
+const rawEventsData = [
   {
     id: 'ds-session',
     title: 'AWS Session for Data Science Students',
@@ -46,8 +58,49 @@ const eventsData = [
       skillBeeImage4,
       skillBeeImage5
     ]
+  },
+  {
+    id: 'cst-department-event',
+    title: '2nd year CST Department Event - AWS & Cloud Career Guidance',
+    organizer: 'CST Department',
+    date: '05-02-2026',
+    description: 'Guided juniors through AWS foundations, cloud learning roadmaps, certifications, and live demos of EC2, S3, Bedrock, global certifications and some projects.',
+    linkedInPost: 'Guiding juniors on AWS, cloud, global certifications, and my personal learning journey. Covered AWS basics, project insights, AI demos, and real-world industry use cases with 60+ active students.',
+    images: [
+      dept2ndImage0,
+      dept2ndImage1,
+      dept2ndImage2,
+      dept2ndImage3
+    ]
+  },
+  {
+    id: 'cst-2nd-year-department-event',
+    title: '3nd Year CST Department Event - AWS, AI & DevOps Session',
+    organizer: 'CST Department',
+    date: '03-01-2026',
+    description: 'Delivered an in-depth department event for 3nd-year CST students, highlighting AWS learning pathways, certifications, AI/DevOps project workflows, and practical cloud adoption steps.',
+    linkedInPost: 'An insightful and memorable day with strong student engagement, deep curiosity, and requests for more sessions and a multi-day workshop. Thankful to HOD Dr Dinesh K and the event coordinator for the opportunity.',
+    images: [
+      dept3rdImage1,
+      dept3rdImage2,
+      dept3rdImage3,
+      dept3rdImage4,
+      dept3rdImage5,
+      dept3rdImage6,
+      dept3rdImage7,
+      dept3rdImage8
+    ]
   }
 ];
+
+const parseEventDate = (dateStr: string) => {
+  const [day, month, year] = dateStr.split('-').map(Number);
+  return new Date(year, month - 1, day).getTime();
+};
+
+const eventsData = [...rawEventsData].sort(
+  (a, b) => parseEventDate(b.date) - parseEventDate(a.date)
+);
 
 const AWSSessionsEvents = () => {
   const [selectedEvent, setSelectedEvent] = useState<string | null>(null);
