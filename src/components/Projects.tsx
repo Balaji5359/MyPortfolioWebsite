@@ -7,6 +7,7 @@ import SIHTeam02Image from '/src/assets/SIH2025/Team02/SIHTeam02.png'
 import SIHTeam03Image from '/src/assets/SIH2025/Team03/SIHTeam03.png'
 import SIHTeam04Image from '/src/assets/SIH2025/Team04/SIHTeam04.png'
 import SIHTeam05Image from '/src/assets/SIH2025/Team05/SIHTeam05.png'
+import PraxisImage from '/src/assets/praxisprojectimage.png'
 import AI_Skill_Dev_Image from '/src/assets/ai-skill-dev-image.png'
 import AI_Skill_Dev_Logo from '/src/assets/ai-skill-dev-logo.png'
 import Get_n_Grow_logo from '/src/assets/getngrow_logo.png'
@@ -16,6 +17,7 @@ import AWSAICertificate from '/src/assets/My_AWS_Activities_Images/AWS-Certified
 
 const Projects = () => {
   const [activeTab, setActiveTab] = React.useState('Projects');
+  const [videoModal, setVideoModal] = React.useState<string | null>(null);
   
   const globalCertifications = [
     {
@@ -36,7 +38,6 @@ const Projects = () => {
     },
   ];
 
-  // Example data for Hackathon and Startup Ideas
   const hackathonIdeas = [
     {
       title: 'Museum Bot - Online Tour Guide (SIH-2024 Idea)',
@@ -48,7 +49,7 @@ const Projects = () => {
       image: '',
       video: '',
     },
-    {
+{
       title: 'AI Agent - 3 days Hackathon (by Product Space)',
       idea: 'An Internal Docs Q&A Agent for Teams for an IT company',
       prototype: 'Prototype built with React, AWS Bedrock Agent, Llama FM and Python',
@@ -61,6 +62,28 @@ const Projects = () => {
       },
       image: '',
       video: 'https://youtu.be/f3UU1HiVXCE',
+    },
+{
+      title: 'Agentic AI Pharmacy Ordering System (HackFusion3 - SSGS College)',
+      idea: 'Built a multi-agent AI system using LLMs to automate medicine ordering with intent extraction, safety validation, and order execution workflows. Implemented agent orchestration with Amazon Bedrock, AWS Lambda, and DynamoDB, ensuring safe transactions and explainable decision tracing.',
+      prototype: 'Tech Stack: Python, Amazon Bedrock, LLMs, AWS Services.',
+      demo: 'https://hackfusion.skillrouteai.com',
+      demo2: 'https://hackfusion.streamlit.app',
+      github: 'https://github.com/Balaji5359/HackFusion_Project_BEnd',
+      github2: 'https://github.com/Balaji5359/HackFusion_Project_FrontEnd',
+      linkedin: 'https://www.linkedin.com/posts/rrbalaji_hackathon-hackfusion3-aws-activity-7434886433452142593-ADQa?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE',
+      image: '',
+      video: '',
+    },
+    {
+      title: 'Learning Pattern Analysis & Classroom Strategy Insights (Praxis 2.0 - DSEU)',
+      idea: 'ML & GenAI Learning Analytics Platform - Developed a machine learning system to identify student learning patterns and predict academic risk using clustering and classification models. Integrated Generative AI using Amazon Bedrock to generate teacher feedback based on ML insights.',
+      prototype: 'Deployed an interactive dashboard on AWS EC2 using Streamlit for real-time analytics. Tech Stack: Python, Machine Learning, Amazon Bedrock, Streamlit',
+      demo: 'https://praxisproject.streamlit.app/',
+      github: 'https://github.com/Balaji5359/learning-patterns-classroom-strategy',
+      linkedin: 'https://www.linkedin.com/posts/rrbalaji_praxis-2-0-hackathon-dseu-activity-7434886433452142593-ADQa?utm_source=share&utm_medium=member_desktop&rcm=ACoAADRS9aMBZdOI4Ihdb8hQpRiXOdWq9n_Z4DE',
+      image: PraxisImage,
+      video: 'https://youtu.be/J1qTRoSCbRY',
     },
     // SIH 5 Teams Ideas
     {
@@ -159,7 +182,18 @@ const Projects = () => {
       video: 'https://youtu.be/f3UU1HiVXCE',
     },
   ];
-  const projects = [
+const projects = [
+    {
+      title: "MeetLite – Meeting Platform",
+      description: "• Cloud-native, real-time video conferencing platform built on AWS serverless architecture\n• Supports secure authentication, WebRTC-based peer-to-peer communication, meeting lifecycle management\n• AI-powered assistance with Amazon Bedrock (Nova Micro) and Bedrock Knowledge Base (RAG)\n",
+      tech: ["React.js", "AWS Lambda", "WebRTC", "Amazon Bedrock", "DynamoDB", "Cognito","Amazon S3","Git and GitHub", "API Gateway"],
+      category: "Cloud Computing",
+      featured: true,
+      gradient: "from-blue-600 to-indigo-700",
+      demo: "https://meetlite.skillrouteai.com",
+      github: "https://github.com/Balaji5359/cst-meet",
+      video: "https://youtu.be/jWlfq1h04kc"
+    },
     {
       title: "My Portfolio Website",
       description: "Build a interactive portfolio website using React, Tailwind CSS, and Framer Motion. Implement smooth animations and a clean UI to showcase projects effectively.",
@@ -267,7 +301,7 @@ const Projects = () => {
                   <div className="p-8">
                     <div className="text-sm text-primary font-medium mb-3">{project.category}</div>
                     <h3 className="text-2xl font-bold mb-4 transition-all duration-300">{project.title}</h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
+                    <p className="text-muted-foreground mb-6 leading-relaxed whitespace-pre-line">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.tech.map((tech) => (
                         <span key={tech} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">{tech}</span>
@@ -288,7 +322,11 @@ const Projects = () => {
                       ) : (
                         <Button variant="outline" size="sm" className="glass-card border-white/20" disabled><Github className="mr-2 h-4 w-4" />Code</Button>
                       )}
-                      <Button variant="ghost" size="sm"><PlayCircle className="mr-2 h-4 w-4" />Video</Button>
+                      {project.video ? (
+                        <Button variant="ghost" size="sm" onClick={() => setVideoModal(project.video)}><PlayCircle className="mr-2 h-4 w-4" />Video</Button>
+                      ) : (
+                        <Button variant="ghost" size="sm" disabled><PlayCircle className="mr-2 h-4 w-4" />Video</Button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -395,15 +433,18 @@ const Projects = () => {
 
             {/* SIH 2025 Teams Section */}
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-center mb-12">
-                <span className="gradient-text">SIH 2025 - 5 Teams (Led at MITS University)</span>
-              </h2>
               <div className="space-y-8">
                 {hackathonIdeas.slice(2).map((idea, idx) => (
                   <div key={idea.title} className="tech-card group relative overflow-hidden animate-floating bg-white shadow-xl">
                     <div className="flex flex-col lg:flex-row">
                       {/* Full Background Image */}
-                      <div className="lg:w-1/2 h-50 lg:h-auto relative overflow-hidden">
+                    <div
+                      className={`lg:w-1/2 relative overflow-hidden ${
+                        idea.title === 'Agentic AI Pharmacy Ordering System (HackFusion3 - SSGS College)'
+                          ? 'h-48 lg:h-56'
+                          : 'h-64 lg:h-full'
+                      }`}
+                    >
                         <img
                           src={idea.image}
                           alt={idea.title}
@@ -414,6 +455,11 @@ const Projects = () => {
                       
                       {/* Content */}
                       <div className="lg:w-1/2 p-8">
+                        {idea.title === 'PM Internships Recommendation System (SIH2025-Team1)' && (
+                          <h2 className="text-2xl font-bold mb-4">
+                            <span className="gradient-text">SIH 2025 - 5 Teams (Led at MITS University)</span>
+                          </h2>
+                        )}
                         <h3 className="text-2xl font-bold mb-4 text-purple-700">{idea.title}</h3>
                         
                         <div className="mb-4">
@@ -450,10 +496,24 @@ const Projects = () => {
                               </Button>
                             </a>
                           )}
+                          {'demo2' in idea && idea.demo2 && (
+                            <a href={idea.demo2} target="_blank" rel="noopener noreferrer">
+                              <Button size="sm" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
+                                <ExternalLink className="mr-2 h-4 w-4" />Demo 2
+                              </Button>
+                            </a>
+                          )}
                           {idea.github && (
                             <a href={idea.github} target="_blank" rel="noopener noreferrer">
                               <Button size="sm" variant="outline">
                                 <Github className="mr-2 h-4 w-4" />GitHub
+                              </Button>
+                            </a>
+                          )}
+                          {'github2' in idea && idea.github2 && (
+                            <a href={idea.github2} target="_blank" rel="noopener noreferrer">
+                              <Button size="sm" variant="outline">
+                                <Github className="mr-2 h-4 w-4" />GitHub 2
                               </Button>
                             </a>
                           )}
@@ -653,6 +713,32 @@ const Projects = () => {
           </div>
         )}
       </div>
+
+      {/* Video Modal */}
+      {videoModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setVideoModal(null)}>
+          <div className="relative w-full max-w-4xl bg-black rounded-lg overflow-hidden shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-white/20 hover:bg-white/40 rounded-full text-white transition-colors"
+              onClick={() => setVideoModal(null)}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="relative aspect-video">
+              <iframe
+                src={videoModal.replace('youtu.be/', 'youtube.com/embed/').replace('watch?v=', 'embed/')}
+                title="Project Demo Video"
+                className="w-full h-full"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

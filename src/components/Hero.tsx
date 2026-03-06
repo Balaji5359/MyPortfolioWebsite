@@ -29,13 +29,25 @@ const Hero = () => {
 
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
+                onClick={() => {
+                  const el = document.getElementById('projects');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 See My Work
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline">
-                <ArrowRight className="ml-2 h-6 w-6" />
+              <Button
+                variant="outline"
+                onClick={() => {
+                  const el = document.getElementById('contact');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Let's Connect
+                <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </div>
           </div>
@@ -79,12 +91,16 @@ const Hero = () => {
               <h3 className="text-2xl font-bold mb-6">Highlights</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
-                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">2+</span>
+                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">2</span>
+                  <span className="block text-base text-gray-700 dark:text-gray-200">AWS Global Certifications Achieved</span>
+                </div>
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
+                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">3+</span>
                   <span className="block text-base text-gray-700 dark:text-gray-200">Years of Programming Experience</span>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
-                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">1.5+</span>
-                  <span className="block text-base text-gray-700 dark:text-gray-200">Year of AWS Cloud Experience</span>
+                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">2+</span>
+                  <span className="block text-base text-gray-700 dark:text-gray-200">Year of AWS Cloud Exposure</span>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
                   <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">100+</span>
@@ -95,7 +111,7 @@ const Hero = () => {
                   <span className="block text-base text-gray-700 dark:text-gray-200">AWS Services Hands-on Experience</span>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
-                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">15+</span>
+                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">20+</span>
                   <span className="block text-base text-gray-700 dark:text-gray-200">Projects Developed</span>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
@@ -110,6 +126,19 @@ const Hero = () => {
                   <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">300+</span>
                   <span className="block text-base text-gray-700 dark:text-gray-200">Problems solved on GFG and HackerRank</span>
                 </div>
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
+                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">15+</span>
+                  <span className="block text-base text-gray-700 dark:text-gray-200">Hackthons Participated</span>
+                </div>
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
+                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">8</span>
+                  <span className="block text-base text-gray-700 dark:text-gray-200">Hackthons Finalists</span>
+                </div>
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center font-semibold text-lg transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-100 dark:border-gray-700">
+                  <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">6+</span>
+                  <span className="block text-base text-gray-700 dark:text-gray-200">Global Level Summits & Conf's Attended</span>
+                </div>
+                
               </div>
             </div>
 
@@ -119,7 +148,7 @@ const Hero = () => {
             <div>
               <h4 className="text-lg font-bold mb-2">Education</h4>
               <p className="font-semibold">B.Tech in Computer Science and Technology</p>
-              <p className="text-sm">MADANAPALLE INSTITUTE OF TECHNOLOGY & SCIENCE<br />2022-2026<br />GPA: 8.96/10</p>
+              <p className="text-sm">MADANAPALLE INSTITUTE OF TECHNOLOGY & SCIENCE<br />2022-2026<br />CGPA: 8.7/10</p>
             </div>
 
             <div>
