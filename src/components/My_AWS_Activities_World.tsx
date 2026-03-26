@@ -8,6 +8,8 @@ import dept2ndEventImage from '@/assets/AWS_sessions/Dept_2nd_Session_Image0.jpe
 import dept3rdEventImage from '@/assets/AWS_sessions/Dept_3rd_Session_Image1.jpeg';
 import skillBeeEventImage from '@/assets/AWS_sessions/Skill_BeeClub_Session_Image0_29-12-25.jpg';
 import dsEventImage from '@/assets/AWS_sessions/DS_Session_Image1_23-12-25.jpg';
+import aiSdlcImage from '@/assets/AWS_Events_photos/AISDLC_WS 2026-03-25 at Bengluru-0.jpeg';
+import quickSuiteImage from '@/assets/AWS_Events_photos/AWS_Quicksuit_WS 2026-03-25 at Bengluru-0.jpeg';
 
 // Add custom CSS animations
 const customStyles = `
@@ -97,6 +99,38 @@ interface ActivityEntry {
 }
 
 const activities: ActivityEntry[] = [
+  {
+    year: 2026,
+    date: "March 25, 2026",
+    title: "AI-Led SDLC Workshop — Kiro & Amazon Bedrock AgentCore",
+    type: "Event",
+    description: "In-person AI-SDLC workshop at Amazon Bagmane Orion with AWS SAs; hands-on labs for Kiro + AgentCore + Bedrock agents, plus startup feedback.",
+    highlights: [
+      "Translating SDLC into AI-SDLC using agentic workflows",
+      "Built and tested Bedrock AgentCore flows with Kiro",
+      "Networking with AWS Solution Architects and peers",
+      "Got actionable feedback on scaling my AI product"
+    ],
+    tags: ["AWS", "AgentCore", "Bedrock", "GenAI", "Workshop"],
+    media: { certificate: aiSdlcImage },
+  },
+  {
+    year: 2026,
+    date: "March 16, 2026",
+    title: "Amazon QuickSuite Hands-on — Unlock AI-Powered Productivity",
+    type: "Event",
+    description: "Visited Amazon DC (Aquila) for QuickSuite workshop on building intelligent productivity systems with custom agents, analytics, flows, and governance.",
+    highlights: [
+      "Prototyped custom AI agents with QuickSuite",
+      "QuickSight + Flows automation for business processes",
+      "Discussed Responsible AI guardrails with AWS architects",
+      "Career and product roadmap chats with SA team"
+    ],
+    tags: ["AWS", "QuickSuite", "AI Agents", "Analytics", "Automation"],
+    media: {
+      certificate: quickSuiteImage
+    },
+  },
   {
     year: 2026,
     date: "February 05, 2026",
@@ -212,10 +246,10 @@ const activities: ActivityEntry[] = [
   
   {
     year: 2026,
-    date: "February 2026",
-    title: "SkillRoute-AI Startup Launch 🚀",
+    date: "***** 2026",
+    title: "SkillRoute-AI Startup Launch",
     type: "Startup",
-    description: "Founded SkillRoute-AI, an AI-powered skill development platform built entirely on AWS services. Transformed a pre-final year project into a production-ready startup after applying 1.5 years experience and learning of AWS.",
+    description: "Founded SkillRoute-AI, an AI-powered skill development platform built entirely on AWS services. Transformed a pre-final year project into a production-ready startup after applying 2 years experience and learning of AWS.",
     highlights: [
       "First product launch planned for October 2025",
       "Built using Amazon Bedrock, Lambda, S3, EC2, DynamoDB and many other AWS services",
@@ -496,37 +530,27 @@ export default function MyAWSActivitiesWorld() {
               a revolutionary AI-powered learning platform.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-orange-500 transition-all duration-500 ease-out group animate-fade-in-up">
-              <Trophy className="h-10 w-10 mb-3 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
-              <p className="text-3xl font-bold text-gray-900 mb-2">2</p>
-              <p className="text-sm font-medium text-gray-600 text-center">Global AWS Certifications</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-blue-500 transition-all duration-500 ease-out group animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-              <Award className="h-10 w-10 mb-3 text-blue-500 group-hover:scale-110 transition-transform duration-300" />
-              <p className="text-3xl font-bold text-gray-900 mb-2">30+</p>
-              <p className="text-sm font-medium text-gray-600 text-center">Training Badges</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-emerald-500 transition-all duration-500 ease-out group animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <Sparkles className="h-10 w-10 mb-3 text-emerald-500 group-hover:scale-110 transition-transform duration-300" />
-              <p className="text-3xl font-bold text-gray-900 mb-2">100+</p>
-              <p className="text-sm font-medium text-gray-600 text-center">AWS Services Known</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-cyan-500 transition-all duration-500 ease-out group animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-              <Code className="h-10 w-10 mb-3 text-cyan-500 group-hover:scale-110 transition-transform duration-300" />
-              <p className="text-3xl font-bold text-gray-900 mb-2">30+</p>
-              <p className="text-sm font-medium text-gray-600 text-center">Hands-On Projects</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-red-500 transition-all duration-500 ease-out group animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-              <Rocket className="h-10 w-10 mb-3 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
-              <p className="text-3xl font-bold text-gray-900 mb-2">1</p>
-              <p className="text-sm font-medium text-gray-600 text-center">AI Startup Founded</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-800 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 hover:border-red-500 transition-all duration-500 ease-out group animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-              <Code className="h-10 w-10 mb-3 text-yellow-500 group-hover:scale-110 transition-transform duration-300" />
-              <p className="text-3xl font-bold text-gray-900 mb-2">4</p>
-              <p className="text-sm font-medium text-gray-600 text-center">AWS Sessions Taken</p>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {[
+              { label: 'Global AWS Certifications', value: '2', icon: Trophy, color: 'text-orange-500', border: 'hover:border-orange-500' },
+              { label: 'Training Badges', value: '30+', icon: Award, color: 'text-blue-500', border: 'hover:border-blue-500' },
+              { label: 'AWS Services Known', value: '100+', icon: Sparkles, color: 'text-emerald-500', border: 'hover:border-emerald-500' },
+              { label: 'Hands-On Projects', value: '30+', icon: Code, color: 'text-cyan-500', border: 'hover:border-cyan-500' },
+              { label: 'AI Startup Founded', value: '1', icon: Rocket, color: 'text-orange-500', border: 'hover:border-orange-500' },
+              { label: 'AWS Sessions Taken', value: '4', icon: Users, color: 'text-yellow-500', border: 'hover:border-yellow-500' },
+              { label: "Global Level Summits & Conf's Attended", value: '7', icon: Cloud, color: 'text-indigo-500', border: 'hover:border-indigo-500' },
+              { label: 'In-Person Summits, Events and WS', value: '2', icon: Calendar, color: 'text-pink-500', border: 'hover:border-pink-500' },
+            ].map((item, idx) => (
+              <div
+                key={item.label}
+                className={`bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-800 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 ease-out group ${item.border}`}
+                style={{ animationDelay: `${0.05 * idx}s` }}
+              >
+                <item.icon className={`h-14 w-14 mb-4 ${item.color} group-hover:scale-110 transition-transform duration-300`} />
+                <p className="text-4xl font-extrabold text-gray-900 mb-2 leading-none">{item.value}</p>
+                <p className="text-base font-semibold text-gray-600">{item.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -748,7 +772,7 @@ export default function MyAWSActivitiesWorld() {
 
                         {activity.media && Object.keys(activity.media).length > 0 && (
                           <div className="mt-4 pt-4 border-t border-gray-200 space-y-4">
-                            {activity.media.certificate && isImageAsset(activity.media.certificate) && (
+                            {activity.media.certificate && (activity.type === 'Event' || isImageAsset(activity.media.certificate)) && (
                               <div className={`rounded-2xl p-4 border-2 transition-all duration-300 ${
                                 activity.type === 'Event'
                                   ? 'bg-cyan-50 border-cyan-300 hover:bg-cyan-100/50 hover:border-cyan-500'

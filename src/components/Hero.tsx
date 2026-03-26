@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, Cloud } from 'lucide-react';
 import profilePhoto from '@/assets/profile-photo.jpg';
 import myimage from '@/assets/my-image.jpg'
 import { Arrow } from '@radix-ui/react-tooltip';
@@ -87,6 +87,7 @@ const Hero = () => {
               and translate complex ideas into clear, actionable plans. Whether I’m architecting a new system or solving a critical problem, 
               my focus is always on building innovative, efficient, and scalable solutions that make a tangible difference.
             </p><br></br>
+            
             <div>
               <h3 className="text-2xl font-bold mb-6">Highlights</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -138,8 +139,23 @@ const Hero = () => {
                   <span className="block text-3xl font-bold text-blue-700 dark:text-blue-400 mb-2">6+</span>
                   <span className="block text-base text-gray-700 dark:text-gray-200">Global Level Summits & Conf's Attended</span>
                 </div>
-                
-              </div>
+              </div><br></br>
+              <div className="flex flex-col sm:flex-row gap-3 mb-8">
+              <a
+                href="#aws-training-anchor"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-white font-semibold shadow-lg transition-all duration-300 bg-gradient-to-r from-purple-600 to-indigo-500 hover:shadow-xl hover:-translate-y-0.5"
+              >
+                <ArrowRight className="h-5 w-5" />
+                View My AWS Training Certifications
+              </a>
+              <a
+                href="/aws-activities"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-white font-semibold shadow-lg transition-all duration-300 bg-blue-600 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-0.5"
+              >
+                <Cloud className="h-5 w-5" />
+                Explore My AWS Cloud Journey
+              </a>
+            </div>
             </div>
 
           </div>
@@ -174,13 +190,22 @@ const Hero = () => {
             </div>
 
             <div>
-              <h4 className="text-lg font-bold mb-2">Online Conferences and Summit Attended</h4>
+              <h4 className="text-lg font-bold mb-2">AWS Online Conferences and Summit</h4>
               <ul className="list-disc list-inside text-sm">
                 <li>AWSome Day (AWS One Day online conference)</li>
                 <li>AWS Summit 2025 - India (GenAI-Applications)</li>
                 <li>AWS Summit 2025 – New York (Agentic AI Evolution)</li>
                 <li>AWS Builders 2025 - Bedrock and Vibe Coding</li>
                 <li>AWS re:Invent 2025 - 5 Days (Future of AgenticAI)</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-bold mb-2">AWS In-Person Summits, Events and WS</h4>
+              <ul className="list-disc list-inside text-sm">
+                <li>AWS Quicksuit-WS (Amazon DC - Aquilo Bengaluru)</li>
+                <li>AWS Kiro & AgentCore (Amazon - Orion Bengaluru)</li>
+                <li>AWS Summit India (KPTO Exibition - WF Bengaluru)</li>
               </ul>
             </div>
 

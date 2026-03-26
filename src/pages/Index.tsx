@@ -11,6 +11,7 @@ import ExtraCurricular from '@/components/ExtraCurricular';
 import Conferences_Summits from '@/components/Conferences_Summits';
 import AWSTrainingCertifications from '@/components/AWSTrainingCertifications';
 import AWSSessionsEvents from '@/components/AWSSessionsEvents';
+import AWSInPersonEvents from '@/components/AWSInPersonEvents';
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,7 +22,8 @@ const Index = () => {
       <main>
         <Hero />
         <AWSSessionsEvents />
-        <div className="flex flex-col items-center gap-4 mt-8 mb-2">
+        <AWSInPersonEvents />
+        <div id="aws-training-anchor" className="flex flex-col items-center gap-4 mt-8 mb-2">
           <button
             onClick={() => setIsModalOpen(true)}
             className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 text-base transform hover:scale-105 animate-pulse-slow"
