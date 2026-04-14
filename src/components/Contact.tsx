@@ -27,8 +27,8 @@ const Contact = () => {
     setSubmitStatus('');
 
     try {
-      const response = await fetch('https://nrkg7cmta3.execute-api.ap-south-1.amazonaws.com/dev', {
-        method: 'PUT',
+      const response = await fetch('https://nrkg7cmta3.execute-api.ap-south-1.amazonaws.com/dev/my-portfolio-api', {
+        method: 'POST',
         mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
