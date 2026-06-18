@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, X, Calendar, Users, ArrowLeft, ArrowRight } from 'lucide-react';
 
-// Import images
 import dsImage1 from '@/assets/AWS_sessions/DS_Session_Image1_23-12-25.jpg';
 import dsImage2 from '@/assets/AWS_sessions/DS_Session_Image2_23-12-25.jpg';
 import dsImage3 from '@/assets/AWS_sessions/DS_Session_Image3_23-12-25.jpg';
@@ -26,71 +25,51 @@ import dept3rdImage6 from '@/assets/AWS_sessions/Dept_3rd_Session_Image6.jpeg';
 import dept3rdImage7 from '@/assets/AWS_sessions/Dept_3rd_Session_Image7.jpeg';
 import dept3rdImage8 from '@/assets/AWS_sessions/Dept_3rd_Session_Image8.jpeg';
 
-// Event data with metadata extracted from filenames
 const rawEventsData = [
   {
     id: 'ds-session',
     title: 'AWS Session for Data Science Students',
     organizer: 'Data Science Department',
     date: '23-12-2025',
-    description: 'Delivered an inspiring AWS session to 100+ Data Science students, sharing my cloud journey and motivating them to pursue AWS certifications.',
-    linkedInPost: 'Sharing My AWS Journey to Inspire many Future Cloud Enthusiasts. Data Science HOD invited me to give a session on AWS and global certification to their students.',
-    images: [
-      dsImage1,
-      dsImage2,
-      dsImage3,
-      dsImage4,
-      dsImage5
-    ]
+    description:
+      'Delivered an inspiring AWS session to 100+ Data Science students, sharing my cloud journey and motivating them to pursue AWS certifications.',
+    linkedInPost:
+      'Sharing My AWS Journey to Inspire many Future Cloud Enthusiasts. Data Science HOD invited me to give a session on AWS and global certification to their students.',
+    images: [dsImage1, dsImage2, dsImage3, dsImage4, dsImage5],
   },
   {
     id: 'skillbee-session',
-    title: 'Skill Bee Club - AWS Workshop',
+    title: 'Skill Bee Club — AWS Workshop',
     organizer: 'Skill Bee Club',
     date: '29-12-2025',
-    description: 'Conducted a comprehensive AWS workshop for all interested students in the university, organized by Skill Bee Club, covering cloud fundamentals and practical applications.',
-    linkedInPost: 'From a Curious Beginner to Addressing the many on AWS. Honored to deliver a college-level workshop on Amazon Web Services, addressing students across the university.',
-    images: [
-      skillBeeImage0,
-      skillBeeImage1,
-      skillBeeImage2,
-      skillBeeImage3,
-      skillBeeImage4,
-      skillBeeImage5
-    ]
-  },
-  {
-    id: 'cst-department-event',
-    title: '2nd year CST Department Event - AWS & Cloud Career Guidance',
-    organizer: 'CST Department',
-    date: '05-02-2026',
-    description: 'Guided juniors through AWS foundations, cloud learning roadmaps, certifications, and live demos of EC2, S3, Bedrock, global certifications and some projects.',
-    linkedInPost: 'Guiding juniors on AWS, cloud, global certifications, and my personal learning journey. Covered AWS basics, project insights, AI demos, and real-world industry use cases with 60+ active students.',
-    images: [
-      dept2ndImage0,
-      dept2ndImage1,
-      dept2ndImage2,
-      dept2ndImage3
-    ]
+    description:
+      'Conducted a comprehensive AWS workshop for all interested students in the university, organized by Skill Bee Club, covering cloud fundamentals and practical applications.',
+    linkedInPost:
+      'From a Curious Beginner to Addressing the many on AWS. Honored to deliver a college-level workshop on Amazon Web Services, addressing students across the university.',
+    images: [skillBeeImage0, skillBeeImage1, skillBeeImage2, skillBeeImage3, skillBeeImage4, skillBeeImage5],
   },
   {
     id: 'cst-2nd-year-department-event',
-    title: '3nd Year CST Department Event - AWS, AI & DevOps Session',
+    title: '3rd Year CST Department — AWS, AI & DevOps Session',
     organizer: 'CST Department',
     date: '03-01-2026',
-    description: 'Delivered an in-depth department event for 3nd-year CST students, highlighting AWS learning pathways, certifications, AI/DevOps project workflows, and practical cloud adoption steps.',
-    linkedInPost: 'An insightful and memorable day with strong student engagement, deep curiosity, and requests for more sessions and a multi-day workshop. Thankful to HOD Dr Dinesh K and the event coordinator for the opportunity.',
-    images: [
-      dept3rdImage1,
-      dept3rdImage2,
-      dept3rdImage3,
-      dept3rdImage4,
-      dept3rdImage5,
-      dept3rdImage6,
-      dept3rdImage7,
-      dept3rdImage8
-    ]
-  }
+    description:
+      'Delivered an in-depth session for 3rd-year CST students, highlighting AWS learning pathways, certifications, AI/DevOps project workflows, and practical cloud adoption steps.',
+    linkedInPost:
+      'An insightful and memorable day with strong student engagement, deep curiosity, and requests for more sessions. Thankful to HOD Dr Dinesh K and the event coordinator for the opportunity.',
+    images: [dept3rdImage1, dept3rdImage2, dept3rdImage3, dept3rdImage4, dept3rdImage5, dept3rdImage6, dept3rdImage7, dept3rdImage8],
+  },
+  {
+    id: 'cst-department-event',
+    title: '2nd Year CST Department — AWS & Cloud Career Guidance',
+    organizer: 'CST Department',
+    date: '05-02-2026',
+    description:
+      'Guided juniors through AWS foundations, cloud learning roadmaps, certifications, and live demos of EC2, S3, Bedrock, global certifications and projects.',
+    linkedInPost:
+      'Guiding juniors on AWS, cloud, global certifications, and my personal learning journey. Covered AWS basics, project insights, AI demos, and real-world industry use cases with 60+ active students.',
+    images: [dept2ndImage0, dept2ndImage1, dept2ndImage2, dept2ndImage3],
+  },
 ];
 
 const parseEventDate = (dateStr: string) => {
@@ -102,407 +81,328 @@ const eventsData = [...rawEventsData].sort(
   (a, b) => parseEventDate(b.date) - parseEventDate(a.date)
 );
 
-const AWSSessionsEvents = () => {
-  const [selectedEvent, setSelectedEvent] = useState<string | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set());
-  const [touchStart, setTouchStart] = useState<number | null>(null);
-  const [touchEnd, setTouchEnd] = useState<number | null>(null);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const sectionRef = useRef<HTMLElement>(null);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+/* ─── Image Modal ─── */
+interface ModalProps {
+  event: (typeof eventsData)[0];
+  startIndex: number;
+  onClose: () => void;
+  onNavigateEvent: (dir: 'prev' | 'next') => void;
+}
 
-  const openModal = (eventId: string, imageIndex: number = 0) => {
-    setSelectedEvent(eventId);
-    setCurrentImageIndex(imageIndex);
-    setIsModalOpen(true);
-  };
+const ImageModal = ({ event, startIndex, onClose, onNavigateEvent }: ModalProps) => {
+  const [idx, setIdx] = useState(startIndex);
+  const touchStartX = useRef<number | null>(null);
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedEvent(null);
-    setCurrentImageIndex(0);
-  };
+  const prev = () => setIdx((i) => (i === 0 ? event.images.length - 1 : i - 1));
+  const next = () => setIdx((i) => (i === event.images.length - 1 ? 0 : i + 1));
 
-  const navigateImage = (direction: 'prev' | 'next') => {
-    if (!selectedEvent) return;
-    const event = eventsData.find(e => e.id === selectedEvent);
-    if (!event) return;
-
-    if (direction === 'prev') {
-      setCurrentImageIndex(prev => prev === 0 ? event.images.length - 1 : prev - 1);
-    } else {
-      setCurrentImageIndex(prev => prev === event.images.length - 1 ? 0 : prev + 1);
-    }
-  };
-
-  const navigateEvent = (direction: 'prev' | 'next') => {
-    const currentIndex = eventsData.findIndex(e => e.id === selectedEvent);
-    if (currentIndex === -1) return;
-
-    let newIndex;
-    if (direction === 'prev') {
-      newIndex = currentIndex === 0 ? eventsData.length - 1 : currentIndex - 1;
-    } else {
-      newIndex = currentIndex === eventsData.length - 1 ? 0 : currentIndex + 1;
-    }
-
-    setSelectedEvent(eventsData[newIndex].id);
-    setCurrentImageIndex(0);
-  };
-
-  // Scroll navigation functions
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      const container = scrollContainerRef.current;
-      const cardWidth = container.clientWidth;
-      const newPosition = Math.max(0, scrollPosition - cardWidth);
-      container.scrollTo({ left: newPosition, behavior: 'smooth' });
-      setScrollPosition(newPosition);
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      const container = scrollContainerRef.current;
-      const cardWidth = container.clientWidth;
-      const maxScroll = container.scrollWidth - container.clientWidth;
-      const newPosition = Math.min(maxScroll, scrollPosition + cardWidth);
-      container.scrollTo({ left: newPosition, behavior: 'smooth' });
-      setScrollPosition(newPosition);
-    }
-  };
-
-  // Update scroll position on scroll
-  const handleScroll = () => {
-    if (scrollContainerRef.current) {
-      setScrollPosition(scrollContainerRef.current.scrollLeft);
-    }
-  };
-
-  // Touch handlers for swipe navigation in scroll container
-  const handleContainerTouchStart = (e: React.TouchEvent) => {
-    setTouchEnd(null);
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleContainerTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleContainerTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
-
-    if (isLeftSwipe) {
-      scrollRight();
-    } else if (isRightSwipe) {
-      scrollLeft();
-    }
-  };
-
-  // Touch handlers for swipe navigation in modal
-  // Touch handlers for swipe navigation in modal
-  const handleModalTouchStart = (e: React.TouchEvent) => {
-    setTouchEnd(null);
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleModalTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleModalTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
-
-    if (isLeftSwipe) {
-      navigateImage('next');
-    } else if (isRightSwipe) {
-      navigateImage('prev');
-    }
-  };
-
-  // Intersection Observer for scroll animations
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = cardRefs.current.indexOf(entry.target as HTMLDivElement);
-            if (index !== -1) {
-              setVisibleCards(prev => new Set([...prev, index]));
-            }
-          }
-        });
-      },
-      { threshold: 0.2, rootMargin: '50px' }
-    );
+    setIdx(startIndex);
+  }, [event.id, startIndex]);
 
-    cardRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Keyboard navigation
   useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (!isModalOpen) return;
-      
-      switch (e.key) {
-        case 'Escape':
-          closeModal();
-          break;
-        case 'ArrowLeft':
-          navigateImage('prev');
-          break;
-        case 'ArrowRight':
-          navigateImage('next');
-          break;
-      }
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
     };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [isModalOpen, selectedEvent]);
-
-  const selectedEventData = selectedEvent ? eventsData.find(e => e.id === selectedEvent) : null;
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [event]);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800" id="aws-sessions">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            AWS Sessions & Events
+    <div
+      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex flex-col"
+      onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
+      onTouchEnd={(e) => {
+        if (touchStartX.current === null) return;
+        const diff = touchStartX.current - e.changedTouches[0].clientX;
+        if (diff > 50) next();
+        else if (diff < -50) prev();
+        touchStartX.current = null;
+      }}
+    >
+      {/* Top bar */}
+      <div className="flex items-center justify-between px-4 py-3 shrink-0">
+        <div className="flex gap-2">
+          <button
+            onClick={() => onNavigateEvent('prev')}
+            className="bg-white/15 hover:bg-white/25 text-white p-2 rounded-full transition-colors"
+            aria-label="Previous event"
+          >
+            <ArrowLeft className="h-4 w-4" />
+          </button>
+          <button
+            onClick={() => onNavigateEvent('next')}
+            className="bg-white/15 hover:bg-white/25 text-white p-2 rounded-full transition-colors"
+            aria-label="Next event"
+          >
+            <ArrowRight className="h-4 w-4" />
+          </button>
+        </div>
+        <span className="text-white/60 text-sm">
+          {idx + 1} / {event.images.length}
+        </span>
+        <button
+          onClick={onClose}
+          className="bg-white/15 hover:bg-white/25 text-white p-2 rounded-full transition-colors"
+          aria-label="Close"
+        >
+          <X className="h-5 w-5" />
+        </button>
+      </div>
+
+      {/* Image */}
+      <div className="relative flex-1 flex items-center justify-center px-10 min-h-0">
+        <img
+          key={idx}
+          src={event.images[idx]}
+          alt={`${event.title} — photo ${idx + 1}`}
+          className="max-w-full max-h-full object-contain rounded-lg shadow-2xl select-none"
+          draggable={false}
+        />
+        <button
+          onClick={prev}
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/35 text-white p-2 sm:p-3 rounded-full transition-colors touch-manipulation"
+          aria-label="Previous image"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <button
+          onClick={next}
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/35 text-white p-2 sm:p-3 rounded-full transition-colors touch-manipulation"
+          aria-label="Next image"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+      </div>
+
+      {/* Dot indicators */}
+      <div className="flex justify-center gap-1.5 py-3 shrink-0">
+        {event.images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIdx(i)}
+            className={`w-2 h-2 rounded-full transition-all ${i === idx ? 'bg-white scale-125' : 'bg-white/40'}`}
+            aria-label={`Go to image ${i + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Caption */}
+      <div className="px-4 pb-4 shrink-0">
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 sm:p-4 text-white">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 mb-1 text-xs text-white/70">
+            <span className="flex items-center gap-1"><Users className="h-3 w-3" />{event.organizer}</span>
+            <span className="flex items-center gap-1"><Calendar className="h-3 w-3" />{event.date}</span>
+          </div>
+          <p className="text-sm font-semibold leading-snug line-clamp-2">{event.title}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/* ─── Main Component ─── */
+const AWSSessionsEvents = () => {
+  const [activeEventIdx, setActiveEventIdx] = useState(0);
+  const [modalEventIdx, setModalEventIdx] = useState<number | null>(null);
+  const [modalStartImg, setModalStartImg] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [scrollPos, setScrollPos] = useState(0);
+
+  const openModal = (eventIdx: number, imgIdx = 0) => {
+    setModalEventIdx(eventIdx);
+    setModalStartImg(imgIdx);
+  };
+  const closeModal = () => setModalEventIdx(null);
+
+  const navigateModalEvent = (dir: 'prev' | 'next') => {
+    setModalEventIdx((prev) => {
+      if (prev === null) return null;
+      return dir === 'prev'
+        ? (prev - 1 + eventsData.length) % eventsData.length
+        : (prev + 1) % eventsData.length;
+    });
+    setModalStartImg(0);
+  };
+
+  // Horizontal scroll helpers
+  const scrollTo = (idx: number) => {
+    if (!scrollRef.current) return;
+    const w = scrollRef.current.clientWidth;
+    scrollRef.current.scrollTo({ left: idx * w, behavior: 'smooth' });
+  };
+
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    const w = scrollRef.current.clientWidth;
+    const pos = scrollRef.current.scrollLeft;
+    setScrollPos(pos);
+    setActiveEventIdx(Math.round(pos / w));
+  };
+
+  const canScrollLeft = scrollPos > 4;
+  const canScrollRight = scrollRef.current
+    ? scrollPos < scrollRef.current.scrollWidth - scrollRef.current.clientWidth - 4
+    : true;
+
+  return (
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800" id="aws-sessions">
+      <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+
+        {/* Section header */}
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3">
+            AWS Sessions &amp; Events
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Interactive storytelling of my AWS journey <br></br>(Learning, services, Projects and Global Certifications) through sessions and workshops to students of all backgrounds and departments.
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Sharing my AWS journey — cloud learning, services, projects, and global certifications — through
+            sessions and workshops with students across departments.
           </p>
         </div>
 
+        {/* Slider wrapper */}
         <div className="relative">
-          {/* Scroll Navigation Buttons */}
+          {/* Prev arrow — hidden on mobile (use dots instead) */}
           <button
-            onClick={scrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl text-gray-700 dark:text-gray-300 p-3 rounded-full transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={scrollPosition <= 0}
+            onClick={() => scrollTo(activeEventIdx - 1)}
+            disabled={!canScrollLeft}
+            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 items-center justify-center bg-white dark:bg-gray-800 shadow-lg rounded-full text-gray-700 dark:text-gray-300 hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+            aria-label="Previous"
           >
-            <ChevronLeft className="h-6 w-6" />
+            <ChevronLeft className="h-5 w-5" />
           </button>
-          
           <button
-            onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl text-gray-700 dark:text-gray-300 p-3 rounded-full transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={scrollContainerRef.current && scrollPosition >= (scrollContainerRef.current.scrollWidth - scrollContainerRef.current.clientWidth)}
+            onClick={() => scrollTo(activeEventIdx + 1)}
+            disabled={!canScrollRight}
+            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 items-center justify-center bg-white dark:bg-gray-800 shadow-lg rounded-full text-gray-700 dark:text-gray-300 hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+            aria-label="Next"
           >
-            <ChevronRight className="h-6 w-6" />
+            <ChevronRight className="h-5 w-5" />
           </button>
 
-          {/* Horizontal Scrolling Container */}
-          <div 
-            ref={scrollContainerRef}
-            className="flex overflow-x-auto scrollbar-hide px-12 py-4"
+          {/* Scroll container */}
+          <div
+            ref={scrollRef}
             onScroll={handleScroll}
-            onTouchStart={handleContainerTouchStart}
-            onTouchMove={handleContainerTouchMove}
-            onTouchEnd={handleContainerTouchEnd}
+            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 pb-2"
           >
-            {eventsData.map((event, eventIndex) => (
+            {eventsData.map((event, eventIdx) => (
               <div
                 key={event.id}
-                ref={(el) => (cardRefs.current[eventIndex] = el)}
-                className="flex-shrink-0 w-full lg:w-full bg-white dark:bg-gray-800 shadow-2xl mx-3"
+                className="snap-center flex-shrink-0 w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700"
               >
-              <div className="flex flex-col lg:flex-row">
-                {/* RIGHT SIDE - Featured Image */}
-                <div 
-                    className="lg:w-1/2 relative group cursor-pointer hover:scale-[1.02] transition-transform
-                              lg:pt-10 xl:pt-12"
-                    onClick={() => {
-                      setSelectedEvent(event.id);
-                      setCurrentImageIndex(0);
-                      setIsModalOpen(true);
-                    }}
+                {/* ── Mobile: stacked layout ── */}
+                <div className="flex flex-col lg:flex-row">
+
+                  {/* Image side */}
+                  <div
+                    className="relative w-full lg:w-1/2 cursor-pointer group"
+                    onClick={() => openModal(eventIdx, 0)}
                   >
-                  <div className="overflow-hidden rounded-2xl">
                     <img
                       src={event.images[0]}
-                      alt={`${event.title} - Main`}
-                      className="w-full h-64 lg:h-80 object-cover"
+                      alt={`${event.title} — main`}
+                      className="w-full h-48 sm:h-56 md:h-64 lg:h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                       loading="lazy"
                     />
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                      <span className="text-white text-sm font-medium">Click to view gallery</span>
+                    </div>
+                    {/* Image count badge */}
+                    <span className="absolute top-3 right-3 bg-black/60 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                      {event.images.length} photos
+                    </span>
                   </div>
 
+                  {/* Content side */}
+                  <div className="w-full lg:w-1/2 p-4 sm:p-6 lg:p-8 flex flex-col gap-4">
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                  <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <p className="text-sm font-medium">Click to view gallery</p>
-                  </div>
-                </div>
-
-                {/* LEFT SIDE - Content */}
-                <div className="lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between">
-                  <div>
-                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-4">
-                      <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
-                        <Users className="h-4 w-4" />
-                        <span className="text-sm font-medium">{event.organizer}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                        <Calendar className="h-4 w-4" />
-                        <span className="text-sm">{event.date}</span>
-                      </div>
+                    {/* Meta row */}
+                    <div className="flex flex-wrap gap-3">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-2.5 py-1 rounded-full">
+                        <Users className="h-3 w-3" /> {event.organizer}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2.5 py-1 rounded-full">
+                        <Calendar className="h-3 w-3" /> {event.date}
+                      </span>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                    {/* Title */}
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white leading-snug">
                       {event.title}
                     </h3>
 
-                    <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                    {/* Description */}
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                       {event.description}
                     </p>
 
-                    {/* Thumbnail Gallery */}
-                    <div className="grid grid-cols-4 gap-2 mb-6">
-                      {event.images.slice(1, 5).map((image, index) => (
-                        <div
-                          key={index}
-                          className="relative group cursor-pointer overflow-hidden rounded-lg"
-                          onClick={() => openModal(event.id, index + 1)}
+                    {/* Thumbnail strip */}
+                    <div className="grid grid-cols-4 gap-1.5 sm:gap-2">
+                      {event.images.slice(1, 5).map((img, i) => (
+                        <button
+                          key={i}
+                          onClick={() => openModal(eventIdx, i + 1)}
+                          className="relative group overflow-hidden rounded-lg aspect-square focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          aria-label={`View photo ${i + 2}`}
                         >
                           <img
-                            src={image}
-                            alt={`${event.title} - ${index + 2}`}
-                            className="w-full h-16 object-cover transition-transform duration-300 group-hover:scale-110"
+                            src={img}
+                            alt={`${event.title} — ${i + 2}`}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                             loading="lazy"
                           />
-                          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        </div>
+                          {/* +N overlay on last thumb if more images exist */}
+                          {i === 3 && event.images.length > 5 && (
+                            <div className="absolute inset-0 bg-black/55 flex items-center justify-center">
+                              <span className="text-white text-xs sm:text-sm font-bold">+{event.images.length - 5}</span>
+                            </div>
+                          )}
+                        </button>
                       ))}
                     </div>
-                  </div>
 
-                  {/* LinkedIn Post Highlight */}
-                  <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border-l-4 border-blue-500">
-                    <p className="text-sm text-gray-700 dark:text-gray-300 italic">
-                      "{event.linkedInPost}"
-                    </p>
+                    {/* LinkedIn quote */}
+                    <div className="mt-auto bg-blue-50 dark:bg-blue-900/20 rounded-xl p-3 sm:p-4 border-l-4 border-blue-500">
+                      <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 italic leading-relaxed">
+                        "{event.linkedInPost}"
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-              </div>
             ))}
           </div>
-          
-          {/* Scroll Indicators */}
-          <div className="flex justify-center mt-6 gap-2">
-            {eventsData.map((_, index) => (
+
+          {/* Dot indicators */}
+          <div className="flex justify-center gap-2 mt-5">
+            {eventsData.map((_, i) => (
               <button
-                key={index}
-                onClick={() => {
-                  if (scrollContainerRef.current) {
-                    const targetPosition = index * scrollContainerRef.current.clientWidth;
-                    scrollContainerRef.current.scrollTo({ left: targetPosition, behavior: 'smooth' });
-                  }
-                }}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  Math.floor(scrollPosition / (scrollContainerRef.current?.clientWidth || 1)) === index
-                    ? 'bg-blue-600 dark:bg-blue-400' 
-                    : 'bg-gray-300 dark:bg-gray-600'
+                key={i}
+                onClick={() => scrollTo(i)}
+                className={`rounded-full transition-all duration-300 ${
+                  i === activeEventIdx
+                    ? 'w-6 h-3 bg-blue-600 dark:bg-blue-400'
+                    : 'w-3 h-3 bg-gray-300 dark:bg-gray-600 hover:bg-blue-400'
                 }`}
+                aria-label={`Go to event ${i + 1}`}
               />
-            ))
-            }
+            ))}
           </div>
         </div>
       </div>
 
       {/* Modal */}
-      {isModalOpen && selectedEventData && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm animate-modal-fade-in">
-          <div className="relative w-full h-full max-w-6xl max-h-screen p-4 animate-scale-in">
-            {/* Close Button */}
-            <button
-              onClick={closeModal}
-              className="absolute top-6 right-6 z-10 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors duration-200"
-            >
-              <X className="h-6 w-6" />
-            </button>
-
-            {/* Event Navigation */}
-            <div className="absolute top-6 left-6 z-10 flex gap-2">
-              <button
-                onClick={() => navigateEvent('prev')}
-                className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors duration-200"
-              >
-                <ArrowLeft className="h-5 w-5" />
-              </button>
-              <button
-                onClick={() => navigateEvent('next')}
-                className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors duration-200"
-              >
-                <ArrowRight className="h-5 w-5" />
-              </button>
-            </div>
-
-            {/* Main Image */}
-            <div 
-              className="relative w-full h-full flex items-center justify-center"
-              onTouchStart={handleModalTouchStart}
-              onTouchMove={handleModalTouchMove}
-              onTouchEnd={handleModalTouchEnd}
-            >
-              <img
-                src={selectedEventData.images[currentImageIndex]}
-                alt={`${selectedEventData.title} - ${currentImageIndex + 1}`}
-                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl animate-image-zoom select-none"
-                key={currentImageIndex}
-                draggable={false}
-              />
-
-              {/* Image Navigation */}
-              <button
-                onClick={() => navigateImage('prev')}
-                className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 md:p-3 rounded-full transition-colors duration-200 touch-manipulation"
-              >
-                <ChevronLeft className="h-4 w-4 md:h-6 md:w-6" />
-              </button>
-              <button
-                onClick={() => navigateImage('next')}
-                className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 md:p-3 rounded-full transition-colors duration-200 touch-manipulation"
-              >
-                <ChevronRight className="h-4 w-4 md:h-6 md:w-6" />
-              </button>
-            </div>
-
-            {/* Event Info */}
-            <div className="absolute bottom-2 md:bottom-6 left-2 md:left-6 right-2 md:right-6 bg-white/10 backdrop-blur-md rounded-lg p-3 md:p-6 text-white">
-              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
-                <div className="flex items-center gap-2">
-                  <Users className="h-3 w-3 md:h-4 md:w-4" />
-                  <span className="text-xs md:text-sm">{selectedEventData.organizer}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-3 w-3 md:h-4 md:w-4" />
-                  <span className="text-xs md:text-sm">{selectedEventData.date}</span>
-                </div>
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2">{selectedEventData.title}</h3>
-              <p className="text-xs md:text-sm opacity-90 line-clamp-2 md:line-clamp-none">{selectedEventData.description}</p>
-              <div className="mt-1 md:mt-2 text-xs opacity-75">
-                Image {currentImageIndex + 1} of {selectedEventData.images.length}
-              </div>
-            </div>
-          </div>
-        </div>
+      {modalEventIdx !== null && (
+        <ImageModal
+          event={eventsData[modalEventIdx]}
+          startIndex={modalStartImg}
+          onClose={closeModal}
+          onNavigateEvent={navigateModalEvent}
+        />
       )}
     </section>
   );

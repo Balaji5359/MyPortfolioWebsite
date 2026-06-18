@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, PlayCircle, Database, Trophy } from 'lucide-react';
-import { features } from 'node:process';
 import SIHTeam01Image from '/src/assets/SIH2025/Team01/SIHTeam01.png'
 import SIHTeam02Image from '/src/assets/SIH2025/Team02/SIHTeam02.png'
 import SIHTeam03Image from '/src/assets/SIH2025/Team03/SIHTeam03.png'
@@ -287,79 +286,84 @@ const projects = [
         {/* Projects Tab */}
         {activeTab === 'Projects' && (
           <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Featured Projects */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
               {projects.filter(p => p.featured).map((project, index) => (
-                <div 
+                <div
                   key={project.title}
-                  className="tech-card group relative overflow-hidden animate-floating bg-white"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-800 group hover:-translate-y-1"
                 >
-                  <div className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${project.gradient}`}></div>
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-primary/20 backdrop-blur-sm rounded-full">
-                    <span className="text-xs font-medium text-primary">Featured</span>
-                  </div>
-                  <div className="p-8">
-                    <div className="text-sm text-primary font-medium mb-3">{project.category}</div>
-                    <h3 className="text-2xl font-bold mb-4 transition-all duration-300">{project.title}</h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed whitespace-pre-line">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-6">
+                  <div className={`h-1.5 w-full bg-gradient-to-r ${project.gradient}`} />
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-2.5 py-1 rounded-full">{project.category}</span>
+                      <span className="text-xs font-semibold text-green-600 bg-green-50 dark:bg-green-900/30 px-2.5 py-1 rounded-full">⭐ Featured</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-primary transition-colors">{project.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 leading-relaxed line-clamp-3 whitespace-pre-line">{project.description}</p>
+                    <div className="flex flex-wrap gap-1.5 mb-5">
                       {project.tech.map((tech) => (
-                        <span key={tech} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium">{tech}</span>
+                        <span key={tech} className="px-2.5 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium">{tech}</span>
                       ))}
                     </div>
-                    <div className="flex gap-3">
+                    <div className="flex gap-2 flex-wrap">
                       {project.demo && project.demo !== '#' ? (
                         <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                          <Button size="sm" className="hero-btn"><ExternalLink className="mr-2 h-4 w-4" />Live Demo</Button>
+                          <Button size="sm" className="hero-btn text-xs"><ExternalLink className="mr-1.5 h-3.5 w-3.5" />Live Demo</Button>
                         </a>
                       ) : (
-                        <Button size="sm" className="hero-btn" disabled><ExternalLink className="mr-2 h-4 w-4" />Live Demo</Button>
+                        <Button size="sm" className="hero-btn text-xs opacity-50" disabled><ExternalLink className="mr-1.5 h-3.5 w-3.5" />Live Demo</Button>
                       )}
                       {project.github && project.github !== '#' ? (
                         <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Button variant="outline" size="sm" className="glass-card border-white/20"><Github className="mr-2 h-4 w-4" />Code</Button>
+                          <Button variant="outline" size="sm" className="text-xs"><Github className="mr-1.5 h-3.5 w-3.5" />Code</Button>
                         </a>
                       ) : (
-                        <Button variant="outline" size="sm" className="glass-card border-white/20" disabled><Github className="mr-2 h-4 w-4" />Code</Button>
+                        <Button variant="outline" size="sm" className="text-xs opacity-50" disabled><Github className="mr-1.5 h-3.5 w-3.5" />Code</Button>
                       )}
                       {project.video ? (
-                        <Button variant="ghost" size="sm" onClick={() => setVideoModal(project.video)}><PlayCircle className="mr-2 h-4 w-4" />Video</Button>
-                      ) : (
-                        <Button variant="ghost" size="sm" disabled><PlayCircle className="mr-2 h-4 w-4" />Video</Button>
-                      )}
+                        <Button variant="ghost" size="sm" className="text-xs" onClick={() => setVideoModal(project.video)}><PlayCircle className="mr-1.5 h-3.5 w-3.5" />Video</Button>
+                      ) : null}
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {projects.filter(p => !p.featured).map((project, index) => (
-                <div key={project.title} className="tech-card group animate-floating" style={{ animationDelay: `${(index + 2) * 0.2}s` }}>
-                  <div className={`w-full h-1 bg-gradient-to-r ${project.gradient} mb-6`}></div>
-                  <div className="text-sm text-primary font-medium mb-3">{project.category}</div>
-                  <h3 className="text-xl font-bold mb-3 transition-all duration-300">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.slice(0, 3).map((tech) => (
-                      <span key={tech} className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs">{tech}</span>
-                    ))}
-                    {project.tech.length > 3 && (<span className="px-2 py-1 text-xs text-muted-foreground">+{project.tech.length - 3} more</span>)}
-                  </div>
-                  <div className="flex gap-2">
-                    {project.demo && project.demo !== '#' ? (
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex-1">
-                        <Button size="sm" variant="outline" className="w-full text-xs glass-card border-white/20"><ExternalLink className="mr-1 h-3 w-3" />Demo</Button>
-                      </a>
-                    ) : (
-                      <Button size="sm" variant="outline" className="flex-1 text-xs glass-card border-white/20" disabled><ExternalLink className="mr-1 h-3 w-3" />Demo</Button>
-                    )}
-                    {project.github && project.github !== '#' ? (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1">
-                        <Button size="sm" variant="ghost" className="w-full text-xs"><Github className="mr-1 h-3 w-3" />Code</Button>
-                      </a>
-                    ) : (
-                      <Button size="sm" variant="ghost" className="flex-1 text-xs" disabled><Github className="mr-1 h-3 w-3" />Code</Button>
-                    )}
+
+            {/* Other Projects Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+              {projects.filter(p => !p.featured).map((project) => (
+                <div
+                  key={project.title}
+                  className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-800 group hover:-translate-y-1 flex flex-col"
+                >
+                  <div className={`h-1 w-full bg-gradient-to-r ${project.gradient}`} />
+                  <div className="p-5 flex flex-col flex-1">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-primary mb-2">{project.category}</span>
+                    <h3 className="text-base font-bold mb-2 text-gray-900 dark:text-white group-hover:text-primary transition-colors">{project.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-400 text-xs mb-3 leading-relaxed line-clamp-3 flex-1">{project.description}</p>
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {project.tech.slice(0, 3).map((tech) => (
+                        <span key={tech} className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs">{tech}</span>
+                      ))}
+                      {project.tech.length > 3 && <span className="text-xs text-gray-400">+{project.tech.length - 3}</span>}
+                    </div>
+                    <div className="flex gap-2">
+                      {project.demo && project.demo !== '#' ? (
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex-1">
+                          <Button size="sm" variant="outline" className="w-full text-xs"><ExternalLink className="mr-1 h-3 w-3" />Demo</Button>
+                        </a>
+                      ) : (
+                        <Button size="sm" variant="outline" className="flex-1 text-xs opacity-50" disabled><ExternalLink className="mr-1 h-3 w-3" />Demo</Button>
+                      )}
+                      {project.github && project.github !== '#' ? (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1">
+                          <Button size="sm" variant="ghost" className="w-full text-xs"><Github className="mr-1 h-3 w-3" />Code</Button>
+                        </a>
+                      ) : (
+                        <Button size="sm" variant="ghost" className="flex-1 text-xs opacity-50" disabled><Github className="mr-1 h-3 w-3" />Code</Button>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}

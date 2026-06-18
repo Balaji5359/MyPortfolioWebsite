@@ -16,30 +16,17 @@ const Header = () => {
             className="h-12 w-12 rounded-full"
             style={{ borderRadius: '20%', height: '48px', width: '48px' }}
           />
-            <div className="gradient-text text-3xl font-bold" style={{ marginLeft: '-220px' }}>
-            R Balaji
-            </div>
+            <div className="gradient-text text-2xl font-bold">R Balaji</div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href='#home' className="text-muted-foreground hover:text-primary transition-colors">
-              Home
-            </a>
-            <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-              About
-            </a>
-            <a href="#skills" className="text-muted-foreground hover:text-primary transition-colors">
-              Skills
-            </a>
-            <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">
-              Projects
-            </a>
-            <a href='#achievements' className="text-muted-foreground hover:text-primary transition-colors">
-              Achievements
-            </a>
-            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
-              Contact
-            </a>
+          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <a href='#home' className="text-muted-foreground hover:text-primary transition-colors">Home</a>
+            <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a>
+            <a href="#experience" className="text-muted-foreground hover:text-primary transition-colors">Experience</a>
+            <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</a>
+            <a href="#skills" className="text-muted-foreground hover:text-primary transition-colors">Skills</a>
+            <a href='#achievements' className="text-muted-foreground hover:text-primary transition-colors">Achievements</a>
+            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
           </nav>
 
           {/* Social Links */}
