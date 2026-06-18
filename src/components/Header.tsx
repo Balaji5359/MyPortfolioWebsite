@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Github, Linkedin, Youtube } from 'lucide-react';
 import logo from '../assets/mywesitelogo.png';
@@ -19,14 +20,15 @@ const Header = () => {
             <div className="gradient-text text-2xl font-bold">R Balaji</div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <a href='#home' className="text-muted-foreground hover:text-primary transition-colors">Home</a>
-            <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a>
-            <a href="#experience" className="text-muted-foreground hover:text-primary transition-colors">Experience</a>
-            <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</a>
-            <a href="#skills" className="text-muted-foreground hover:text-primary transition-colors">Skills</a>
-            <a href='#achievements' className="text-muted-foreground hover:text-primary transition-colors">Achievements</a>
-            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
+          <nav className="hidden md:flex items-center space-x-5 text-sm font-medium" aria-label="Main navigation">
+            <a href='/#home' className="text-muted-foreground hover:text-primary transition-colors">Home</a>
+            <a href="/#about" className="text-muted-foreground hover:text-primary transition-colors">About</a>
+            <a href="/#experience" className="text-muted-foreground hover:text-primary transition-colors">Experience</a>
+            <a href="/#projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</a>
+            <a href="/#skills" className="text-muted-foreground hover:text-primary transition-colors">Skills</a>
+            <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link>
+            <Link to="/resume" className="text-muted-foreground hover:text-primary transition-colors font-semibold text-primary">Resume</Link>
+            <a href="/#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
           </nav>
 
           {/* Social Links */}
@@ -73,19 +75,14 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 space-y-4">
-            <nav className="flex flex-col space-y-4">
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-                About
-              </a>
-              <a href="#skills" className="text-muted-foreground hover:text-primary transition-colors">
-                Skills
-              </a>
-              <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">
-                Projects
-              </a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
-                Contact
-              </a>
+            <nav className="flex flex-col space-y-4" aria-label="Mobile navigation">
+              <a href="/#about" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>About</a>
+              <a href="/#experience" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Experience</a>
+              <a href="/#projects" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Projects</a>
+              <a href="/#skills" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Skills</a>
+              <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+              <Link to="/resume" className="font-semibold text-primary" onClick={() => setIsMenuOpen(false)}>Resume</Link>
+              <a href="/#contact" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</a>
             </nav>
             <div className="flex items-center space-x-4 pt-4 border-t border-white/10">
               <Button variant="ghost" size="icon" asChild>
