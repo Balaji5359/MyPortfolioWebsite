@@ -289,12 +289,12 @@ const Resume = () => {
               </Button>
             </a>
             <Link to="/#contact">
-              <Button variant="outline" size="sm" className="gap-2 text-white border-white/50 hover:bg-white/10 font-semibold">
+              <Button variant="secondary" size="sm" className="gap-2 font-semibold">
                 <Mail className="h-4 w-4" /> Contact Me
               </Button>
             </Link>
             <a href="https://linkedin.com/in/rrbalaji" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="gap-2 text-white border-white/50 hover:bg-white/10 font-semibold">
+              <Button variant="secondary" size="sm" className="gap-2 font-semibold">
                 <Linkedin className="h-4 w-4" /> LinkedIn
               </Button>
             </a>
