@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const RESUME_URL =
-  'https://drive.google.com/file/d/17GdmzUvj46hJzek-dq_UIN4mBOzeTwgN/view?usp=drive_link';
+  'https://1drv.ms/w/c/4dba723c3a32d248/IQDB-JC5iYzkS4YVaP5wPXYYAciotiOitKDzs2CZVf2ewDY?e=P7sF8g';
 
 const Resume = () => {
   useEffect(() => {
     document.title =
-      'R Balaji Resume | AI Engineer | Software Engineer | AWS Certified | MITS 2026';
+      'R Balaji Resume | Junior Research Fellow BITS Pilani | AI/ML Researcher | AWS Certified';
     const desc = document.querySelector('meta[name="description"]');
     if (desc)
       desc.setAttribute(
         'content',
-        'Download R Balaji\'s resume. AI Engineer and Software Engineer specializing in Amazon Bedrock, Agentic AI, React.js, Python, Java, and AWS Serverless. Dual AWS Certified. B.Tech CSE 2026 MITS Bengaluru.'
+        'R Balaji — Junior Research Fellow at BITS Pilani (Hyderabad), BREATHE Project. GATE DA 2025 AIR 7217. AI/ML Researcher specializing in Geospatial AI, Multimodal Data Fusion, Amazon Bedrock, and Agentic Systems. Dual AWS Certified.'
       );
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) canonical.setAttribute('href', 'https://balaji.skillrouteai.com/resume');
@@ -48,9 +48,10 @@ const Resume = () => {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-1">
             R Balaji
           </h1>
-          <p className="text-base sm:text-lg font-semibold text-primary mb-4">
-            AI Engineer &nbsp;|&nbsp; Software Engineer &nbsp;|&nbsp; Full Stack Developer
+          <p className="text-base sm:text-lg font-semibold text-primary mb-1">
+            Junior Research Fellow @ BITS Pilani &nbsp;|&nbsp; AI/ML Researcher &nbsp;|&nbsp; AWS Certified Cloud
           </p>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">B.Tech CS | GATE DA 2025 (AIR 7217)</p>
 
           <div className="flex flex-wrap gap-3 text-sm text-gray-600 dark:text-gray-400 mb-5">
             <a href="mailto:rrbalaji2020@gmail.com" className="flex items-center gap-1.5 hover:text-primary transition-colors">
@@ -60,7 +61,7 @@ const Resume = () => {
               <Phone className="h-4 w-4" /> +91 9398350217
             </span>
             <span className="flex items-center gap-1.5">
-              <MapPin className="h-4 w-4" /> Bengaluru, Karnataka, India
+              <MapPin className="h-4 w-4" /> Hyderabad / Bengaluru, India
             </span>
           </div>
 
@@ -81,18 +82,18 @@ const Resume = () => {
         </header>
 
         <div className="space-y-6">
-          {/* ── Summary ── */}
+          {/* ── Research Objective ── */}
           <section aria-labelledby="summary-heading" className="bg-white dark:bg-gray-900 rounded-2xl shadow-md p-6 sm:p-8 border border-gray-100 dark:border-gray-800">
             <h2 id="summary-heading" className="text-lg font-bold text-gray-900 dark:text-white mb-3 pb-2 border-b border-gray-200 dark:border-gray-700">
-              Professional Summary
+              Research Objective
             </h2>
             <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-              AI Engineer and Software Engineer graduating B.Tech CSE in 2026 from MITS, Bengaluru. Dual AWS Certified —
-              <strong> AWS Cloud Practitioner</strong> and <strong>AWS AI Practitioner</strong>. Specialized in building
-              production-ready AI applications with <strong>Amazon Bedrock, Agentic AI, RAG, and Generative AI</strong>.
-              Experienced in React.js, Next.js, Python, Java, Spring Boot, and AWS Serverless Architecture.
-              Built 20+ projects across AI Agents, GenAI, Data Science, and Full-Stack. Founder of SkillRoute-AI.
-              Currently seeking full-time AI Engineer or Software Engineer roles.
+              AI/ML researcher currently working as a <strong>Junior Research Fellow at BITS Pilani, Hyderabad Campus</strong>, on the{' '}
+              <strong>BREATHE project</strong> (British Academy-funded, in collaboration with the University of Warwick, UK, and the One Health Trust).
+              Strong foundation in Machine Learning, Generative AI, and applied research, with a valid{' '}
+              <strong>GATE Data Science &amp; Artificial Intelligence qualification (AIR 7217)</strong>. Building expertise in{' '}
+              <strong>multimodal data fusion, geospatial AI, and climate-health analytics</strong>, with a long-term goal of pursuing a full-time PhD
+              and an academic research career. Dual AWS Certified <strong>Cloud Practitioner</strong> and <strong>AI Practitioner</strong>.
             </p>
           </section>
 
@@ -104,11 +105,12 @@ const Resume = () => {
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
               <div>
                 <h3 className="text-base font-semibold text-gray-900 dark:text-white">B.Tech — Computer Science and Technology</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Madanapalle Institute of Technology &amp; Science (MITS), Bengaluru</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Madanapalle Institute of Technology &amp; Science (MITS)</p>
+                <p className="text-xs text-gray-500 mt-0.5">Relevant Coursework: Machine Learning, Deep Learning, AI Tools, Cloud Computing (AWS), Data Structures &amp; Algorithms</p>
               </div>
               <div className="text-right shrink-0">
                 <span className="text-sm font-semibold text-primary">2022 – 2026</span>
-                <p className="text-xs text-gray-500">CGPA: 8.7 / 10</p>
+                <p className="text-xs text-gray-500">CGPA: 8.68 / 10</p>
               </div>
             </div>
           </section>
@@ -121,46 +123,55 @@ const Resume = () => {
             <div className="space-y-5">
               {[
                 {
+                  role: 'Junior Research Fellow (JRF) — BREATHE Project',
+                  company: 'BITS Pilani, Hyderabad Campus',
+                  period: 'Sept 2026 – Present',
+                  badge: 'British Academy (UK) Funded · University of Warwick & One Health Trust',
+                  borderColor: 'border-emerald-400',
+                  points: [
+                    'Contributing to the design and development of AI/ML models for climate-health analytics, using multimodal data — environmental sensor data, satellite imagery, wearable physiological signals, and household survey data.',
+                    'Building foundational skills in geospatial data processing and remote sensing (Sentinel, Landsat, ERA5 datasets), QGIS, and Google Earth Engine to support climate vulnerability mapping.',
+                    'Collaborating with an interdisciplinary, international research team across BITS Pilani, University of Warwick, and One Health Trust; contributing toward research publications and technical reporting.',
+                  ],
+                  tech: ['QGIS', 'Google Earth Engine', 'Remote Sensing', 'Python', 'PyTorch', 'Multimodal AI'],
+                },
+                {
                   role: 'Software Engineer Intern',
                   company: 'Rizzle Technology',
-                  period: 'Apr 2026 – Present',
+                  period: 'Apr 2026 – Jun 2026',
+                  badge: null,
+                  borderColor: 'border-primary/40',
                   points: [
-                    'Building ERP product features using React.js and Next.js',
-                    'Developing backend APIs with Java + Spring Boot',
-                    'Integrating MongoDB and DynamoDB for data persistence',
+                    'Investigated slow ERP search performance; redesigned data structure and added caching/indexing — reduced average search response time by 95–98%.',
+                    'Developed backend APIs with Java + Spring Boot and integrated MongoDB and DynamoDB for data persistence.',
                   ],
                   tech: ['React.js', 'Next.js', 'Java', 'Spring Boot', 'DynamoDB'],
                 },
                 {
-                  role: 'Founder & AI Engineer',
-                  company: 'SkillRoute-AI (Startup)',
-                  period: 'Jan 2026 – Present',
+                  role: 'Founder & AI Developer',
+                  company: 'Skillexcellence / SkillRoute AI',
+                  period: 'May 2025 – Present',
+                  badge: null,
+                  borderColor: 'border-primary/40',
                   points: [
-                    'Founded AI-powered skill development platform for CS students',
-                    'Built agentic AI system using Amazon Bedrock and AWS Serverless',
-                    'Received AWS Activate Startup Credits ($1000)',
+                    'Built multi-agent conversational AI and RAG architectures using Amazon Bedrock, Python, and serverless AWS services.',
+                    'Optimized model prompting and inference pipelines, reducing query costs by 97%+ and increasing response topic diversity by 80%+.',
                   ],
-                  tech: ['Amazon Bedrock', 'Agentic AI', 'React.js', 'Lambda', 'S3'],
-                },
-                {
-                  role: 'AWS Cloud Educator & Session Lead',
-                  company: 'MITS University',
-                  period: 'Dec 2025 – Mar 2026',
-                  points: [
-                    'Conducted 4 AWS sessions for 300+ students across departments',
-                    'Led hands-on demos on EC2, S3, Bedrock, and AI certification paths',
-                    'Invited by 3 department HODs for cloud career guidance',
-                  ],
-                  tech: ['AWS EC2', 'Amazon S3', 'Amazon Bedrock', 'Amazon Q'],
+                  tech: ['Amazon Bedrock', 'Agentic AI', 'RAG', 'React.js', 'Lambda', 'S3'],
                 },
               ].map((exp, i) => (
-                <div key={i} className="border-l-4 border-primary/40 pl-4">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 mb-2">
+                <div key={i} className={`border-l-4 ${exp.borderColor} pl-4`}>
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0.5 mb-2">
                     <div>
                       <h3 className="text-sm font-bold text-gray-900 dark:text-white">{exp.role}</h3>
                       <p className="text-xs font-semibold text-primary">{exp.company}</p>
+                      {exp.badge && (
+                        <span className="inline-block mt-1 text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-700">
+                          {exp.badge}
+                        </span>
+                      )}
                     </div>
-                    <span className="text-xs text-gray-500 whitespace-nowrap">{exp.period}</span>
+                    <span className="text-xs text-gray-500 whitespace-nowrap shrink-0">{exp.period}</span>
                   </div>
                   <ul className="space-y-0.5 mb-2">
                     {exp.points.map((pt, j) => (
@@ -208,12 +219,10 @@ const Resume = () => {
             </h2>
             <div className="grid sm:grid-cols-2 gap-4 text-sm">
               {[
-                { label: 'AI & GenAI', items: 'Amazon Bedrock, Agentic AI, RAG, Prompt Engineering, LLMs, Fine-Tuning' },
-                { label: 'Languages', items: 'Python, Java, JavaScript, TypeScript, SQL' },
-                { label: 'Frontend', items: 'React.js, Next.js, HTML, CSS, Tailwind CSS' },
-                { label: 'Backend', items: 'Node.js, Express, Spring Boot, REST APIs' },
-                { label: 'Cloud & AWS', items: 'Lambda, S3, EC2, DynamoDB, API Gateway, Bedrock, Cognito, SageMaker' },
-                { label: 'Tools', items: 'Git, GitHub, VS Code, Postman, Jupyter, Kaggle' },
+                { label: 'Geospatial & Remote Sensing', items: 'QGIS, Google Earth Engine (GEE), Remote Sensing, heat mapping' },
+                { label: 'AI & Machine Learning', items: 'Agentic AI Systems, RAG Pipelines, Multimodal Data Fusion, LLMs, Amazon Bedrock, PyTorch, Scikit-Learn' },
+                { label: 'Cloud & Infrastructure', items: 'AWS (Lambda, S3, EC2, CloudWatch, Bedrock), REST APIs, Git & GitHub' },
+                { label: 'Languages & Tools', items: 'Python, JavaScript, SQL, React.js, System Architecture' },
               ].map((s) => (
                 <div key={s.label}>
                   <span className="font-semibold text-gray-800 dark:text-gray-200">{s.label}: </span>
@@ -278,14 +287,14 @@ const Resume = () => {
 
         {/* ── CTA Footer ── */}
         <div className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 sm:p-8 text-white text-center">
-          <h2 className="text-xl sm:text-2xl font-bold mb-2">Open to Full-Time Opportunities</h2>
+          <h2 className="text-xl sm:text-2xl font-bold mb-2">Open to PhD Track &amp; Research Roles</h2>
           <p className="text-sm sm:text-base text-white/80 mb-5">
-            Looking for AI Engineer, Software Engineer, or Full Stack Developer roles — available from Aug 2026.
+            Aiming for a full-time PhD track and product research roles in AI &amp; Geospatial Intelligence. Also open to AI Engineer and Software Engineer roles.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" size="sm" className="gap-2 font-semibold">
-                <Download className="h-4 w-4" /> Download Resume PDF
+                <Download className="h-4 w-4" /> Download Updated CV
               </Button>
             </a>
             <Link to="/#contact">

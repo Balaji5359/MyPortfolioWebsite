@@ -1,29 +1,52 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Cloud, Github, Linkedin, Mail, MapPin, CheckCircle } from 'lucide-react';
+import { ArrowRight, Cloud, Github, Linkedin, Mail, MapPin, CheckCircle, FlaskConical, Download } from 'lucide-react';
 import myimage from '@/assets/my-image.jpg';
 
 const stats = [
-  { value: '2', label: 'AWS Global Certifications Achieved' },
-  { value: '100+', label: 'AWS Services known and explored' },
-  { value: '300+', label: 'DSA Problems Solved in different platforms' },
-  { value: '8+', label: 'National and College Hackathon Finalists' },
-  { value: '6+', label: 'Global Level Summits & Conf\'s Attended' },
-  { value: '2026', label: 'Graduate (Computer Science)' },
+  { value: '2', label: 'AWS Global Certifications' },
+  { value: 'AIR 7217', label: 'GATE DA 2025 Qualified' },
+  { value: '300+', label: 'DSA Problems Solved' },
+  { value: '8+', label: 'National Hackathon Finalists' },
+  { value: '6+', label: 'Global Summits & Conf\'s Attended' },
+  { value: '2026', label: 'B.Tech Graduate (CS)' },
 ];
 
 const badges = [
-  'AI Engineer Roles',
-  'Software Engineer Roles',
-  'AWS Certified',
-  '3+ Internships',
+  'Junior Research Fellow @ BITS Pilani',
+  'GATE DA 2025 Qualified',
+  'Dual AWS Certified',
+  'AI/ML Researcher',
 ];
 
+const heroSkillChips = [
+  { label: 'QGIS', cat: 'geo' },
+  { label: 'Google Earth Engine', cat: 'geo' },
+  { label: 'ArcGIS', cat: 'geo' },
+  { label: 'Landsat & MODIS', cat: 'geo' },
+  { label: 'LST Modeling', cat: 'geo' },
+  { label: 'Agentic AI Systems', cat: 'ai' },
+  { label: 'RAG Pipelines', cat: 'ai' },
+  { label: 'Multimodal Data Fusion', cat: 'ai' },
+  { label: 'Amazon Bedrock', cat: 'ai' },
+  { label: 'PyTorch', cat: 'ai' },
+  { label: 'AWS Lambda & S3', cat: 'cloud' },
+  { label: 'Python', cat: 'cloud' },
+  { label: 'React.js', cat: 'cloud' },
+  { label: 'SQL', cat: 'cloud' },
+];
+
+const chipColors: Record<string, string> = {
+  geo: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 border-emerald-200 dark:border-emerald-700',
+  ai: 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300 border-purple-200 dark:border-purple-700',
+  cloud: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border-blue-200 dark:border-blue-700',
+};
+
 const aboutSkills = [
-  'Generative AI & Agentic AI',
-  'Amazon Bedrock & Prompt Engineering',
-  'React.js, Next.js, Java, Python',
-  'AWS Serverless Architecture',
-  'REST APIs & Full-Stack Development',
+  'AI/ML Modeling & Multimodal Data Fusion',
+  'Geospatial AI — QGIS, GEE, Remote Sensing',
+  'Agentic AI Systems & RAG Pipelines',
+  'Amazon Bedrock & AWS Serverless',
+  'React.js, Python, Full-Stack Development',
 ];
 
 const Hero = () => {
@@ -36,29 +59,30 @@ const Hero = () => {
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 leading-tight">
                 R Balaji
               </h1>
-              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-muted-foreground mb-4">
-                AI Engineer &nbsp;|&nbsp; Software Engineer &nbsp;|&nbsp; Full Stack Developer
+              <h2 className="text-base sm:text-lg md:text-xl font-semibold text-muted-foreground mb-4 leading-snug">
+                Junior Research Fellow @ BITS Pilani &nbsp;|&nbsp; AI/ML Researcher &nbsp;|&nbsp; AWS Certified Cloud 
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground mb-3 max-w-xl mx-auto md:mx-0 leading-relaxed">
-                Building AI-powered applications with{' '}
-                <strong className="text-foreground">Amazon Bedrock, AgenticAI, AWS, React, Python,</strong> and{' '}
-                <strong className="text-foreground">Serverless Architecture</strong>.....
-              </p>
               <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-muted-foreground mb-6">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>B.Tech CST 2026 • Bengaluru, India</span>
+                <span>Hyderabad, India</span>
               </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
-                <a href="https://drive.google.com/file/d/17GdmzUvj46hJzek-dq_UIN4mBOzeTwgN/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                  <Button className="hero-btn gap-2">
-                    View Resume <ArrowRight className="h-4 w-4" />
+                <Button
+                  className="hero-btn gap-2"
+                  onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  <FlaskConical className="h-4 w-4" /> View Research
+                </Button>
+                <a href="https://1drv.ms/w/c/4dba723c3a32d248/IQDB-JC5iYzkS4YVaP5wPXYYAciotiOitKDzs2CZVf2ewDY?e=P7sF8g" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="gap-2">
+                    <Download className="h-4 w-4" /> Download Updated CV
                   </Button>
                 </a>
                 <a href="https://linkedin.com/in/rrbalaji" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="gap-2">
-                    <Linkedin className="h-4 w-4" /> LinkedIn
+                    <Linkedin className="h-4 w-4" /> LinkedIn Profile
                   </Button>
                 </a>
                 <a href="https://github.com/Balaji5359" target="_blank" rel="noopener noreferrer">
@@ -103,7 +127,7 @@ const Hero = () => {
                 key={s.label}
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 text-center border border-gray-100 dark:border-gray-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
               >
-                <span className="block text-2xl sm:text-3xl font-bold text-primary mb-1">{s.value}</span>
+                <span className="block text-xl sm:text-2xl font-bold text-primary mb-1">{s.value}</span>
                 <span className="block text-xs sm:text-sm text-gray-600 dark:text-gray-300 font-medium">{s.label}</span>
               </div>
             ))}
@@ -115,20 +139,15 @@ const Hero = () => {
             <div className="lg:w-2/3 bg-white dark:bg-card rounded-2xl p-6 sm:p-8 shadow-md">
               <h3 className="text-2xl font-bold mb-4">About Me</h3>
               <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-6">
-                I'm a Software Engineer and AI Engineer graduating in 2026, passionate about building
-                production-ready AI applications rather than just experimenting with models. I cleared dual
-                AWS Global Certifications — <strong>AWS Cloud Practitioner</strong> and{' '}
-                <strong>AWS AI Practitioner</strong> — and am familiar with 100+ AWS services with hands-on
-                experience in 30–40. I've built 20+ projects across AI Agents, Generative AI, Data Science,
-                Augmented Reality, and Full-Stack — all deployed on AWS.
-              </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-6">
-                I've worked with startups, led 5 SIH teams, and built AI systems used by 200+ students.
-                Currently seeking full-time opportunities as an{' '}
-                <strong>AI Engineer or Software Engineer</strong>.
+                Junior Research Fellow at <strong>BITS Pilani (Hyderabad Campus)</strong> working on the{' '}
+                <strong>British Academy–funded BREATHE project</strong>. GATE DA 2025 Qualified (AIR 7217) with strong
+                expertise in <strong>AI/ML modeling, Agentic Systems, Remote Sensing (GIS/QGIS),</strong> and{' '}
+                <strong>Multimodal Data Fusion</strong>. Experienced in building cloud-native AI architectures, leading
+                guest workshops, and driving data-driven environmental and spatial modeling. Aiming for a full-time{' '}
+                <strong>PhD track</strong> and product research roles in <strong>AI &amp; Geospatial Intelligence</strong>.
               </p>
 
-              <h4 className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-3">I have experience across:</h4>
+              <h4 className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-3">Core expertise across:</h4>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
                 {aboutSkills.map((skill) => (
                   <li key={skill} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
@@ -137,6 +156,21 @@ const Hero = () => {
                   </li>
                 ))}
               </ul>
+
+              {/* Featured Skill Chips */}
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">Featured Skills</h4>
+                <div className="flex flex-wrap gap-2">
+                  {heroSkillChips.map((chip) => (
+                    <span
+                      key={chip.label}
+                      className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors duration-150 ${chipColors[chip.cat]}`}
+                    >
+                      {chip.label}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
               <div className="flex flex-wrap gap-3">
                 <a
@@ -157,10 +191,17 @@ const Hero = () => {
             {/* Sidebar */}
             <div className="lg:w-1/3 bg-gray-50 dark:bg-card rounded-2xl p-6 shadow-md flex flex-col gap-5">
               <div>
+                <h4 className="text-base font-bold mb-1">Current Position</h4>
+                <p className="font-semibold text-sm text-primary">Junior Research Fellow (JRF)</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">BITS Pilani, Hyderabad Campus</p>
+                <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">BREATHE Project · British Academy (UK) Funded</p>
+              </div>
+
+              <div>
                 <h4 className="text-base font-bold mb-1">Education</h4>
                 <p className="font-semibold text-sm">B.Tech — Computer Science & Technology</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  MITS, Madanapalle · 2022–2026 · CGPA: 8.7/10
+                  MITS, Madanapalle · 2022–2026 · CGPA: 8.68/10
                 </p>
               </div>
 
@@ -173,19 +214,11 @@ const Hero = () => {
               </div>
 
               <div>
-                <h4 className="text-base font-bold mb-1">Internships</h4>
+                <h4 className="text-base font-bold mb-1">Research & Exams</h4>
                 <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                  <li>• Rizzle Technology — Software Engineer Intern</li>
-                  <li>• 2 more internships completed</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-base font-bold mb-1">Hackathons & Exams</h4>
-                <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                  <li>• GATE DA 2025 — AIR 7217</li>
                   <li>• SIH 2025 — Finalist (4 Teams @ MITS)</li>
                   <li>• SIH 2024 — Finalist (1 Team @ MITS)</li>
-                  <li>• GATE-DA 2025 — AIR 7217</li>
                 </ul>
               </div>
 
