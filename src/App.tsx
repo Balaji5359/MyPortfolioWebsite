@@ -10,6 +10,7 @@ import My_AWS_Activities_World from "@/components/My_AWS_Activities_World.tsx";
 import Resume from "./pages/Resume";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import JRFExperience from "./pages/JRFExperience";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
         <Routes>
           <Route path="/"               element={<Index />} />
           <Route path="/aws-activities" element={<My_AWS_Activities_World />} />
+          <Route path="/jrf-experience" element={<JRFExperience />} />
           <Route path="/resume"         element={<Resume />} />
           <Route path="/blog"           element={<Blog />} />
           <Route path="/blog/:slug"     element={<BlogPost />} />

@@ -27,6 +27,7 @@ const Header = () => {
             <a href="/#projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</a>
             <a href="/#skills" className="text-muted-foreground hover:text-primary transition-colors">Skills</a>
             <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link>
+            <Link to="/jrf-experience" className="text-muted-foreground hover:text-primary transition-colors">JRF Journey</Link>
             <Link to="/resume" className="text-muted-foreground hover:text-primary transition-colors font-semibold text-primary">Resume</Link>
             <a href="/#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
           </nav>
@@ -81,6 +82,7 @@ const Header = () => {
               <a href="/#projects" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Projects</a>
               <a href="/#skills" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Skills</a>
               <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+              <Link to="/jrf-experience" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>JRF Journey</Link>
               <Link to="/resume" className="font-semibold text-primary" onClick={() => setIsMenuOpen(false)}>Resume</Link>
               <a href="/#contact" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</a>
             </nav>

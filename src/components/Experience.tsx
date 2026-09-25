@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+import { FlaskConical, ArrowRight } from 'lucide-react';
+
 const experiences = [
   {
     company: 'BITS Pilani, Hyderabad Campus',
@@ -5,6 +8,7 @@ const experiences = [
     period: 'Sept 2026 – Present',
     location: 'Hyderabad, India',
     badge: 'British Academy (UK) Funded',
+    journeyLink: '/jrf-experience',
     tech: ['QGIS', 'Google Earth Engine', 'Remote Sensing','Python', 'PyTorch', 'Multimodal AI'],
     points: [
       'Contributing to the design and development of AI/ML models for climate-health analytics, using multimodal data environmental sensor data, satellite imagery, wearable physiological signals, and household surveys.',
@@ -44,6 +48,8 @@ const experiences = [
   },
 ];
 
+
+
 const Experience = () => (
   <section id="experience" className="py-20">
     <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
@@ -53,7 +59,6 @@ const Experience = () => (
         </h2>
         <p className="text-muted-foreground text-base">Research, internships, startup work, and technical leadership.</p>
       </div>
-
       <div className="relative">
         {/* Timeline line */}
         <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 hidden sm:block" />
@@ -71,9 +76,19 @@ const Experience = () => (
                     <h3 className="text-lg font-bold text-gray-900 dark:text-white">{exp.company}</h3>
                     <p className="text-sm font-semibold text-primary">{exp.role}</p>
                     {exp.badge && (
-                      <span className="inline-block mt-1 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-700">
-                        {exp.badge}
-                      </span>
+                      <div className="flex items-center gap-2 mt-1 flex-wrap">
+                        <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-700">
+                          {exp.badge}
+                        </span>
+                        {exp.journeyLink && (
+                          <Link
+                            to={exp.journeyLink}
+                            className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white dark:bg-gray-800 text-emerald-600 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-700 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition-colors"
+                          >
+                            <FlaskConical className="h-3 w-3" /> View Journey
+                          </Link>
+                        )}
+                      </div>
                     )}
                   </div>
                   <div className="text-right shrink-0">
@@ -102,6 +117,9 @@ const Experience = () => (
           ))}
         </div>
       </div>
+
+      
+
     </div>
   </section>
 );
